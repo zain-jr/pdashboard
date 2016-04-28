@@ -714,7 +714,7 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-.text-left {
+.text-left, .sideBar-active .addPropertyFormContianer .listing-holder {
   text-align: left !important;
 }
 
@@ -726,7 +726,7 @@ input[type='submit'] {
   text-transform: uppercase !important;
 }
 
-.text-center {
+.text-center, .addPropertyFormContianer .listing-holder {
   text-align: center !important;
 }
 
@@ -753,37 +753,29 @@ a {
 
 #header {
   width: 100%;
-  display: block;
-  position: relative;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
   background: #133783;
 }
 
-#header .layout {
-  padding: 10px 0;
+#header .sideBar-opener {
+  float: left;
+  width: 50px;
+  height: 100%;
+  position: relative;
+  background: #39f;
+  padding: 10px;
 }
 
 .logo {
-  float: left;
-  width: 140px;
-}
-
-.logo a {
-  display: block;
-}
-
-.logo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.logo-dash {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
   line-height: 22px;
   float: left;
-  background: #000;
+  background: #1ab394;
   padding: 15px 30px;
 }
 
@@ -795,16 +787,11 @@ a {
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
-  background: #489ddd;
+  background: #1ab394;
   border-radius: 4px;
-  padding: 10px 20px;
-  margin: 12px 0 0;
-  transition: background 0.4s ease;
-}
-
-.add-property.less-indent {
   margin: 9px 10px 0;
   padding: 8px 17px;
+  transition: background 0.4s ease;
 }
 
 @media (max-width: 767px) {
@@ -833,6 +820,24 @@ a {
 
 #main {
   overflow: hidden;
+  padding: 52px 0 0;
+}
+
+#sidebar-dashboard {
+  overflow: auto;
+  width: 300px;
+  height: 100vh;
+  background: #2e2e2e;
+  position: fixed;
+  top: 52px;
+  left: 0;
+  z-index: 999;
+  transform: translateX(-300px);
+  transition: transform 0.5s ease;
+}
+
+.sideBar-active #sidebar-dashboard {
+  transform: translateX(0);
 }
 
 .addPropertyFormContianer {
@@ -840,6 +845,11 @@ a {
   margin: 0 auto;
   padding: 0 10px;
   clear: both;
+  transition: padding 0.5s ease;
+}
+
+.sideBar-active .addPropertyFormContianer {
+  padding: 0 10px 0 180px;
 }
 
 .addPropertyFormContianer.sectionListingActive .section-listing {
@@ -850,41 +860,8 @@ a {
   z-index: 9;
 }
 
-.addPropertyFormContianer.fixed-position {
-  padding: 85px 10px 0;
-}
-
-.addPropertyFormContianer.fixed-position .listing-holder {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 98;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 10px;
-  clear: both;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer.fixed-position .section-listing {
-    left: 0;
-    right: 0;
-  }
-}
-
-.addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
-  padding: 30px 0 0;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
-    padding: 25px 0 0;
-  }
-}
-
 .addPropertyFormContianer .attactment-block, .addPropertyFormContianer .basics-block, .addPropertyFormContianer .feature-block, .addPropertyFormContianer .contact-information {
-  padding: 10px 0 0;
+  padding: 75px 0 0;
 }
 
 @media (max-width: 1023px) {
@@ -902,16 +879,11 @@ a {
 }
 
 .addPropertyFormContianer .listing-holder {
-  display: block;
   width: 100%;
-  position: relative;
+  position: fixed;
+  left: 0;
+  z-index: 99;
   clear: both;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .listing-holder {
-    text-align: center;
-  }
 }
 
 .addPropertyFormContianer .listing-holder:after {
@@ -959,6 +931,10 @@ a {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0;
+}
+
+.sideBar-active .addPropertyFormContianer .section-listing {
+  padding: 0 0 0 300px;
 }
 
 @media (max-width: 767px) {
@@ -1152,7 +1128,7 @@ a {
 }
 
 .addPropertyFormContianer .property-add {
-  padding: 20px 0 50px;
+  padding: 0 0 50px;
   overflow: hidden;
 }
 

@@ -12,15 +12,18 @@
 	<!-- google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
-<body class="">
+<body class="sideBar-active">
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<header id="header">
-			<a href="#" class="logo-dash">Property42</a>
+			<a href="#" class="logo">Property42</a>
+			<a href="#" class="sideBar-opener"><span></span></a>
 			<a href="#" class="add-property less-indent">Add a property</a>
 		</header>
 		<main id="main" role="main">
-			
+			<aside id="sidebar-dashboard">
+					<a href="#">All properties</a>
+			</aside>
 			<div class="addPropertyFormContianer">
 				<div class="listing-holder">
 					<a class="listing-opener"><span class="icon-menu"></span></a>
@@ -536,6 +539,10 @@
 	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js" defer><\/script>')</script>
 	<script type="text/javascript" src="js/select2.full.js" defer></script>
 	<!-- include custom JavaScript -->
+	<script type="text/javascript" src="js/tabset-plugin.js" defer></script>
+	<script type="text/javascript" src="js/helper.js" defer></script>
+	<script type="text/javascript" src="js/add-propertyFrom.js" defer></script>
+	<script type="text/javascript" src="js/dashboard.js" defer></script>
 	<script type="text/javascript" src="js/jquery.main.js" defer></script>
 </body>
 </html>

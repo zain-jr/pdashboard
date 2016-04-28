@@ -55,29 +55,27 @@ a{ outline: none;}
 }
 #header {
 	width: 100%;
-	display: block;
-	position: relative;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	right: 0;
 	background: $defualt-blue;
 	@extend %clearfix;
 	
-	.layout {
-		padding: 10px 0;
+	.sideBar-opener {
+		float: left;
+		@include squar(50px, 100%);
+		position: relative;
+		background: $light-blue;
+		padding: 10px;
 	}
 }
 .logo {
-	float: left;
-	width: 140px;
-	
-	a{ display: block; }
-	
-	img { @include img-res;}
-}
-.logo-dash{
 	text-decoration: none;
 	color: $white;
 	@include font(20,22);
 	float: left;
-	background: $black;
+	background: $sharp-musterd;
 	padding: 15px 30px;
 }
 .add-property {
@@ -87,16 +85,11 @@ a{ outline: none;}
 	text-transform: uppercase;
 	@include font(14,18);
 	text-decoration: none;
-	background: $mix-blue;
+	background: $sharp-musterd;
 	border-radius: 4px;
-	padding: 10px 20px;
-	margin: 12px 0 0;
+	margin: 9px 10px 0;
+	padding: 8px 17px;
 	transition: background 0.4s ease;
-	
-	&.less-indent{
-		margin: 9px 10px 0;
-		padding: 8px 17px;
-	}
 	
 	@include media('<tablet'){
 		max-width: 130px;
@@ -116,9 +109,30 @@ a{ outline: none;}
 }
 #main{
 	overflow: hidden;
+	padding: 52px 0 0;
+}
+#sidebar-dashboard{
+	overflow: auto;
+	@include squar(300px, 100vh);
+	background: $mix-black;
+	position: fixed;
+	top: 52px;
+	left: 0;
+	z-index: 999;
+	transform: translateX(-300px);
+	transition: transform 0.5s ease;
+	
+	.sideBar-active & {
+		transform: translateX(0);
+	}
 }
 .addPropertyFormContianer {
 	@include container;
+	transition: padding 0.5s ease;
+	
+	.sideBar-active & {
+		padding: 0 10px 0 180px;
+	}
 	
 	&.sectionListingActive {
 		.section-listing{
@@ -130,33 +144,8 @@ a{ outline: none;}
 		}
 	}
 	
-	&.fixed-position{
-		padding: 85px 10px 0;
-		
-		.listing-holder{
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 98;
-			@include container;
-		}
-		.section-listing {
-			@include media('<tablet'){
-				left: 0;
-				right: 0;
-			}
-		}
-		.attactment-block, .basics-block, .feature-block, .contact-information{
-			padding: 30px 0 0;
-			@include media('<tablet'){
-				padding: 25px 0 0;
-			}
-		}
-	}
-	
 	.attactment-block, .basics-block, .feature-block, .contact-information{
-		padding: 10px 0 0;
+		padding: 75px 0 0;
 	}
 	
 	.select2-container{
@@ -171,13 +160,15 @@ a{ outline: none;}
 	}
 	
 	.listing-holder{
-		display: block;
+		@extend .text-center;
 		width: 100%;
-		position: relative;
+		position: fixed;
+		left: 0;
+		z-index: 99;
 		clear: both;
 		
-		@include media('<tablet'){
-			text-align: center;
+		.sideBar-active &{
+			@extend .text-left;
 		}
 		
 		&:after{
@@ -212,6 +203,10 @@ a{ outline: none;}
 		@include align-reset(top, 18, 21);
 		position: relative;
 		background: $light-gray;
+		
+		.sideBar-active &{
+			padding: 0 0 0 300px;
+		}
 		
 		@include media('<tablet'){
 			position: absolute;
@@ -368,7 +363,7 @@ a{ outline: none;}
 		}
 	}
 	.property-add {
-		padding: 20px 0 50px;
+		padding: 0 0 50px;
 		overflow: hidden;
 		
 		@include media('<tablet'){

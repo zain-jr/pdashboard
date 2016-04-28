@@ -22,8 +22,7 @@ $(".searchable-select").select2({
 	placeholder: "Select",
   allowClear: true
 });
-
-// page init
+// tabs
 jQuery(function(){
 	initTabs();
 });
@@ -32,5 +31,19 @@ jQuery(function(){
 function initTabs() {
 	jQuery('.tabset').contentTabs({
 		tabLinks: 'a'
+	});
+}
+
+//accordion
+jQuery(function(){
+	initAccordion();
+});
+
+// accordion menu init
+function initAccordion() {
+	jQuery('.accordion').slideAccordion({
+		opener: '.opener',
+		slider: '.slide',
+		animSpeed: 300
 	});
 }

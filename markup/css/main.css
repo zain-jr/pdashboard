@@ -467,7 +467,7 @@ th {
   content: "\e902";
 }
 
-.addPropertyFormContianer .section-listing, .addPropertyFormContianer .tabset, .addPropertyFormContianer .property-add .radio-holder, .addPropertyFormContianer .feature-list, .addPropertyFormContianer .image-uploading-area {
+#sidebar-dashboard .accordion, #sidebar-dashboard .accordion li .slide, .addPropertyFormContianer .section-listing, .addPropertyFormContianer .tabset, .addPropertyFormContianer .property-add .radio-holder, .addPropertyFormContianer .feature-list, .addPropertyFormContianer .image-uploading-area {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -714,7 +714,7 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-.text-left, .sideBar-active .addPropertyFormContianer .listing-holder {
+.text-left, #sidebar-dashboard .layout, .sideBar-active .addPropertyFormContianer .listing-holder {
   text-align: left !important;
 }
 
@@ -726,7 +726,7 @@ input[type='submit'] {
   text-transform: uppercase !important;
 }
 
-.text-center, .addPropertyFormContianer .listing-holder {
+.text-center, #sidebar-dashboard .user-picture, .addPropertyFormContianer .listing-holder {
   text-align: center !important;
 }
 
@@ -762,11 +762,56 @@ a {
 
 #header .sideBar-opener {
   float: left;
-  width: 50px;
-  height: 100%;
+  width: 40px;
+  height: 25px;
   position: relative;
-  background: #39f;
-  padding: 10px;
+  margin: 13px 0 0 20px;
+}
+
+#header .sideBar-opener:after, #header .sideBar-opener:before, #header .sideBar-opener span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  content: '';
+  background: #fff;
+}
+
+#header .sideBar-opener:after {
+  top: auto;
+  bottom: 0;
+}
+
+#header .sideBar-opener span {
+  top: 50%;
+  margin: -2px 0 0;
+}
+
+#header .sideBar-opener span:before, #header .sideBar-opener span:after {
+  position: absolute;
+  top: 50%;
+  left: -13px;
+  content: '';
+  border: 5px solid transparent;
+  border-right: 5px solid #fff;
+  margin: -5px 0 0;
+  transition: left 0.4s ease, right 0.4s ease;
+}
+
+#header .sideBar-opener span:after {
+  left: auto;
+  right: -8px;
+  border-right: 0;
+  border-left: 5px solid #fff;
+}
+
+.sideBar-active #header .sideBar-opener span:before, #header .sideBar-opener:hover span:before {
+  left: -18px;
+}
+
+.sideBar-active #header .sideBar-opener span:after, #header .sideBar-opener:hover span:after {
+  right: -13px;
 }
 
 .logo {
@@ -838,6 +883,103 @@ a {
 
 .sideBar-active #sidebar-dashboard {
   transform: translateX(0);
+}
+
+#sidebar-dashboard .user-picture {
+  padding: 10px 5px;
+  overflow: hidden;
+}
+
+#sidebar-dashboard .user-picture .image-thumb {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  overflow: hidden;
+  background: #606060;
+  padding: 4px;
+  float: left;
+}
+
+#sidebar-dashboard .user-picture .image-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  height: 100%;
+  border-radius: 100%;
+}
+
+#sidebar-dashboard .layout {
+  padding: 18px 10px 0 10px;
+}
+
+#sidebar-dashboard .account-type {
+  display: block;
+  color: #fff;
+  font-style: italic;
+  color: #fff581;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+#sidebar-dashboard .user-name {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #dde2e8;
+  font-size: 16pxpx;
+  line-height: 19pxpx;
+  letter-spacing: 1px;
+  transition: color 0.4s ease;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+#sidebar-dashboard .user-name:hover {
+  color: #fff;
+}
+
+#sidebar-dashboard .accordion {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+#sidebar-dashboard .accordion li {
+  margin: 0 0 10px;
+  display: block;
+}
+
+#sidebar-dashboard .accordion li .opener {
+  display: block;
+  color: #fff;
+  background: #363636;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+#sidebar-dashboard .accordion li .opener:hover {
+  background: #606060;
+}
+
+#sidebar-dashboard .accordion li .slide {
+  color: #fff;
+  background: #606060;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+#sidebar-dashboard .accordion li .slide li {
+  display: block;
+}
+
+#sidebar-dashboard .accordion li .slide li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 30px;
+}
+
+#sidebar-dashboard .accordion li .slide li a:hover {
+  background: #606060;
 }
 
 .addPropertyFormContianer {
@@ -965,6 +1107,7 @@ a {
 
 .addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a {
   color: #000;
+  pointer-events: none;
 }
 
 .addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a:after {

@@ -64,10 +64,56 @@ a{ outline: none;}
 	
 	.sideBar-opener {
 		float: left;
-		@include squar(50px, 100%);
+		@include squar(40px, 25px);
 		position: relative;
-		background: $light-blue;
-		padding: 10px;
+		margin: 13px 0 0 20px;
+		
+		&:after, &:before, span{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 2px;
+			content: '';
+			background: $white;
+		}
+		&:after{
+			top: auto;
+			bottom: 0;
+		}
+		
+		span{ 
+			top: 50%;
+			margin: -2px 0 0;
+			
+			&:before, &:after {
+				position: absolute;
+				top: 50%;
+				left: -13px;
+				content: '';
+				border: 5px solid transparent;
+				border-right: 5px solid $white;
+				margin: -5px 0 0;
+				transition: left 0.4s ease, right 0.4s ease;
+			}
+			&:after {
+				left: auto;
+				right: -8px;
+				border-right: 0;
+				border-left: 5px solid $white;
+			}
+		}
+		.sideBar-active &,
+		&:hover {
+			span{
+				&:before{
+					left: -18px;
+				}
+				&:after{
+					right: -13px;
+				}
+			}
+		}
 	}
 }
 .logo {
@@ -124,6 +170,90 @@ a{ outline: none;}
 	
 	.sideBar-active & {
 		transform: translateX(0);
+	}
+	.user-picture{
+		padding: 10px 5px;
+		@extend .text-center;
+		overflow: hidden;
+		
+		.image-thumb{
+			@include squar(70px,70px);
+			border-radius: 100%;
+			overflow: hidden;
+			background: $mix-grays;
+			padding: 4px;
+			float: left;
+			
+			img{
+				@include img-res;
+				height: 100%;
+				border-radius: 100%;
+			}
+		}
+	}
+	.layout {
+		@extend .text-left;
+		padding: 18px 10px 0 10px;
+	}
+	.account-type{
+		display: block;
+		color: $white;
+		font-style: italic;
+		color: #fff581;
+		@include font(12,15);
+	}
+	.user-name {
+		@include align(top);
+		text-decoration: none;
+		color: $light-gray;
+		@include font(16px,19px);
+		letter-spacing: 1px;
+		transition: color 0.4s ease;
+		text-transform: capitalize;
+		font-weight: 600;
+		
+		&:hover {  color: $white;}
+	}
+	.accordion{
+		@extend %listreset;
+		@include font(16,19);
+		
+		li{
+			margin: 0 0 10px;
+			display: block;
+			
+			.opener {
+				display: block;
+				color: $white;
+				background: $dove-black;
+				text-decoration: none;
+				padding: 10px 20px;
+				
+				&:hover {
+					background: $mix-grays;
+				}
+			}
+			
+			.slide{
+				@extend %listreset;
+				color: $white;
+				background: $mix-grays;
+				@include font(13,16);
+				
+				li{
+					display: block;
+					
+					a{
+						display: block;
+						text-decoration: none;
+						color: $white;
+						padding: 5px 30px;
+						
+						&:hover { background: $mix-grays;}
+					}
+				}
+			}
+		}
 	}
 }
 .addPropertyFormContianer {
@@ -233,6 +363,7 @@ a{ outline: none;}
 				}
 				a{
 					color: $black;
+					pointer-events: none;
 					&:after{
 						right: 0;
 					}

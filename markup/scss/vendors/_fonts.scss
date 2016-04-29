@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:    url('../fonts/icomoon.eot?l3plj3');
-    src:    url('../fonts/icomoon.eot?l3plj3#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?l3plj3') format('truetype'),
-        url('../fonts/icomoon.woff?l3plj3') format('woff'),
-        url('../fonts/icomoon.svg?l3plj3#icomoon') format('svg');
+    src:    url('../fonts/icomoon.eot?v8fkwu');
+    src:    url('../fonts/icomoon.eot?v8fkwu#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?v8fkwu') format('truetype'),
+        url('../fonts/icomoon.woff?v8fkwu') format('woff'),
+        url('../fonts/icomoon.svg?v8fkwu#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-clothes-tag:before {
+    content: "\e90e";
+}
+.icon-rent:before {
+    content: "\e90f";
+}
+.icon-flash-activation:before {
+    content: "\e90b";
+}
+.icon-list:before {
+    content: "\e90c";
+}
 .icon-menu:before {
     content: "\e90a";
 }
@@ -38,6 +50,9 @@
 }
 .icon-contact_phone:before {
     content: "\e905";
+}
+.icon-clock:before {
+    content: "\e90d";
 }
 .icon-cross:before {
     content: "\e906";

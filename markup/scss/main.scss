@@ -48,11 +48,13 @@ $media-expressions: (
 .container { @include container;}
 .layout{ overflow: hidden;}
 a{ outline: none;}
+/*main page wrapper*/
 #wrapper {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 }
+/*dashboard header*/
 #header {
 	width: 100%;
 	position: fixed;
@@ -126,6 +128,7 @@ a{ outline: none;}
 	background: $sharp-musterd;
 	padding: 15px 30px;
 }
+/*add property button*/
 .add-property {
 	float: right;
 	max-width: 300px;
@@ -155,10 +158,12 @@ a{ outline: none;}
 		font-weight: bold;
 	}
 }
+/*mian content of the page*/
 #main{
 	overflow: hidden;
 	padding: 52px 0 0;
 }
+/*dashboard side bar*/
 #sidebar-dashboard{
 	overflow: auto;
 	@include squar(300px, 100vh);
@@ -230,8 +235,8 @@ a{ outline: none;}
 			
 			&.active{
 				> a{
-					background: rgba(77, 118, 134, 0.5);
-					border-color: #3a7775;
+					background: rgba(0, 0, 0, 0.3);
+					border-color: #000;
 					color: $white;
 				}
 			}
@@ -246,6 +251,7 @@ a{ outline: none;}
 				margin: 0 10px 0 0;
 				
 				&.small{
+					margin: -2px 0 0;
 					@include font(12,14);
 					padding: 3px;
 					background: rgba($gray, 0.5);
@@ -263,8 +269,8 @@ a{ outline: none;}
 				margin: 0 0 5px;
 				
 				&:hover{
-					background: rgba(77, 118, 134, 0.5);
-					border-color: #3a7775;
+					background: rgba(0, 0, 0, 0.3);
+					border-color: #000;
 					color: $white;
 				}
 				
@@ -303,6 +309,7 @@ a{ outline: none;}
 		}
 	}
 }
+/*Add a property full form*/
 .addPropertyFormContianer {
 	@include container;
 	transition: padding 0.5s ease;
@@ -1066,6 +1073,203 @@ a{ outline: none;}
 						opacity: 1;
 						visibility: visible;
 					}
+				}
+			}
+		}
+	}
+}
+/*Listing page with table */
+.property-listing-holder{
+	overflow: hidden;
+	padding: 60px 10px 0;
+	transition: padding 0.4s ease;
+	
+	.sideBar-active &{
+		padding: 60px 10px 0 320px;
+		
+		.listing-cetegories-links {
+			ul{
+				padding: 0 10px 0 300px;
+			}
+		}
+	}
+	.listing-cetegories-links {
+		position: fixed;
+		top: 52px;
+		left: 0;
+		right: 0;
+		z-index: 99;
+		background:$light-gray;
+		text-transform: capitalize;
+		
+		ul{
+			transition: padding 0.4s ease; 
+			@extend %listreset;
+			@include align-reset(top, 18,21);
+			
+			li{
+				&.active-nav{
+					a{
+						background: $white;
+					}
+				}
+				&.active{
+					a{ 
+						color: $green;
+					}
+				}
+				&.pendings{
+					a{ 
+						color: $mix-blue;
+					}
+				}
+				&.rejected{
+					a{
+						color:#bc5858;
+					}
+				}
+				&.expired{
+					a{
+						color: #cf8511;
+					}
+				}
+				&.deleted{
+					a{
+						color: $red;
+					}
+				}
+				a{
+					@include align(top);
+					padding: 15px 50px;
+					transition: color 0.4s ease, background 0.4s ease;
+					color: $dove-black;
+					text-decoration: none;
+					
+					&:hover{
+						background: $white;
+					}
+					
+					.numbering{
+						@include font(13,17);
+						
+						&:before, &:after{
+							@include align(middle);
+							content: '(';
+							margin: -4px 0 0;
+						}
+						&:after{
+							content: ')';
+						}
+					}
+				}
+			}
+		}
+	}
+	.property-filter{
+		overflow: hidden;
+		
+		.by-user-sorting, .by-id-sorting {
+			display: block;
+			width: 40%;
+			overflow: hidden;
+			margin: 0 0 10px;
+			float: left;
+			
+			ul{
+				float: left;
+				@extend %listreset;
+				@include align-reset(middle,14,17);
+				text-transform: capitalize;
+				
+				li{
+					padding: 5px 10px 10px;
+					float: left;
+					
+					label{ margin: 0 10px 0 0;}
+					
+					select{
+						padding: 0;
+						min-width: 50px;
+						border: 1px solid $mix-black;
+						height: 29px;
+						@include font(12,15);
+						outline: none;
+					}
+				}
+			}
+			input[type="submit"]{
+				border: 0;
+				height: 30px;
+				padding:4px 10px;
+				margin: 4px 0 0;
+				text-transform: uppercase;
+				background: $green;
+				color: $white;
+				float: left;
+				transition: background 0.3s ease;
+				outline: none;
+				
+				&:hover{ background: $sharp-musterd;}
+			}
+		}
+		.by-id-sorting{
+			float: right;
+		}
+	}
+	.propeties-table{
+		width: 100%;
+		border-collapse: collapse;
+		@include font(15,18);
+		
+		tr{
+			width: 100%;
+			
+			th{
+				text-align: left;
+				@include font(15,18);
+				padding: 8px;
+				background: rgba($defualt-blue, 0.5);
+				color: $white;
+				
+				&:first-child{ border-radius: 4px 0 0 4px;}
+				&:last-child{ border-radius: 0 4px 4px 0 ;}
+			}
+			
+			td{
+				text-align:left;
+				padding: 5px;
+				border-bottom: 1px solid rgba($mix-grays, 0.4);
+				padding: 10px 8px;
+				overflow: hidden;
+			}
+			
+			a{
+				@include align(top);
+				text-decoration:none;
+				@include font(18,21);
+				margin: 0 5px;
+				color: $black;
+				
+				&.details{
+					color: $mix-blue;
+					font-size: 20px;
+					line-height: 1;
+					font-weight: bold;	
+					&:hover{ color: darken($mix-blue, 15%);}
+				}
+				&.edit{
+					color: $orange;
+					&:hover{ color: darken($orange, 15%);}
+				}
+				&.delete{
+					color: $red;
+					&:hover{ color: darken($red, 15%);}
+				}
+			}
+			
+			&:hover{
+				td{
+					background: rgba($mix-grays, 0.08);
 				}
 			}
 		}

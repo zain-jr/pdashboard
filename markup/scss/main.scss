@@ -66,9 +66,9 @@ a{ outline: none;}
 	
 	.sideBar-opener {
 		float: left;
-		@include squar(40px, 25px);
+		@include squar(25px, 19px);
 		position: relative;
-		margin: 13px 0 0 20px;
+		margin: 16px 0 0 20px;
 		cursor: pointer;
 		
 		&:after, &:before, span{
@@ -78,7 +78,7 @@ a{ outline: none;}
 			right: 0;
 			height: 2px;
 			content: '';
-			background: $white;
+			background: $dove-gray;
 		}
 		&:after{
 			top: auto;
@@ -95,7 +95,7 @@ a{ outline: none;}
 				left: -13px;
 				content: '';
 				border: 5px solid transparent;
-				border-right: 5px solid $white;
+				border-right: 5px solid $dove-gray;
 				margin: -5px 0 0;
 				transition: left 0.4s ease, right 0.4s ease;
 			}
@@ -104,7 +104,7 @@ a{ outline: none;}
 				left: auto;
 				right: -8px;
 				border-right: 0;
-				border-left: 5px solid $white;
+				border-left: 5px solid $dove-gray;
 			}
 		}
 		.sideBar-active &,
@@ -118,6 +118,10 @@ a{ outline: none;}
 				}
 			}
 		}
+	}
+	.searh-dashboard{
+		float: right;
+		margin: 0 30px 0 0;
 	}
 }
 .logo {
@@ -163,23 +167,70 @@ a{ outline: none;}
 	overflow: hidden;
 	padding: 52px 0 0;
 }
+.pages-holder {
+	position: relative;
+	overflow: hidden;
+	min-height: 785px;
+}
+.searh-dashboard{
+	overflow: hidden;
+	position: relative;
+	width: 250px;
+	
+	input[type="text"], input[type="search"] {
+		@include squar(100%, 40px);
+		padding: 10px 30px 10px 0;
+		margin: 0;
+		border: 0;
+		border-bottom: 1px solid $white;
+		color: $white;
+		background: transparent;
+		@include font(14,16);
+		transition: padding 0.4s ease;
+		
+		@include placeholder{
+			color: $white;
+			opacity: 1;
+		}
+		&:focus{
+			padding: 10px 30px 10px 10px;
+		}
+	}
+	button[type="submit"]{
+		border: 0;
+		color: $white;
+		background: transparent;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 20px;
+		
+		&:hover{
+			color: $light-gray;
+		}
+	}
+}
 /*dashboard side bar*/
 #sidebar-dashboard{
 	overflow: auto;
 	@include squar(300px, 100vh);
 	background: $black linear-gradient(to right, #3a3633 93%, #2a2725 100%);
 	position: fixed;
-	top: 52px;
+	top: 0;
 	left: 0;
 	z-index: 999;
 	transform: translateX(-300px);
 	transition: transform 0.5s ease;
+	padding: 52px 0 0;
 	
 	.sideBar-active & {
 		transform: translateX(0);
 	}
 	.user-picture{
-		padding: 10px 5px;
+		padding: 10px 5px 0;
 		@extend .text-center;
 		overflow: hidden;
 		border-bottom: 1px solid $black;
@@ -196,6 +247,72 @@ a{ outline: none;}
 				@include img-res;
 				height: 100%;
 				border-radius: 100%;
+			}
+		}
+	}
+	.form-holder{
+		border-top: 1px solid $mix-grays;
+		overflow: hidden;
+	}
+	.search-sideBar{
+		border: 1px solid $white;
+		border-radius: 20px;
+		overflow: hidden;
+		width: 90%;
+		margin: 10px auto 0;
+		position: relative;
+		
+		input[type="text"], input[type="search"] {
+			width: 100%;
+			height: 30px;
+			background: transparent;
+			color: $white;
+			@include font(14,17);
+			border: 0;
+			padding:5px 40px 5px 10px;
+			
+			@include placeholder{
+				opacity: 1;
+				color: $white;
+			}
+			
+			&:focus{
+			}
+		}
+		button[type="submit"]{
+			border: 0;
+			background: transparent;
+			color: $white;
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			width: 20px;
+			display: block;
+			bottom: 0;
+			z-index: 9;
+			padding: 0;
+			margin: -13px 0 0;
+			appearance: none;
+			outline: none;
+			
+			&:hover{
+				color: $index-white;
+			}
+		}
+	}
+	.notifications-links{
+		@extend %listreset;
+		@extend .text-right;
+		@include align-reset(top,24,24);
+		
+		li{
+			padding: 0 10px 10px;
+			
+			a{
+				text-decoration: none;
+				color: $light-gray;
+				
+				&:hover{ color: $white;}
 			}
 		}
 	}
@@ -223,7 +340,6 @@ a{ outline: none;}
 		&:hover {  color: $white;}
 	}
 	.sideBar-links {
-		border-top: 1px solid $mix-grays;
 		@extend %listreset;
 		@include font(16,19);
 		text-transform: capitalize;
@@ -267,6 +383,7 @@ a{ outline: none;}
 				transition: color 0.4s ease;
 				border: 1px solid transparent;
 				margin: 0 0 5px;
+				transition: background 0.4s ease, border 0.4s ease;
 				
 				&:hover{
 					background: rgba(0, 0, 0, 0.3);
@@ -292,7 +409,7 @@ a{ outline: none;}
 					
 					a{
 						padding: 5px 30px;
-						transition: color 0.4s ease;
+						transition: background 0.4s ease, border 0.4s ease;
 						
 						[class^="icon-"],[class*="icon-"]{
 							@include align(middle);
@@ -1084,6 +1201,11 @@ a{ outline: none;}
 	padding: 60px 10px 0;
 	transition: padding 0.4s ease;
 	
+	&.slide-onMobile-active{
+		
+		.slide-onMobile{ display: block !important;}	
+	}
+	
 	.sideBar-active &{
 		padding: 60px 10px 0 320px;
 		
@@ -1093,6 +1215,7 @@ a{ outline: none;}
 			}
 		}
 	}
+	
 	.listing-cetegories-links {
 		position: fixed;
 		top: 52px;
@@ -1101,11 +1224,50 @@ a{ outline: none;}
 		z-index: 99;
 		background:$light-gray;
 		text-transform: capitalize;
-		
+			
 		ul{
 			transition: padding 0.4s ease; 
 			@extend %listreset;
 			@include align-reset(top, 18,21);
+			
+			@include media('<widescreen'){
+				@include align-reset(top, 16,19);
+			}
+			
+			&.navFor-mobile {
+				text-align: center;
+				@include media('>desktop'){
+					display: none;
+				}
+				li{
+					display: block;
+					position: relative;
+					
+					.slide-onMobile-opener{
+						cursor: pointer;
+						&:hover{ background: none;}
+					}
+					.tag{
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						background: $mix-grays;
+						color: $white;
+						padding: 13px 10px;
+					}
+				}
+			}
+			
+			&.slide-onMobile{
+				@include media('<desktop'){
+					display: none;
+					li{
+						display: block;
+						@include font(14,17);
+					}
+				}
+			}
 			
 			li{
 				&.active-nav{
@@ -1139,11 +1301,19 @@ a{ outline: none;}
 					}
 				}
 				a{
-					@include align(top);
+					display: block;
 					padding: 15px 50px;
 					transition: color 0.4s ease, background 0.4s ease;
 					color: $dove-black;
 					text-decoration: none;
+					
+					@include media('<1426px'){
+						padding: 15px 25px;
+					}
+					
+					@include media('<widescreen'){
+						padding: 15px;
+					}
 					
 					&:hover{
 						background: $white;
@@ -1175,15 +1345,36 @@ a{ outline: none;}
 			margin: 0 0 10px;
 			float: left;
 			
+			@include media('<1426px'){
+				width: 50%;
+			}
+			
+			.sideBar-active & {
+				@include media('<desktop'){
+					width: 100% !important;
+					float: none !important;
+					overflow: hidden;
+					margin: 0 0 10px !important;
+				}
+			}
+			
 			ul{
 				float: left;
 				@extend %listreset;
 				@include align-reset(middle,14,17);
 				text-transform: capitalize;
 				
+				@include media('<widescreen'){
+					@include align-reset(middle,12,15);
+				}
+				
 				li{
 					padding: 5px 10px 10px;
 					float: left;
+					
+					@include media('<widescreen'){
+						padding: 5px 4px 10px;
+					}
 					
 					label{ margin: 0 10px 0 0;}
 					
@@ -1209,17 +1400,39 @@ a{ outline: none;}
 				transition: background 0.3s ease;
 				outline: none;
 				
+				@include media('<widescreen'){
+					padding: 5px;
+					@include font(12,15);
+				}
+				
 				&:hover{ background: $sharp-musterd;}
 			}
 		}
 		.by-id-sorting{
 			float: right;
+			
+			@include media('<1426px'){
+				padding: 0 0 0 70px;
+			}
+			@include media('<widescreen'){
+				padding: 0;
+			}
 		}
+	}
+	.table-responsive{
+		overflow-x: auto;
 	}
 	.propeties-table{
 		width: 100%;
 		border-collapse: collapse;
 		@include font(15,18);
+		
+		@include media('<widescreen'){
+			width: 1024px;
+		}
+		@include media('<desktop'){
+			@include font(14,18);
+		}
 		
 		tr{
 			width: 100%;
@@ -1231,16 +1444,31 @@ a{ outline: none;}
 				background: rgba($defualt-blue, 0.5);
 				color: $white;
 				
+				@include media('<desktop'){
+					padding: 5px;
+				}
+				
+				span {
+					@include align(top);
+					cursor: pointer;
+					&:hover{
+						color: $index-white;
+					}
+				}
+				
 				&:first-child{ border-radius: 4px 0 0 4px;}
 				&:last-child{ border-radius: 0 4px 4px 0 ;}
 			}
 			
 			td{
 				text-align:left;
-				padding: 5px;
 				border-bottom: 1px solid rgba($mix-grays, 0.4);
 				padding: 10px 8px;
 				overflow: hidden;
+				
+				@include media('<desktop'){
+					padding: 5px;
+				}
 			}
 			
 			a{
@@ -1272,6 +1500,81 @@ a{ outline: none;}
 					background: rgba($mix-grays, 0.08);
 				}
 			}
+		}
+	}
+}
+.social-networks {
+	@include align-reset(top,22,22);
+	@extend %listreset;
+	margin: 0 -10px;
+	
+	li{
+		padding:  0 10px 10px;
+		margin: 0;
+		
+		a {
+			border: 2px solid $white;
+			padding: 10px;
+			border-radius: 100%;
+			@include align(top);
+			transition: all 0.4s ease;
+			
+			&:hover{
+				
+				&.facebook{
+					background: #3B5998;
+					border-color: #3B5998;
+				}
+				
+				&.twitter {
+					background: #55acee;
+					border-color: #55acee;
+				}
+			}
+		}
+	}
+}
+#footer{
+	background: $dove-black;
+	
+	.cols-holder{
+		overflow: hidden;
+		@include align-reset(top,14,16);
+		transition: padding 0.4s ease;
+		
+		.sideBar-active & {
+			padding: 0 0 0 180px;
+		}
+		
+		.col {
+			width: 25%;
+			color: $light-gray;
+			padding: 30px 10px;
+			
+			address{
+				display: block;
+				font-style: normal;
+			}
+		}
+		ul{
+			@extend %listreset;
+			text-transform: capitalize;
+			
+			li{
+				margin: 0 0 5px;
+				
+				a{
+					text-decoration: none;
+					color: $light-gray;
+					
+					&:hover{ color: $white;}
+				}
+			}
+		}
+		h2{
+			@include font(18,21);
+			font-weight: 600;
+			margin: 0 0 10px;
 		}
 	}
 }

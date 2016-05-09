@@ -2572,7 +2572,7 @@ a {
 
 .property-listing-holder .listing-cetegories-links ul li a {
   display: block;
-  padding: 15px 50px;
+  padding: 15px 48px;
   transition: color 0.4s ease, background 0.4s ease;
   color: #363636;
   text-decoration: none;
@@ -2693,7 +2693,7 @@ a {
 }
 
 .property-listing-holder .property-filter .by-user-sorting ul li, .property-listing-holder .property-filter .by-id-sorting ul li {
-  padding: 5px 10px 10px;
+  padding: 5px 7px 10px;
   float: left;
 }
 

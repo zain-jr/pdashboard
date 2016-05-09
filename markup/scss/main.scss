@@ -47,6 +47,21 @@ $media-expressions: (
 .text-center{ text-align: center !important;}
 .container { @include container;}
 .layout{ overflow: hidden;}
+.hidden-lg{
+	@include media('<widescreen'){
+		display: none !important;
+	}
+}
+.hidden-sm{
+	@include media('<desktop'){
+		display: none !important;
+	}
+}
+.hidden-xs {
+	@include media('<tablet'){
+		display: none !important;
+	}
+}
 a{ outline: none;}
 /*main page wrapper*/
 #wrapper {
@@ -70,6 +85,13 @@ a{ outline: none;}
 		position: relative;
 		margin: 16px 0 0 20px;
 		cursor: pointer;
+		
+		@include media('<tablet'){
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 9;
+		}
 		
 		&:after, &:before, span{
 			position: absolute;
@@ -119,9 +141,14 @@ a{ outline: none;}
 			}
 		}
 	}
-	.searh-dashboard{
+	.searhForm-holder{
 		float: right;
 		margin: 0 30px 0 0;
+		
+		@include media('<tablet'){
+			margin: 17px 15px 0 0;
+			@extend .text-center;
+		}
 	}
 }
 .logo {
@@ -131,6 +158,12 @@ a{ outline: none;}
 	float: left;
 	background: $sharp-musterd;
 	padding: 15px 30px;
+	
+	@include media('<tablet'){
+		@include font(16,18);
+		padding: 15px;
+		margin:  0 0 0 60px;
+	}
 }
 /*add property button*/
 .add-property {
@@ -150,7 +183,7 @@ a{ outline: none;}
 		max-width: 130px;
 		@include font(12,18);
 		padding: 6px 5px;
-		margin: 17px 0 0;
+		margin: 8px 9px 0 0;
 	}
 	
 	&:hover{ background: $orange; }
@@ -166,50 +199,107 @@ a{ outline: none;}
 #main{
 	overflow: hidden;
 	padding: 52px 0 0;
+	
+	@include media('<tablet'){
+		padding: 48px 0 0;
+	}
 }
 .pages-holder {
 	position: relative;
 	overflow: hidden;
 	min-height: 785px;
+	
+	@include media('<desktop'){
+		min-height: 695px;
+	}
 }
-.searh-dashboard{
-	overflow: hidden;
-	position: relative;
+.searhForm-holder{
 	width: 250px;
 	
-	input[type="text"], input[type="search"] {
-		@include squar(100%, 40px);
-		padding: 10px 30px 10px 0;
-		margin: 0;
-		border: 0;
-		border-bottom: 1px solid $white;
-		color: $white;
-		background: transparent;
-		@include font(14,16);
-		transition: padding 0.4s ease;
-		
-		@include placeholder{
-			color: $white;
-			opacity: 1;
+	&.searh-dashboard-active{
+		.searh-dashboard{
+			display: block;
 		}
-		&:focus{
-			padding: 10px 30px 10px 10px;
+		.form-openerMobile{ color: $white;}
+	}
+	
+	@include media('<tablet'){
+		width: 20px;
+	}
+	
+	.form-openerMobile{
+		color: rgba($white, 0.5);
+		@include align(top);
+		cursor: pointer;
+		@include media('>=tablet'){
+			display: none;
 		}
 	}
-	button[type="submit"]{
-		border: 0;
-		color: $white;
-		background: transparent;
-		padding: 0;
-		margin: 0;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		width: 20px;
+	
+	.searh-dashboard{
+		overflow: hidden;
+		position: relative;
+		width: 100%;
 		
-		&:hover{
-			color: $light-gray;
+		@include media('<tablet'){
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			z-index: 9;
+			display: none;
+			background: rgba($defualt-blue, 0.92);
+		}
+		
+		input[type="text"], input[type="search"] {
+			@include squar(100%, 40px);
+			padding: 10px 30px 10px 0;
+			margin: 0;
+			border: 0;
+			border-bottom: 1px solid $white;
+			color: $white;
+			background: transparent;
+			@include font(14,16);
+			transition: padding 0.4s ease;
+			
+			@include media('<tablet'){
+				@include squar(100%, 50px);
+				border: 0;
+				@include font(14,50);
+				padding: 0 50px 0 20px;
+			}
+			
+			@include placeholder{
+				color: $white;
+				opacity: 1;
+			}
+			&:focus{
+				padding: 10px 30px 10px 10px;
+				
+				@include media('<tablet'){
+					padding: 0 50px 0 20px;
+				}
+			}
+		}
+		button[type="submit"]{
+			border: 0;
+			color: $white;
+			background: transparent;
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 20px;
+			
+			@include media('<tablet'){
+				right: 15px;
+			}
+			
+			&:hover{
+				color: $light-gray;
+			}
 		}
 	}
 }
@@ -225,6 +315,14 @@ a{ outline: none;}
 	transform: translateX(-300px);
 	transition: transform 0.5s ease;
 	padding: 52px 0 0;
+	
+	@include media('<desktop'){
+		width: 250px;
+	}
+	@include media('<tablet'){
+		width: 100%;
+		transform: translateX(-100%);
+	}
 	
 	.sideBar-active & {
 		transform: translateX(0);
@@ -305,6 +403,10 @@ a{ outline: none;}
 		@extend .text-right;
 		@include align-reset(top,24,24);
 		
+		@include media('<desktop'){
+			@include align-reset(top,19,19);
+		}
+		
 		li{
 			padding: 0 10px 10px;
 			
@@ -345,6 +447,10 @@ a{ outline: none;}
 		text-transform: capitalize;
 		padding: 10px 0 0;
 		
+		@include media('<desktop'){
+			@include font(14,18);
+		}
+		
 		li{
 			margin: 0 0 5px;
 			display: block;
@@ -352,7 +458,7 @@ a{ outline: none;}
 			&.active{
 				> a{
 					background: rgba(0, 0, 0, 0.3);
-					border-color: #000;
+					border-color: $black;
 					color: $white;
 				}
 			}
@@ -366,11 +472,20 @@ a{ outline: none;}
 				float: right;
 				margin: 0 10px 0 0;
 				
+				@include media('<desktop'){
+					@include font(11,14);
+					padding: 3px;
+				}
+				
 				&.small{
 					margin: -2px 0 0;
 					@include font(12,14);
 					padding: 3px;
 					background: rgba($gray, 0.5);
+					
+					@include media('<desktop'){
+						@include font(10,12);
+					}
 				}
 			}
 			
@@ -397,6 +512,10 @@ a{ outline: none;}
 					&:before{
 						font-size: 22px;
 						line-height: 1;
+						
+						@include media('<desktop'){
+							font-size: 18px;
+						}
 					}
 				} 
 			}
@@ -428,11 +547,10 @@ a{ outline: none;}
 }
 /*Add a property full form*/
 .addPropertyFormContianer {
-	@include container;
 	transition: padding 0.5s ease;
 	
 	.sideBar-active & {
-		padding: 0 10px 0 180px;
+		padding: 0 10px 0 320px;
 	}
 	
 	&.sectionListingActive {
@@ -564,8 +682,8 @@ a{ outline: none;}
 				z-index: 1;
 				overflow: hidden;
 				
-				@include media('<widescreen'){
-					padding: 15px 70px;
+				@include media('<tvscreen'){
+					padding: 15px 66px;
 				}
 				@include media('<desktop'){
 					padding: 15px 45px;
@@ -1209,9 +1327,27 @@ a{ outline: none;}
 	.sideBar-active &{
 		padding: 60px 10px 0 320px;
 		
+		@include media('<widescreen'){
+			padding: 60px 10px 0 310px;
+		}
+		
+		@include media('<desktop'){
+			padding: 60px 10px 0 260px;
+		}
+		@include media('<tablet'){
+			padding: 60px 10px 0;
+		}
+		
 		.listing-cetegories-links {
 			ul{
 				padding: 0 10px 0 300px;
+				
+				@include media('<desktop'){
+					padding: 0 10px 0 250px;
+				}
+				@include media('<tablet'){
+					padding: 0;
+				}
 			}
 		}
 	}
@@ -1224,7 +1360,11 @@ a{ outline: none;}
 		z-index: 99;
 		background:$light-gray;
 		text-transform: capitalize;
-			
+		
+		@include media('<tablet'){
+			top: 48px;
+		}
+		
 		ul{
 			transition: padding 0.4s ease; 
 			@extend %listreset;
@@ -1236,7 +1376,7 @@ a{ outline: none;}
 			
 			&.navFor-mobile {
 				text-align: center;
-				@include media('>desktop'){
+				@include media('>=desktop'){
 					display: none;
 				}
 				li{
@@ -1255,6 +1395,11 @@ a{ outline: none;}
 						background: $mix-grays;
 						color: $white;
 						padding: 13px 10px;
+						
+						@include media('<tablet'){
+							@include font(12,15);
+							padding: 17px 8px;
+						}
 					}
 				}
 			}
@@ -1275,31 +1420,28 @@ a{ outline: none;}
 						background: $white;
 					}
 				}
-				&.active{
-					a{ 
+				
+				strong{
+					@include align(top);
+					font-weight: 600;
+					
+					&.active{
 						color: $green;
 					}
-				}
-				&.pendings{
-					a{ 
-						color: $mix-blue;
+					&.pendings{
+							color: $mix-blue;
+					}
+					&.rejected{
+							color:#bc5858;
+					}
+					&.expired{
+							color: #cf8511;
+					}
+					&.deleted{
+							color: $red;
 					}
 				}
-				&.rejected{
-					a{
-						color:#bc5858;
-					}
-				}
-				&.expired{
-					a{
-						color: #cf8511;
-					}
-				}
-				&.deleted{
-					a{
-						color: $red;
-					}
-				}
+				
 				a{
 					display: block;
 					padding: 15px 50px;
@@ -1349,6 +1491,17 @@ a{ outline: none;}
 				width: 50%;
 			}
 			
+			@include media('<widescreen'){
+				width: 54%;
+			}
+			
+			@include media('<tablet'){
+				width: 100% !important;
+				float: none !important;
+				overflow: hidden;
+				margin: 0 0 10px !important;
+			}
+			
 			.sideBar-active & {
 				@include media('<desktop'){
 					width: 100% !important;
@@ -1368,6 +1521,13 @@ a{ outline: none;}
 					@include align-reset(middle,12,15);
 				}
 				
+				@include media('<tablet'){
+					float: none;
+					overflow: hidden;
+					display: block;
+					margin: 0 -5px;
+				}
+				
 				li{
 					padding: 5px 10px 10px;
 					float: left;
@@ -1376,15 +1536,32 @@ a{ outline: none;}
 						padding: 5px 4px 10px;
 					}
 					
-					label{ margin: 0 10px 0 0;}
+					@include media('<tablet'){
+						width: 50%;
+						padding: 0 5px;
+					}
+					
+					label{
+						margin: 0 10px 0 0;
+						
+						@include media('<tablet'){
+							display: block;
+							@extend .text-center;
+							margin: 0 0 5px;
+						}
+					}
 					
 					select{
-						padding: 0;
 						min-width: 50px;
 						border: 1px solid $mix-black;
 						height: 29px;
 						@include font(12,15);
 						outline: none;
+						
+						@include media('<tablet'){
+							min-width: 100%;
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -1405,17 +1582,21 @@ a{ outline: none;}
 					@include font(12,15);
 				}
 				
+				@include media('<tablet'){
+					float: none;
+					width: 100%;
+					display: block;
+				}
+				
 				&:hover{ background: $sharp-musterd;}
 			}
 		}
 		.by-id-sorting{
 			float: right;
 			
-			@include media('<1426px'){
-				padding: 0 0 0 70px;
-			}
 			@include media('<widescreen'){
 				padding: 0;
+				width: 46%;
 			}
 		}
 	}
@@ -1426,12 +1607,21 @@ a{ outline: none;}
 		width: 100%;
 		border-collapse: collapse;
 		@include font(15,18);
+		margin: 0 auto;
+		
+		.sideBar-active &{
+			margin: 0;
+		}
 		
 		@include media('<widescreen'){
 			width: 1024px;
 		}
 		@include media('<desktop'){
 			@include font(14,18);
+		}
+		
+		@include media('<desktop'){
+			width: 894px;
 		}
 		
 		tr{
@@ -1508,9 +1698,17 @@ a{ outline: none;}
 	@extend %listreset;
 	margin: 0 -10px;
 	
+	@include media('<desktop'){
+		@include align-reset(top,18,21);
+	}
+	
 	li{
 		padding:  0 10px 10px;
 		margin: 0;
+		
+		@include media('<desktop'){
+			padding: 0 5px 5px;
+		}
 		
 		a {
 			border: 2px solid $white;
@@ -1541,15 +1739,35 @@ a{ outline: none;}
 		overflow: hidden;
 		@include align-reset(top,14,16);
 		transition: padding 0.4s ease;
+		text-align: center;
+		
+		@include media('<desktop'){
+			@include align-reset(top,12,15);
+		}
 		
 		.sideBar-active & {
 			padding: 0 0 0 180px;
+			
+			@include media('<widescreen'){
+				padding: 0 0 0 290px;
+			}
+			@include media('<desktop'){
+				padding: 0 0 0 170px;
+			}
+			@include media('<tablet'){
+				padding: 0;
+			}
 		}
 		
 		.col {
 			width: 25%;
 			color: $light-gray;
 			padding: 30px 10px;
+			
+			@include media('<tablet'){
+				width: 50%;
+				padding: 30px 5px 0;
+			}
 			
 			address{
 				display: block;

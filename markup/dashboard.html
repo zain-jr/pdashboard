@@ -18,11 +18,14 @@
 		<header id="header">
 			<a href="#" class="logo">Property42</a>
 			<a class="sideBar-opener"><span></span></a>
-			<a href="#" class="add-property less-indent">Add a property</a>
-			<form class="searh-dashboard">
-				<input type="search" placeholder="Searh by ID">
-				<button type="submit"><span class="icon-search"></span></button>
-			</form>
+			<a href="#" class="add-property"><span class="hidden-xs">Add a</span> property</a>
+			<div class="searhForm-holder">
+				<a class="form-openerMobile"><span class="icon-search"></span></a>
+				<form class="searh-dashboard">
+					<input type="search" placeholder="Searh by ID">
+					<button type="submit"><span class="icon-search"></span></button>
+				</form>
+			</div>
 		</header>
 		<main id="main" role="main">
 			<aside id="sidebar-dashboard">
@@ -64,15 +67,37 @@
 						<ul class="navFor-mobile">
 							<li class="active">
 								<span class="tag">For Sale</span>
-								<a class="slide-onMobile-opener"><span class="icon-flash-activation"></span> active <span class="numbering">999+</span></a>
+								<a class="slide-onMobile-opener">
+									<strong class="active"><span class="icon-flash-activation"></span> active <span class="numbering">999+</span></strong>
+								</a>
 							</li>
 						</ul>
 						<ul class="slide-onMobile">
-							<li class="active active-nav"><a href="#"><span class="icon-flash-activation"></span> active <span class="numbering">999+</span></a></li>
-							<li class="pendings"><a href="#"><span class="icon-clock"></span> pendings <span class="numbering">88</span></a></li>
-							<li class="rejected"><a href="#"><span class="icon-sign"></span> rejected <span class="numbering">2</span></a></li>
-							<li class="expired"><a href="#"><span class="icon-exclamation-triangle"></span> expired <span class="numbering">99</span></a></li>
-							<li class="deleted"><a href="#"><span class="icon-trash"></span> deleted <span class="numbering">34</span></a></li>
+							<li class="active-nav">
+								<a href="#">
+									<strong class="active"><span class="icon-flash-activation"></span> active <span class="numbering">999+</span></strong>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<strong class="pendings"><span class="icon-clock"></span> pendings <span class="numbering">88</span></strong>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<strong class="rejected"><span class="icon-sign"></span> rejected <span class="numbering">2</span></strong>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<strong class="expired"><span class="icon-exclamation-triangle"></span> expired <span class="numbering">99</span></strong>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<strong class="deleted"><span class="icon-trash"></span> deleted <span class="numbering">34</span></strong>
+								</a>
+							</li>
 						</ul>
 					</div>
 					<div class="property-form-table">

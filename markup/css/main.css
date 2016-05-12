@@ -1034,7 +1034,7 @@ a {
   padding: 10px 30px 10px 0;
   margin: 0;
   border: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
   background: transparent;
   font-size: 14px;
@@ -1055,32 +1055,58 @@ a {
 
 #header .searhForm-holder .searh-dashboard input[type="text"]::-webkit-input-placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]::-webkit-input-placeholder {
   color: #fff;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 #header .searhForm-holder .searh-dashboard input[type="text"]::-moz-placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]::-moz-placeholder {
   opacity: 1;
   color: #fff;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 #header .searhForm-holder .searh-dashboard input[type="text"]:-moz-placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]:-moz-placeholder {
   color: #fff;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 #header .searhForm-holder .searh-dashboard input[type="text"]:-ms-input-placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]:-ms-input-placeholder {
   color: #fff;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 #header .searhForm-holder .searh-dashboard input[type="text"].placeholder, #header .searhForm-holder .searh-dashboard input[type="search"].placeholder {
   color: #fff;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 #header .searhForm-holder .searh-dashboard input[type="text"]:focus, #header .searhForm-holder .searh-dashboard input[type="search"]:focus {
   padding: 10px 30px 10px 10px;
+  border-color: #fff;
+}
+
+#header .searhForm-holder .searh-dashboard input[type="text"]:focus::-webkit-input-placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+#header .searhForm-holder .searh-dashboard input[type="text"]:focus::-moz-placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]:focus::-moz-placeholder {
+  opacity: 1;
+  opacity: 1;
+}
+
+#header .searhForm-holder .searh-dashboard input[type="text"]:focus:-moz-placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]:focus:-moz-placeholder {
+  opacity: 1;
+}
+
+#header .searhForm-holder .searh-dashboard input[type="text"]:focus:-ms-input-placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+#header .searhForm-holder .searh-dashboard input[type="text"]:focus.placeholder, #header .searhForm-holder .searh-dashboard input[type="search"]:focus.placeholder {
+  opacity: 1;
+}
+
+#header .searhForm-holder .searh-dashboard input[type="text"]:focus ~ button[type="submit"], #header .searhForm-holder .searh-dashboard input[type="search"]:focus ~ button[type="submit"] {
+  color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -1091,7 +1117,7 @@ a {
 
 #header .searhForm-holder .searh-dashboard button[type="submit"] {
   border: 0;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
   background: transparent;
   padding: 0;
   margin: 0;
@@ -1707,4 +1733,8 @@ a {
   line-height: 21px;
   font-weight: 600;
   margin: 0 0 10px;
+}
+
+.resize-active * {
+  transition: none !important;
 }

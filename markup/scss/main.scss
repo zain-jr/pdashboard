@@ -191,7 +191,7 @@ a{ outline: none;}
 				padding: 10px 30px 10px 0;
 				margin: 0;
 				border: 0;
-				border-bottom: 1px solid $white;
+				border-bottom: 1px solid rgba($white,0.5);
 				color: $white;
 				background: transparent;
 				@include font(14,16);
@@ -206,10 +206,15 @@ a{ outline: none;}
 				
 				@include placeholder{
 					color: $white;
-					opacity: 1;
+					opacity: 0.5;
 				}
 				&:focus{
 					padding: 10px 30px 10px 10px;
+					border-color: $white;
+					
+					@include placeholder{ opacity: 1;}
+					
+					~ button[type="submit"]{ color: $white;}
 					
 					@include media('<tablet'){
 						padding: 0 50px 0 20px;
@@ -218,7 +223,7 @@ a{ outline: none;}
 			}
 			button[type="submit"]{
 				border: 0;
-				color: $white;
+				color: rgba($white, 0.5);
 				background: transparent;
 				padding: 0;
 				margin: 0;
@@ -650,4 +655,7 @@ a{ outline: none;}
 			margin: 0 0 10px;
 		}
 	}
+}
+.resize-active *{
+	transition: none !important;
 }

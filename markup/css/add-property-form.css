@@ -24,7 +24,7 @@
 }
 
 .sideBar-active .addPropertyFormContainer {
-  padding: 0 10px 0 320px;
+  padding: 0 10px 0 310px;
 }
 
 .addPropertyFormContainer.sectionListingActive .section-listing {
@@ -36,7 +36,7 @@
 }
 
 .addPropertyFormContainer .attactment-block, .addPropertyFormContainer .basics-block, .addPropertyFormContainer .feature-block, .addPropertyFormContainer .contact-information {
-  padding: 75px 0 0;
+  padding: 75px 20px 0;
 }
 
 @media (max-width: 1023px) {
@@ -73,6 +73,7 @@
 }
 
 .addPropertyFormContainer .listing-holder .listing-opener {
+  text-align: center;
   text-decoration: none;
   color: #000;
   font-size: 40px;
@@ -191,7 +192,7 @@
 }
 
 .addPropertyFormContainer .section-listing li a:after {
-  background: #edf1f4;
+  background: #fff;
   position: absolute;
   left: 0;
   right: 100%;
@@ -916,21 +917,18 @@
 
 .addPropertyFormContainer .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #000;
+  top: 50%;
+  right: 50%;
+  color: #e14646;
   text-decoration: none;
   z-index: 6;
-  font-size: 30px;
-  line-height: 32px;
+  font-size: 50px;
+  line-height: 50px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
   cursor: pointer;
-}
-
-.addPropertyFormContainer .image-uploading-area li .image-holder .propertyDocumentCloseBtn:hover {
-  color: #e14646;
+  margin: -25px -25px 0 0;
 }
 
 .addPropertyFormContainer .image-uploading-area li .image-holder img {

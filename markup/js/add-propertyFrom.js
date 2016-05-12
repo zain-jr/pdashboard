@@ -1,4 +1,4 @@
- function previewAddPropertyImg(file, target)
+function previewAddPropertyImg(file, target)
  {
 	previewFile(file, target);
 	$(file).closest('li').find('.picture-name').removeClass('disableInput');
@@ -21,7 +21,7 @@
  });
  
  $(document).on('click', '.listing-opener', function(){
-	 $('.addPropertyFormContianer').toggleClass('sectionListingActive');
+	 $('.addPropertyFormContainer').toggleClass('sectionListingActive');
  });
  
 function onScroll(event){
@@ -42,7 +42,7 @@ function onScroll(event){
 function handleAddPropertyFormScrolling()
 {
 	$('.scrollAddPropertyNavLink').click(function() {
-			$('.addPropertyFormContianer').removeClass('sectionListingActive');
+			$('.addPropertyFormContainer').removeClass('sectionListingActive');
 			$(this).closest('li').siblings().removeClass('activeAddPropertyNavLink');
 			$(this).closest('li').addClass('activeAddPropertyNavLink');
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

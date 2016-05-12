@@ -1,14 +1,13 @@
  
  $(function() {
-	 if ($(".addPropertyFormContianer")[0]){
+	 if ($(".addPropertyFormContainer")[0]){
 		handleAddPropertyFormScrolling();
-		//$(document).on("scroll", onScroll);
+		$(document).on("scroll", onScroll);
 	 }
 });
 
-/*
 $(window).scroll(function(){
-	if ($(".addPropertyFormContianer")[0]){
+	if ($(".addPropertyFormContainer")[0]){
 		if ($(this).scrollTop() >= $('#header').height()) {
 			$('.addPropertyFormContianer').addClass('fixed-position');
 		} else {
@@ -16,7 +15,7 @@ $(window).scroll(function(){
 		}
 	}
 });
-*/
+
 
 $(".searchable-select").select2({
 	placeholder: "Select",

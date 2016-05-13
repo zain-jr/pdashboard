@@ -24,7 +24,7 @@
 }
 
 .sideBar-active .addPropertyFormContainer {
-  padding: 0 10px 0 310px;
+  padding: 0 10px 0 290px;
 }
 
 .addPropertyFormContainer.sectionListingActive .section-listing {
@@ -787,13 +787,6 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-}
-
-@media (max-width: 1199px) {
-  .addPropertyFormContainer .image-uploading-area li .file-uploader {
-    width: 200px;
-    height: 200px;
-  }
 }
 
 @media (max-width: 1023px) {

@@ -30,7 +30,7 @@ $media-expressions: (
 	transition: padding 0.5s ease;
 	
 	.sideBar-active & {
-		padding: 0 10px 0 310px;
+		padding: 0 10px 0 290px;
 	}
 	
 	&.sectionListingActive {
@@ -653,10 +653,6 @@ $media-expressions: (
 					position: relative;
 					z-index: 1;
 					overflow: hidden;
-					
-					@include media('<widescreen'){
-						@include squar(200px, 200px);
-					}
 					
 					@include media('<desktop'){
 						@include squar(150px, 150px);

@@ -316,7 +316,12 @@ a{ outline: none;}
 	left: 0;
 	z-index: 999;
 	transform: translateX(-300px);
+	-webkit-transform: translateX(-300px);
+	-moz-transform: translateX(-300px);
+	-ms-transform: translateX(-300px);
 	transition: transform 0.5s ease;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
 	padding: 52px 0 0;
 	
 	@include media('<desktop'){
@@ -325,10 +330,16 @@ a{ outline: none;}
 	@include media('<tablet'){
 		width: 100%;
 		transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+		-ms-transform: translateX(-100%);
+		-moz-transform: translateX(-100%);
 	}
 	
 	.sideBar-active & {
 		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
 	}
 	.user-picture{
 		padding: 10px 5px 0;

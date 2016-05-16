@@ -28,12 +28,79 @@ $media-expressions: (
 /*Add a property full form*/
 .addPropertyFormContainer {
 	transition: padding 0.5s ease;
+	-webkit-transition: padding 0.5s ease;
+	-ms-transition: padding 0.5s ease;
+	-moz-transition: padding 0.5s ease;
+	position: relative;
+	overflow: hidden;
 	
 	.sideBar-active & {
-		padding: 0 10px 0 290px;
+		padding: 0 10px 0 300px;
+		
+		@include media('<desktop'){
+			padding: 0 10px 0 245px;
+		}
+		@include media('<tablet'){
+			padding:0;
+		}
+	}
+	
+	.sideBar-active.sideBar-active & {
+		&:after{
+			left: 300px;
+			
+			@include media('<desktop'){
+				left: 250px;
+			}
+		}
+	}
+	
+	.please-wait & {
+		height: 100vh;
+		
+		&:after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 99;
+			background: rgba($white, 0.9);
+			content: '';
+			transition: left 0.4s ease;
+			-webkit-transition: left 0.4s ease;
+			-moz-transition: left 0.4s ease;
+			-ms-transition: left 0.4s ease;
+		}
+		
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background: url("../images/rolling.gif") no-repeat;
+			background-size: 100% , 100%;
+			z-index: 991;
+			content: 'Please wait...';
+			@include squar(100px,100px);
+			@include font(14,17);
+			font-weight: 600;
+			margin: -150px 0 0;
+			text-align: center;
+			padding: 120px 0 0 10px;
+			color: lighten($black, 45%);
+			
+			@include media('<1425px'){
+				margin: -150px 0 0 100px;
+			}
+			
+			@include media('<desktop'){
+				margin: -150px 0 0 -55px;
+			}
+		}
 	}
 	
 	&.sectionListingActive {
+		
 		.section-listing{
 			height: auto;
 			max-height: 210px;
@@ -45,6 +112,10 @@ $media-expressions: (
 	
 	.attactment-block, .basics-block, .feature-block, .contact-information{
 		padding: 75px 20px 0;
+		
+		@include media('<tablet'){
+			padding: 75px 10px 0;
+		}
 	}
 	
 	.select2-container{
@@ -55,6 +126,38 @@ $media-expressions: (
 			margin: 0;
 			min-width: inherit;
 			width: 100%;
+		}
+	}
+	
+	
+	.errors{
+		overflow: hidden;
+		
+		ul {
+			@extend %listreset;
+			@include align-reset(top,14,15);
+			max-width: 1200px;
+			margin:0 auto;
+			
+			@include media('<tablet'){
+				@include align-reset(top,12,15);
+			}
+			
+			li{
+				width: 30%;
+				padding: 7px;
+				border-radius: 4px;
+				color: $red;
+				margin: 0 5px 10px;
+				border: 1px solid $red;
+				background: lighten($red, 35%);
+				text-align: center;
+				
+				@include media('<tablet'){
+					padding: 5px;
+					width: 45%;
+				}
+			}
 		}
 	}
 	
@@ -103,9 +206,18 @@ $media-expressions: (
 		@include align-reset(top, 18, 21);
 		position: relative;
 		background: $light-gray;
+		transition: padding 0.4s ease;
+		-webkit-transition: padding 0.4s ease;
+		-moz-transition: padding 0.4s ease;
+		-ms-transition: padding 0.4s ease;
 		
 		.sideBar-active &{
 			padding: 0 0 0 300px;
+			
+			@include media('<desktop'){
+				padding: 0 0 0 250px;
+				@include align-reset(top, 14, 17);
+			}
 		}
 		
 		@include media('<tablet'){
@@ -120,6 +232,9 @@ $media-expressions: (
 			height: 0;
 			overflow: auto;
 			transition: z-index 0.5s ease, max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+			-webkit-transition: z-index 0.5s ease, max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+			-moz-transition: z-index 0.5s ease, max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+			-ms-transition: z-index 0.5s ease, max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
 		}
 		
 		li{
@@ -164,10 +279,15 @@ $media-expressions: (
 				overflow: hidden;
 				
 				@include media('<tvscreen'){
-					padding: 15px 66px;
+					padding: 15px 58px;
 				}
+				
+				@include media('<widescreen'){
+					padding:15px 45px;
+				}
+				
 				@include media('<desktop'){
-					padding: 15px 45px;
+					padding: 15px 30px;
 				}
 				
 				&:after {
@@ -180,6 +300,9 @@ $media-expressions: (
 					z-index: -1;
 					content: '';
 					transition: all 0.4s ease;
+					-webkit-transition: all 0.4s ease;
+					-moz-transition: all 0.4s ease;
+					-ms-transition: all 0.4s ease;
 				}
 				[class^="icon-"], [class*="icon-"] {
 					position: absolute;
@@ -187,13 +310,29 @@ $media-expressions: (
 					left:40px;
 					margin: -11px 0 0;
 					
+					@include media('<tvscreen'){
+						left: 25px;
+					}
+					
+					@include media('<widescreen'){
+						left: 15px;
+					}
+					
 					@include media('<desktop'){
-						left: 9px;
+						left: 5px;
+					}
+					
+					@include media('<tablet'){
+						left: 35px;
 					}
 					
 					&:before{
 						font-size: 25px;
 						line-height: 1;
+						
+						@include media('<desktop'){
+							font-size: 20px;
+						}
 					}
 				}
 			}
@@ -224,16 +363,21 @@ $media-expressions: (
 				position: relative;
 				text-decoration: none;
 				transition: color 0.4s ease;
+				-webkit-transition: color 0.4s ease;
+				-moz-transition: color 0.4s ease;
+				-ms-transition: color 0.4s ease;
 				
 				.round{
 					@include align(middle);
 					@include squar(20px, 20px);
 					border: 2px solid $mix-grays;
 					margin: -2px 4px 0 0;
-					transition: all 0.4s ease;
 					content: '';
 					position: relative;
 					transition: border 0.4s ease;
+					-webkit-transition: border 0.4s ease;
+					-moz-transition: border 0.4s ease;
+					-ms-transition: border 0.4s ease;
 					
 					&:after{
 						position: absolute;
@@ -282,8 +426,12 @@ $media-expressions: (
 			padding: 6px 10px;
 			outline: none;
 			
+			@include media('<widescreen'){
+				max-width: 185px;
+			}
+			
 			@include media('<desktop'){
-				max-width: 190px;
+				max-width: 115px;
 			}
 			
 			@include media('<tablet'){
@@ -319,6 +467,9 @@ $media-expressions: (
 				right: -100px;
 				margin: -9px 0 0;
 				transition: right 0.4s ease;
+				-webkit-transition: right 0.4s ease;
+				-moz-transition: right 0.4s ease;
+				-ms-transition: right 0.4s ease;
 				
 				&:before{
 					font-size: 12px;
@@ -335,9 +486,13 @@ $media-expressions: (
 				z-index: -1;
 				content: '';
 				transition: all 0.4s ease;
+				-webkit-transition: all 0.4s ease;
+				-ms-transition: all 0.4s ease;
+				-moz-transition: all 0.4s ease;
 			}
 			&:hover{
 				&:after{ left: 0;}
+				
 				[class^="icon"],[class*="icon"]{
 					right: 20px;
 				}
@@ -362,8 +517,12 @@ $media-expressions: (
 			resize: none;
 			padding: 10px;
 			
+			@include media('<widescreen'){
+				max-width: 523px;
+			}
+			
 			@include media('<desktop'){
-				max-width: 565px;
+				max-width: 350px;
 			}
 			@include media('<tablet'){
 				max-width: inherit;
@@ -415,6 +574,7 @@ $media-expressions: (
 		.radio-holder{
 			@extend %listreset;
 			@include align-reset(top,12,15);
+			text-transform: capitalize;
 			
 			li{
 				padding: 0 10px 10px;
@@ -487,7 +647,7 @@ $media-expressions: (
 			.layout-holder{
 				float: left;
 				width: 50%;
-				margin: 0 auto;
+				margin: 0 auto 10px;
 				
 				@include media('<tablet'){
 					float: none;
@@ -537,6 +697,10 @@ $media-expressions: (
 		border-bottom: 1px solid #adadad;
 		padding: 0 0 5px;
 		margin: 30px 0 0;
+		
+		@include media('<desktop'){
+			@include font(14,16);
+		}
 		
 		span{
 			@include align(top);
@@ -591,16 +755,60 @@ $media-expressions: (
 		}
 		
 		li{
-			padding: 0 30px 15px;
+			padding: 0 10px 15px;
+			width: 25%;
+			
+			@include media('<desktop'){
+				width: 33.33%;
+				padding: 0 5px 10px;
+			}
+			
+			@include media('<tablet'){
+				width: 50%;
+			}
 			
 			label{
 				text-transform: capitalize;
 				cursor: pointer;
-				@include align(middle);
+				float: left;
+				width: 35%;
+				padding: 5px 0 0;
+				
+				@include media('<widescreen'){
+					width: 50%;
+				}
+				@include media('<tablet'){
+					float: left;
+				}
+				
+				
 			}
+			select,
+			input[type="text"],input[type="search"],input[type="email"],input[type="password"],input[type="number"],input[type="tel"]{
+				margin: 0;
+				width: 100%;
+				height: 25px;
+				max-width: inherit;
+				padding: 3px 10px;
+				@include font(12,15);
+			}
+			
+			.input-holder{
+				padding: 0 0 0 10px;
+				width: 65%;
+				
+				@include media('<widescreen'){
+					width: 50%;
+				}
+				@include media('<tablet'){
+					float: left;
+				}
+			}
+			input[type="radio"],
 			input[type="checkbox"]{
 				cursor: pointer;
-				@include align(middle);
+				@include align(bottom);
+				margin: 7px 0 0;
 			}
 		}
 	}
@@ -617,11 +825,15 @@ $media-expressions: (
 		li{
 			width: 25%;
 			position: relative;
-			padding: 10px 0;
+			padding: 10px;
 			
-			@include media('<tablet'){
-				width: 50%;
+			@include media('<desktop'){
+				width: 33.33%;
 				padding: 10px 5px;
+			}
+			
+			@include media('<desktop'){
+				width: 50%;
 			}
 			
 			&:first-child{
@@ -647,18 +859,18 @@ $media-expressions: (
 			}
 			
 			.file-uploader{
-					@include squar(250px, 200px);
+					@include squar(100%, 250px);
 					margin: 0 auto;
 					background: $dove-gray;
 					position: relative;
 					z-index: 1;
 					overflow: hidden;
 					
-					@include media('<desktop'){
-						@include squar(150px, 150px);
+					@include media('<1425px'){
+						@include squar(100%, 200px);
 					}
 					
-					@include media('<tablet'){
+					@include media('<widescreen'){
 						@include squar(100%, 150px);
 					}
 					
@@ -682,6 +894,9 @@ $media-expressions: (
 						margin: -40px 0 0 -40px;
 						color: #9da2a8;
 						transition: color 0.4s ease;
+						-webkit-transition: color 0.4s ease;
+						-ms-transition: color 0.4s ease;
+						-moz-transition: color 0.4s ease;
 						
 						@include media('<desktop'){
 							font-size: 60px;
@@ -708,6 +923,9 @@ $media-expressions: (
 				height: 50px;
 				@include font(14,18);
 				transition: border 0.4s ease;
+				-webkit-transition: border 0.4s ease;
+				-ms-transition: border 0.4s ease;
+				-moz-transition: border 0.4s ease;
 				
 				@include media('<widescreen'){
 					max-width: 200px;
@@ -742,7 +960,10 @@ $media-expressions: (
 				overflow: hidden;
 				z-index: -1;
 				opacity: 0;
-				transition: z-index 0.9s ease, opacity 0.9s ease; 
+				transition: z-index 0.9s ease, opacity 0.9s ease;
+				-webkit-transition: z-index 0.9s ease, opacity 0.9s ease;
+				-moz-transition: z-index 0.9s ease, opacity 0.9s ease;
+				-ms-transition: z-index 0.9s ease, opacity 0.9s ease; 
 				
 				&:after{
 					position: absolute;
@@ -753,6 +974,9 @@ $media-expressions: (
 					background: rgba(255,255,255,0.7);
 					content: '';
 					transition: top 0.4s ease;
+					-webkit-transition: top 0.4s ease;
+					-moz-transition: top 0.4s ease;
+					-ms-transition: top 0.4s ease;
 				}
 				
 				.propertyDocumentCloseBtn{
@@ -766,6 +990,9 @@ $media-expressions: (
 					opacity: 0;
 					visibility: hidden;
 					transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+					-webkit-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+					-ms-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+					-moz-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
 					cursor:pointer;
 					margin: -25px -25px 0 0;
 				}

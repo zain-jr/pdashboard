@@ -79,6 +79,18 @@ a{ outline: none;}
 	background: $defualt-blue;
 	@extend %clearfix;
 	
+	.please-wait & {
+		&:after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 99;
+			content: '';
+		}
+	}
+	
 	.sideBar-opener {
 		float: left;
 		@include squar(25px, 19px);
@@ -120,6 +132,9 @@ a{ outline: none;}
 				border-right: 5px solid $dove-gray;
 				margin: -5px 0 0;
 				transition: left 0.4s ease, right 0.4s ease;
+				-webkit-transition: left 0.4s ease, right 0.4s ease;
+				-ms-transition: left 0.4s ease, right 0.4s ease;
+				-moz-transition: left 0.4s ease, right 0.4s ease;
 			}
 			
 			&:after {
@@ -196,6 +211,9 @@ a{ outline: none;}
 				background: transparent;
 				@include font(14,16);
 				transition: padding 0.4s ease;
+				-moz-transition: padding 0.4s ease;
+				-webkit-transition: padding 0.4s ease;
+				-ms-transition: padding 0.4s ease;
 				
 				@include media('<tablet'){
 					@include squar(100%, 50px);
@@ -271,6 +289,9 @@ a{ outline: none;}
 	margin: 9px 10px 0;
 	padding: 8px 17px;
 	transition: background 0.4s ease;
+	-webkit-transition: background 0.4s ease;
+	-ms-transition: background 0.4s ease;
+	-moz-transition: background 0.4s ease;
 	
 	@include media('<tablet'){
 		max-width: 130px;
@@ -323,6 +344,18 @@ a{ outline: none;}
 	-webkit-transition: transform 0.5s ease;
 	-moz-transition: transform 0.5s ease;
 	padding: 52px 0 0;
+	
+	.please-wait & {
+		&:after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 99;
+			content: '';
+		}
+	}
 	
 	@include media('<desktop'){
 		width: 250px;
@@ -382,11 +415,17 @@ a{ outline: none;}
 			@include font(14,17);
 			padding:5px 40px 5px 10px;
 			transition: border 0.4s ease;
+			-webkit-transition: border 0.4s ease;
+			-moz-transition: border 0.4s ease;
+			-ms-transition: border 0.4s ease;
 			
 			@include placeholder{
 				opacity: 0.5;
 				color: $white;
 				transition: opacity 0.4s ease;
+				-moz-transition: opacity 0.4s ease;
+				-ms-transition: opacity 0.4s ease;
+				-webkit-transition: opacity 0.4s ease;
 			}
 			
 			&:focus{
@@ -411,6 +450,9 @@ a{ outline: none;}
 			appearance: none;
 			outline: none;
 			transition: color 0.4s ease;
+			-webkit-transition: color 0.4s ease;
+			-moz-transition: color 0.4s ease;
+			-ms-transition: color 0.4s ease;
 			
 			&:hover{
 				color: $index-white;
@@ -455,6 +497,9 @@ a{ outline: none;}
 		@include font(16px,19px);
 		letter-spacing: 1px;
 		transition: color 0.4s ease;
+		-webkit-transition: color 0.4s ease;
+		-moz-transition: color 0.4s ease;
+		-ms-transition: color 0.4s ease;
 		text-transform: capitalize;
 		font-weight: 600;
 		
@@ -514,10 +559,12 @@ a{ outline: none;}
 				text-decoration: none;
 				padding: 10px 20px;
 				color: $light-gray;
-				transition: color 0.4s ease;
 				border: 1px solid transparent;
 				margin: 0 0 5px;
-				transition: background 0.4s ease, border 0.4s ease;
+				transition:color 0.4s ease, background 0.4s ease, border 0.4s ease;
+				-webkit-transition:color 0.4s ease, background 0.4s ease, border 0.4s ease;
+				-moz-transition:color 0.4s ease, background 0.4s ease, border 0.4s ease;
+				-ms-transition:color 0.4s ease, background 0.4s ease, border 0.4s ease;
 				
 				&:hover{
 					background: rgba(0, 0, 0, 0.3);
@@ -548,6 +595,9 @@ a{ outline: none;}
 					a{
 						padding: 5px 30px;
 						transition: background 0.4s ease, border 0.4s ease;
+						-webkit-transition: background 0.4s ease, border 0.4s ease;
+						-ms-transition: background 0.4s ease, border 0.4s ease;
+						-moz-transition: background 0.4s ease, border 0.4s ease;
 						
 						[class^="icon-"],[class*="icon-"]{
 							@include align(middle);
@@ -587,6 +637,9 @@ a{ outline: none;}
 			border-radius: 100%;
 			@include align(top);
 			transition: all 0.4s ease;
+			-webkit-transition: all 0.4s ease;
+			-moz-transition: all 0.4s ease;
+			-ms-transition: all 0.4s ease;
 			
 			&:hover{
 				
@@ -605,11 +658,27 @@ a{ outline: none;}
 }
 #footer{
 	background: $dove-black;
+	position: relative;
+	
+	.please-wait & {
+		&:after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 99;
+			content: '';
+		}
+	}
 	
 	.cols-holder{
 		overflow: hidden;
 		@include align-reset(top,14,16);
 		transition: padding 0.4s ease;
+		-webkit-transition: padding 0.4s ease;
+		-moz-transition: padding 0.4s ease;
+		-ms-transition: padding 0.4s ease;
 		text-align: center;
 		
 		@include media('<desktop'){
@@ -669,4 +738,7 @@ a{ outline: none;}
 }
 .resize-active *{
 	transition: none !important;
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
 }

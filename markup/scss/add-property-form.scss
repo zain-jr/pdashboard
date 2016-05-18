@@ -118,18 +118,6 @@ $media-expressions: (
 		}
 	}
 	
-	.select2-container{
-		@include media('<desktop'){
-			min-width: 190px;
-		}
-		@include media('<tablet'){
-			margin: 0;
-			min-width: inherit;
-			width: 100%;
-		}
-	}
-	
-	
 	.errors{
 		overflow: hidden;
 		
@@ -636,6 +624,9 @@ $media-expressions: (
 			&.add{
 				max-width: 885px;
 				margin: 0 auto;
+				overflow: visible;
+				@extend %clearfix;
+				clear: both;
 				
 				@include media('<tablet'){
 					max-width: inherit;
@@ -664,6 +655,15 @@ $media-expressions: (
 				select{
 					margin: 0 0 0 9px;
 					height: 30px;
+					width:262px;
+					
+					@include media('<widescreen'){
+						width: 186px;
+					}
+					
+					@include media('<desktop'){
+						width: 116px;
+					}
 					
 					@include media('<tablet'){
 						width: 100%;
@@ -719,14 +719,35 @@ $media-expressions: (
 	}
 	.feature-block{
 		
+		.feature-blockOpener{
+			width: 300px;
+			text-align: center;
+			cursor: pointer;
+			display: block;
+			margin: 0 auto;
+			color: $black;
+			border: 1px solid $black;
+			text-transform: capitalize;
+			font-weight: 600;
+			padding: 10px;
+			transition: color 0.4s ease, background 0.4s ease;
+			-webkit-transition: color 0.4s ease, background 0.4s ease;
+			-moz-transition: color 0.4s ease, background 0.4s ease;
+			-ms-transition: color 0.4s ease, background 0.4s ease;
+			
+			&:hover{
+				background: $black;
+				color: $white;
+			}
+		}
+		
 		.holder{
 			overflow: hidden;
 			padding: 10px 0 0;
 			
 			.tag{
-				padding: 10px 0;
-				max-width: 800px;
-				margin: 0 auto;
+				display: block;
+				padding:10px;
 			}
 		}
 	}
@@ -739,8 +760,8 @@ $media-expressions: (
 	.feature-list{
 		@extend %listreset;
 		@include align-reset(middle,13,16);
-		max-width: 800px;
 		margin: 0 auto 20px;
+		max-width: 1220px;
 		position: relative;
 		padding: 0 0 20px;
 		
@@ -759,7 +780,7 @@ $media-expressions: (
 			width: 25%;
 			
 			@include media('<desktop'){
-				width: 33.33%;
+				width: 50%;
 				padding: 0 5px 10px;
 			}
 			
@@ -773,6 +794,7 @@ $media-expressions: (
 				float: left;
 				width: 35%;
 				padding: 5px 0 0;
+				@include font(12,15);
 				
 				@include media('<widescreen'){
 					width: 50%;
@@ -823,9 +845,9 @@ $media-expressions: (
 		}
 		
 		li{
-			width: 25%;
+			width: 16.66%;
 			position: relative;
-			padding: 10px;
+			padding: 10px 5px;
 			
 			@include media('<desktop'){
 				width: 33.33%;
@@ -859,7 +881,7 @@ $media-expressions: (
 			}
 			
 			.file-uploader{
-					@include squar(100%, 250px);
+					@include squar(100%, 200px);
 					margin: 0 auto;
 					background: $dove-gray;
 					position: relative;
@@ -867,11 +889,11 @@ $media-expressions: (
 					overflow: hidden;
 					
 					@include media('<1425px'){
-						@include squar(100%, 200px);
+						@include squar(100%, 150px);
 					}
 					
 					@include media('<widescreen'){
-						@include squar(100%, 150px);
+						@include squar(100%, 110px);
 					}
 					
 					&:hover{
@@ -888,10 +910,10 @@ $media-expressions: (
 						left: 50%;
 						content: "\e900";
 						font-family: 'icomoon';
-						font-size: 86px;
+						font-size: 50px;
 						line-height: 1;
 						z-index: -1;
-						margin: -40px 0 0 -40px;
+						margin: -25px 0 0 -25px;
 						color: #9da2a8;
 						transition: color 0.4s ease;
 						-webkit-transition: color 0.4s ease;
@@ -915,8 +937,9 @@ $media-expressions: (
 			}
 			.picture-name{
 				display: block;
-				margin: 0 auto;
-				max-width: 250px;
+				max-width: inherit;
+				margin: 0;
+				width: 100%;
 				border-width:0 0 2px;
 				border-style: solid;
 				border-color: $gray;
@@ -926,18 +949,6 @@ $media-expressions: (
 				-webkit-transition: border 0.4s ease;
 				-ms-transition: border 0.4s ease;
 				-moz-transition: border 0.4s ease;
-				
-				@include media('<widescreen'){
-					max-width: 200px;
-				}
-				
-				@include media('<desktop'){
-					max-width: 150px;
-				}
-				
-				@include media('<tablet'){
-					max-width: inherit;
-				}
 				
 				&.disableInput{
 					opacity: 0.5;
@@ -995,6 +1006,10 @@ $media-expressions: (
 					-moz-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
 					cursor:pointer;
 					margin: -25px -25px 0 0;
+					
+					@include media('<1425px'){
+						@include font(50,50);
+					}
 				}
 				
 				img{

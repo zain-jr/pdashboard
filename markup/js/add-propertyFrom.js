@@ -1,3 +1,12 @@
+$(document).ready(function() {
+    $('.feature-block').find('.holder').hide();
+	 $('.feature-block').find('.form-heading').hide();
+	$('.feature-blockOpener').on('click', function(){
+		$(this).closest('.feature-block').find('.holder').slideToggle();
+		$(this).closest('.feature-block').find('.form-heading').slideToggle();
+	});
+});
+
 function previewAddPropertyImg(file, target)
  {
 	previewFile(file, target);

@@ -79,7 +79,41 @@ a{ outline: none;}
 	background: $defualt-blue;
 	@extend %clearfix;
 	
+	.page-loader-underProgress &{
+		&:before{
+			width: 0;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			background: red;
+			content: '';
+			animation-name: pagelodaer-progress;
+			animation-duration: 7s;
+			animation-iteration-count: 1;
+			animation-timing-function: ease-out;
+		}
+	}
+	.page-loader-hold &{
+		
+		&:before{
+			animation-name: pagelodaer-progress;
+			animation-duration: 4s;
+			animation-iteration-count: 1;
+			animation-timing-function: ease-out;
+			animation-play-state: paused;
+		}
+	}
+	.page-loader-complete &{
+		&:before{
+			animation-name: pagelodaer-complete;
+			animation-duration: 0.5s;
+			animation-iteration-count: 1;
+			animation-timing-function: ease-out;
+		}
+	}
 	.please-wait & {
+		
 		&:after{
 			position: absolute;
 			top: 0;
@@ -735,6 +769,24 @@ a{ outline: none;}
 			margin: 0 0 10px;
 		}
 	}
+}
+@keyframes pagelodaer-progress{
+	0% { width: 0%; } 20% { width: 20%; } 40% { width: 40%; } 60% { width:  60%;} 100% { width: 100%;}
+}
+@-moz-keyframes pagelodaer-progress{
+	0% { width: 0%; } 20% { width: 20%; } 40% { width: 40%; } 60% { width:  60%;} 100% { width: 100%;}
+}
+@-webkit-keyframes pagelodaer-progress{
+	0% { width: 0%; } 20% { width: 20%; } 40% { width: 40%; } 60% { width:  60%;} 100% { width: 100%;}
+}
+@keyframes pagelodaer-complete{
+	from { width: 60%} to { width: 100%}
+}
+@-moz-keyframes pagelodaer-complete{
+	from { width: 60%} to { width: 100%}
+}
+@-webkit-keyframes pagelodaer-complete{
+	from { width: 60%} to { width: 100%}
 }
 .resize-active *{
 	transition: none !important;

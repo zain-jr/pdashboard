@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('.feature-block').find('.holder').hide();
 	 $('.feature-block').find('.form-heading').hide();
-	$('.feature-blockOpener').on('click', function(){
+	$(document).on('click', '.feature-blockOpener', function(){
 		$(this).closest('.feature-block').find('.holder').slideToggle();
 		$(this).closest('.feature-block').find('.form-heading').slideToggle();
 	});
@@ -10,7 +10,6 @@ $(document).ready(function() {
 function previewAddPropertyImg(file, target)
  {
 	previewFile(file, target);
-	$(file).closest('li').find('.picture-name').removeClass('disableInput');
 	$(file).closest('li').find('.image-holder').css({
 		 'opacity':'1',
 		 'z-index':'5'
@@ -27,6 +26,7 @@ function previewAddPropertyImg(file, target)
 	 $(this).closest('.file-uploader').removeClass('after-none');
 	 $(this).closest('li').find('.picture-name').addClass('disableInput');
 	 $(this).closest('li').find('.picture-name').val('');
+	 $(this).closest('li').find('img').attr('src', '#');
  });
  
  $(document).on('click', '.listing-opener', function(){

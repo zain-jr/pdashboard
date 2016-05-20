@@ -895,7 +895,7 @@
   text-align: center;
   cursor: pointer;
   display: block;
-  margin: 0 auto;
+  margin: 30px auto 0;
   color: #000;
   border: 1px solid #000;
   text-transform: capitalize;
@@ -942,7 +942,7 @@
 
 .addPropertyFormContainer .feature-list > * {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   font-size: 13px;
   line-height: 16px;
   letter-spacing: 0;
@@ -981,7 +981,7 @@
   cursor: pointer;
   float: left;
   width: 35%;
-  padding: 5px 0 0;
+  padding: 3px 0 0;
   font-size: 12px;
   line-height: 15px;
 }

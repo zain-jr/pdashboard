@@ -16,7 +16,6 @@ $(window).scroll(function(){
 	}
 });
 
-
 $(".searchable-select").select2({
 	placeholder: "Select",
   allowClear: true

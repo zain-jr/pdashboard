@@ -724,7 +724,7 @@ $media-expressions: (
 			text-align: center;
 			cursor: pointer;
 			display: block;
-			margin: 0 auto;
+			margin: 30px auto 0;
 			color: $black;
 			border: 1px solid $black;
 			text-transform: capitalize;
@@ -759,7 +759,7 @@ $media-expressions: (
 	}
 	.feature-list{
 		@extend %listreset;
-		@include align-reset(middle,13,16);
+		@include align-reset(top,13,16);
 		margin: 0 auto 20px;
 		max-width: 1220px;
 		position: relative;
@@ -793,7 +793,7 @@ $media-expressions: (
 				cursor: pointer;
 				float: left;
 				width: 35%;
-				padding: 5px 0 0;
+				padding: 3px 0 0;
 				@include font(12,15);
 				
 				@include media('<widescreen'){

@@ -316,7 +316,6 @@ $media-expressions: (
 	}
 	.propeties-table{
 		width: 100%;
-		@include font(15,18);
 		margin: 0 auto;
 		@extend %listreset;
 		overflow: hidden;
@@ -326,7 +325,7 @@ $media-expressions: (
 		}
 		
 		@include media('<widescreen'){
-			width: 1024px;
+			width: 1200px;
 		}
 		@include media('<desktop'){
 			@include font(14,18);
@@ -341,13 +340,49 @@ $media-expressions: (
 			@include align-reset(top,15,18);
 			border-bottom: 1px solid rgba($mix-grays, 0.4);
 			
+			@include media('<1555px'){
+				@include align-reset(top,13,16);
+			}
+			
+			&.active {
+				border-left: 1px solid rgba($mix-grays, 0.4);
+				border-right: 1px solid rgba($mix-grays, 0.4);
+				background: rgba($black, 0.03);
+			}
+			
+			&:first-child{
+				border: 0;
+				background: rgba($defualt-blue, 0.5);
+				border-radius: 4px;
+			}
+			
 			.t-head{
 				text-align: left;
 				padding: 8px;
-				background: rgba($defualt-blue, 0.5);
 				color: $white;
 				width: 14.28%;
 				font-weight: 600;
+				
+				&.by-location,
+				&.by-type{
+					width: 23.72%;
+				}
+				
+				&.by-id {
+					width: 8%;
+				}
+				
+				&.by-price{
+					width: 8%;
+				}
+				
+				&.by-view {
+					width: 8%;
+				}
+				
+				@include media('<1555px'){
+					width: 14.28% !important;
+				}
 				
 				@include media('<desktop'){
 					padding: 5px;
@@ -356,13 +391,27 @@ $media-expressions: (
 				span {
 					@include align(top);
 					cursor: pointer;
+					position: relative;
+					
+					&:after{
+						position: absolute;
+						top: 8px;
+						right: -15px;
+						border: 5px solid transparent;
+						content: '';
+					}
+					
+					&.descending{
+						&:after{
+							border-top: 5px solid $white;
+						}
+					}
+					
 					&:hover{
 						color: $index-white;
+						&:after{ opacity: 0.8;}
 					}
 				}
-				
-				&:first-child{ border-radius: 4px 0 0 4px;}
-				&:last-child{ border-radius: 0 4px 4px 0 ;}
 			}
 			
 			.t-data{
@@ -371,11 +420,34 @@ $media-expressions: (
 				overflow: hidden;
 				width: 14.28%;
 				
+				&.by-location,
+				&.by-type{
+					width: 23.72%;
+				}
+				
+				&.by-id {
+					width: 8%;
+				}
+				
+				&.by-price{
+					width: 8%;
+				}
+				
+				&.by-view {
+					width: 8%;
+				}
+				
 				@include media('<desktop'){
 					padding: 5px;
 				}
+				
+				@include media('<1555px'){
+					width: 14.28% !important;
+				}
 			}
-			
+			p{
+				margin: 0;
+			}
 			a{
 				@include align(top);
 				text-decoration:none;
@@ -398,6 +470,51 @@ $media-expressions: (
 				&.delete{
 					color: $red;
 					&:hover{ color: darken($red, 15%);}
+				}
+			}
+			.slide{
+				display: block;
+				overflow: hidden;
+				padding: 0 0 10px;
+				
+				.two-cols {
+					@include align-reset(top,14,17);
+					padding: 20px 20px 0;
+					color: $mix-grays;
+					
+					.col {
+						width: 50%;
+					}
+					h1 {
+						@include font(22,25);
+						font-style: italic;
+						margin: 0 0 15px;
+						text-transform: capitalize;
+						font-weight: 600;
+					}
+					p { margin: 0 0 10px;}
+				}
+				.btn-more{
+					color: $white;
+					font-weight: 600;
+					@include font(16,19);
+					border-radius: 4px;
+					width: 200px;
+					margin: 0 auto;
+					background: $green;
+					text-align: center;
+					display: block;
+					border-bottom: 4px solid darken($green, 15%);
+					padding: 5px 10px;
+					transition: border 0.4s ease, background 0.4s ease;
+					-webkit-transition: border 0.4s ease, background 0.4s ease;
+					-moz-transition: border 0.4s ease, background 0.4s ease;
+					-ms-transition: border 0.4s ease, background 0.4s ease;
+					
+					&:hover{
+						background: $orange;
+						border-bottom: 4px solid darken($orange, 15%);
+					}
 				}
 			}
 		}

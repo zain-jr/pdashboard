@@ -343,6 +343,23 @@ a{ outline: none;}
 		font-weight: bold;
 	}
 }
+.logout {
+	float: right;
+	color: $white;
+	text-decoration: none;
+	margin: 15px 40px 0 30px;
+	
+	@include media('<tablet'){
+		margin: 15px 25px 0 10px;
+	}
+	
+	span[class*="icon-"], span[class*="icon-"] {
+		@include align(middle);
+		margin: -2px 0 0;
+	}
+	
+	&:hover{ opacity: 0.8;}
+}
 /*mian content of the page*/
 #main{
 	overflow: hidden;

@@ -173,26 +173,55 @@
   display: inline-block;
   vertical-align: top;
   font-weight: 600;
+  position: relative;
+}
+
+.property-listing-holder .listing-cetegories-links ul li strong:before {
+  font-family: 'icomoon';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 4px;
+  font-weight: 400;
 }
 
 .property-listing-holder .listing-cetegories-links ul li strong.active {
   color: #58a36f;
 }
 
-.property-listing-holder .listing-cetegories-links ul li strong.pendings {
+.property-listing-holder .listing-cetegories-links ul li strong.active:before {
+  content: "\e91d";
+}
+
+.property-listing-holder .listing-cetegories-links ul li strong.pending {
   color: #489ddd;
+}
+
+.property-listing-holder .listing-cetegories-links ul li strong.pending:before {
+  content: "\e90d";
 }
 
 .property-listing-holder .listing-cetegories-links ul li strong.rejected {
   color: #bc5858;
 }
 
+.property-listing-holder .listing-cetegories-links ul li strong.rejected:before {
+  content: "\e920";
+}
+
 .property-listing-holder .listing-cetegories-links ul li strong.expired {
   color: #cf8511;
 }
 
+.property-listing-holder .listing-cetegories-links ul li strong.expired:before {
+  content: "\e912";
+}
+
 .property-listing-holder .listing-cetegories-links ul li strong.deleted {
   color: #e14646;
+}
+
+.property-listing-holder .listing-cetegories-links ul li strong.deleted:before {
+  content: "\e910";
 }
 
 .property-listing-holder .listing-cetegories-links ul li a {
@@ -211,7 +240,7 @@
 
 @media (max-width: 1199px) {
   .property-listing-holder .listing-cetegories-links ul li a {
-    padding: 15px;
+    padding: 15px 14px;
   }
 }
 

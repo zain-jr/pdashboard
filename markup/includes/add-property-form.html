@@ -10,25 +10,16 @@
     </div>
     <form class="property-add" ng-submit="submitProperty()">
         <section class="basics-block" id="basics-block">
-			<div class="errors">
-				<ul>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-					<li data-ng-repeat="error in errors">Owner is invalid</li>
-				</ul>
-        	</div>
+            <div class="errors">
+                <ul>
+                    <li data-ng-repeat="error in errors">Owner is invalid</li>
+                </ul>
+            </div>
             <strong class="form-heading"><span>Property Type and Location</span></strong>
             <div class="layout">
                 <span class="title">purpose:</span>
                 <div class="input-holder">
-                    <ul class="radio-holder">
+                    <ul class="radio-holder error">
                         <li>
                             <label for="sale">
                                 <input type="radio" ng-model="form.data.propertyPurpose" value="1" name="propertyPurpose" id="sale">
@@ -43,13 +34,14 @@
                                 <span class="fake-label">For Rent</span>
                             </label>
                         </li>
+                        <li class="error-text">Oh ! this is error</li>
                     </ul>
                 </div>
             </div>
             <div class="layout">
                 <span class="title">Property Type:</span>
                 <div class="input-holder">
-                    <ul class="radio-holder">
+                    <ul class="radio-holder error">
                         <li>
                             <label for="homes">
                                 <input type="radio" name="propertyType" value="1" id="homes">
@@ -71,10 +63,11 @@
                                 <span class="fake-label">commercial</span>
                             </label>
                         </li>
+                        <li class="error-text">Oh ! this is error</li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab1">
-                            <ul class="radio-holder">
+                            <ul class="radio-holder error">
                                 <li>
                                     <label for="house">
                                         <input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="house" value="house">
@@ -117,6 +110,7 @@
                                         <span class="fake-label">ploot</span>
                                     </label>
                                 </li>
+                                <li class="error-text">Oh ! this is error</li>
                             </ul>
                         </div>
                     </div>
@@ -144,55 +138,63 @@
             </div>
             <strong class="form-heading"><span>Property &amp; Area</span></strong>
             <div class="layout add">
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Price:</span>
                     <input type="number" name="price" ng-model="form.data.price">
+                    <span class="error-text">This is error</span>
                 </div>
                 <span class="calculatedPrice"></span>
             </div>
             <div class="layout add">
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Land Area:</span>
                     <input type="number" step="any" ng-model="form.data.landArea">
+                    <span class="error-text">This is error</span>
                 </div>
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Unit:</span>
                     <select name="land_unit" ng-model="form.data.landUnit">
                         <option value="1" selected disabled>Select Unit</option>
                         <option value="2">Squar Feet</option>
                         <option value="3">Squar Yards</option>
                     </select>
+                    <span class="error-text">This is error</span>
                 </div>
             </div>
             <strong class="form-heading"><span>Property Details</span></strong>
             <div class="layout add">
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Property Title:</span>
                     <input type="text" name="propertyTitle" ng-model="form.data.propertyTitle">
+                    <span class="error-text">This is error</span>
                 </div>
             </div>
             <div class="layout add">
-                <div class="layout-holder add">
+                <div class="layout-holder add error">
                     <span class="title">Description:</span>
                     <textarea name="propertyDescription" ng-model="form.data.propertyDescription"></textarea>
+                    <span class="error-text">This is error</span>
                 </div>
             </div>
             <div class="layout add">
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Bedrooms:</span>
-					<input type="number">
+                    <input type="number">
+                    <span class="error-text">This is error</span>
                 </div>
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Bedrooms:</span>
-					<input type="number">
+                    <input type="number">
+                    <span class="error-text">This is error</span>
                 </div>
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Bedrooms:</span>
-					<input type="number">
+                    <input type="number">
+                    <span class="error-text">This is error</span>
                 </div>
             </div>
         </section>
-       <section class="feature-block" id="feature-block">
+        <section class="feature-block" id="feature-block">
             <a class="feature-blockOpener">Click here to see extra feature</a>
             <strong class="form-heading"><span>extra features</span></strong>
             <div class="holder">
@@ -430,8 +432,8 @@
         </section>
         <section class="attactment-block" id="attactment-block">
             <strong class="form-heading"><span>attactments</span></strong>
-            <ul class="image-uploading-area">
-                <li>
+            <ul class="image-uploading-area error">
+                <li class="error">
                     <div class="file-uploader">
                         <input type="file" ngf-select ng-model="form.data.files.mainFile.file" onchange="previewAddPropertyImg(this , '.img-thumb1')" class="upload-img">
                         <div class="image-holder">
@@ -440,8 +442,9 @@
                         </div>
                     </div>
                     <input type="text" ng-model="form.data.files.mainFile.title" class="picture-name disableInput" placeholder="Title">
+                    <span class="error-text">This is error</span>
                 </li>
-                <li>
+                <li class="error">
                     <div class="file-uploader">
                         <input type="file" ngf-select ng-model="form.data.files.twoFile.file" onchange="previewAddPropertyImg(this , '.img-thumb2')" class="upload-img">
                         <div class="image-holder">
@@ -450,8 +453,9 @@
                         </div>
                     </div>
                     <input type="text" ng-model="form.data.files.twoFile.title" class="picture-name disableInput" placeholder="Title">
+                    <span class="error-text">This is error</span>
                 </li>
-                <li>
+                <li class="error">
                     <div class="file-uploader">
                         <input type="file" ngf-select ng-model="form.data.files.threeFile.file" onchange="previewAddPropertyImg(this , '.img-thumb3')" class="upload-img">
                         <div class="image-holder">
@@ -460,8 +464,9 @@
                         </div>
                     </div>
                     <input type="text" ng-model="form.data.files.threeFile.title" class="picture-name disableInput" placeholder="Title">
+                    <span class="error-text">This is error</span>
                 </li>
-                <li>
+                <li class="error">
                     <div class="file-uploader">
                         <input type="file" ng-model="form.data.files.fourFile.file" onchange="previewAddPropertyImg(this , '.img-thumb4')" class="upload-img">
                         <div class="image-holder">
@@ -470,8 +475,9 @@
                         </div>
                     </div>
                     <input type="text" ng-model="form.data.files.fourFile.title" class="picture-name disableInput" placeholder="Title">
+                    <span class="error-text">This is error</span>
                 </li>
-                <li>
+                <li class="error">
                     <div class="file-uploader">
                         <input type="file" ng-model="form.data.files.fiveFile.file" onchange="previewAddPropertyImg(this , '.img-thumb5')" class="upload-img">
                         <div class="image-holder">
@@ -480,8 +486,9 @@
                         </div>
                     </div>
                     <input type="text" ng-model="form.data.files.fiveFile.title" class="picture-name disableInput" placeholder="Title">
+                    <span class="error-text">This is error</span>
                 </li>
-                <li>
+                <li class="error">
                     <div class="file-uploader">
                         <input type="file" ng-model="form.data.files.sixFile.file" onchange="previewAddPropertyImg(this , '.img-thumb6')" class="upload-img">
                         <div class="image-holder">
@@ -490,41 +497,48 @@
                         </div>
                     </div>
                     <input type="text" ng-model="form.data.files.sixFile.title" class="picture-name disableInput" placeholder="Title">
+                    <span class="error-text">This is error</span>
                 </li>
             </ul>
         </section>
         <section class="contact-information" id="contact-information">
             <strong class="form-heading"><span>Contact info</span></strong>
             <div class="layout add">
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">owner:</span>
                     <select name="owner" ng-model="form.data.owner">
                         <option value="1">Noman Tufail</option>
                     </select>
+                    <span class="error-text">This is error</span>
                 </div>
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">contact person:</span>
                     <input type="text" name="contact_person" ng-model="form.data.contactPerson">
+                    <span class="error-text">This is error</span>
                 </div>
             </div>
             <div class="layout add">
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Phone:</span>
                     <input type="text" name="phone" ng-model="form.data.phone">
+                    <span class="error-text">This is error</span>
                 </div>
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">Cell:</span>
                     <input type="text" name="cell" ng-model="form.data.cell">
+                    <span class="error-text">This is error</span>
                 </div>
             </div>
             <div class="layout add">
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">fax:</span>
                     <input type="text" name="title" ng-model="form.data.fax">
+                    <span class="error-text">This is error</span>
                 </div>
-                <div class="layout-holder">
+                <div class="layout-holder error">
                     <span class="title">email:</span>
                     <input type="email" name="email" ng-model="form.data.email">
+                    <span class="error-text">This is error</span>
                 </div>
             </div>
         </section>

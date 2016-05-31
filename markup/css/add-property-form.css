@@ -158,7 +158,6 @@
 }
 
 .addPropertyFormContainer .errors ul li {
-  width: 30%;
   padding: 7px;
   border-radius: 4px;
   color: #e14646;
@@ -498,6 +497,22 @@
   }
 }
 
+.addPropertyFormContainer .property-add .error-text {
+  display: none;
+  width: 100%;
+  font-size: 12px !important;
+  line-height: 15px !important;
+  font-weight: 600 !important;
+  color: #e14646 !important;
+  padding: 5px 0 0 110px;
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .property-add .error-text {
+    padding: 3px;
+  }
+}
+
 .addPropertyFormContainer .property-add input[type="text"],
 .addPropertyFormContainer .property-add input[type="search"],
 .addPropertyFormContainer .property-add input[type="number"],
@@ -713,8 +728,23 @@
   letter-spacing: 0;
 }
 
+.addPropertyFormContainer .property-add .radio-holder.error .fake-radio {
+  border-color: #e14646;
+}
+
+.addPropertyFormContainer .property-add .radio-holder.error li.error-text {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .addPropertyFormContainer .property-add .radio-holder li {
   padding: 0 10px 10px;
+}
+
+.addPropertyFormContainer .property-add .radio-holder li.error-text {
+  padding: 5px 0 0;
+  width: auto !important;
+  display: none;
 }
 
 .addPropertyFormContainer .property-add .radio-holder li label {
@@ -807,6 +837,16 @@
   }
 }
 
+.addPropertyFormContainer .property-add .layout .layout-holder.error .error-text {
+  display: block;
+}
+
+.addPropertyFormContainer .property-add .layout .layout-holder.error select,
+.addPropertyFormContainer .property-add .layout .layout-holder.error textarea,
+.addPropertyFormContainer .property-add .layout .layout-holder.error input[type="text"], .addPropertyFormContainer .property-add .layout .layout-holder.error input[type="search"], .addPropertyFormContainer .property-add .layout .layout-holder.error input[type="email"], .addPropertyFormContainer .property-add .layout .layout-holder.error input[type="password"], .addPropertyFormContainer .property-add .layout .layout-holder.error input[type="number"], .addPropertyFormContainer .property-add .layout .layout-holder.error input[type="tel"] {
+  border-color: #e14646;
+}
+
 .addPropertyFormContainer .property-add .layout .layout-holder.add {
   width: 100%;
 }
@@ -851,7 +891,6 @@
 }
 
 .addPropertyFormContainer .property-add .tab-content {
-  max-width: 490px;
   margin: 10px 0 0;
   padding: 0 0 0 20px;
 }
@@ -870,7 +909,7 @@
 @media (max-width: 1023px) {
   .addPropertyFormContainer .form-heading {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 20px;
   }
 }
 
@@ -909,8 +948,8 @@
   -ms-transition: color 0.4s ease, background 0.4s ease;
 }
 
-.addPropertyFormContainer .feature-block .feature-blockOpener:hover {
-  background: #000;
+.addPropertyFormContainer .feature-block .feature-blockOpener.active, .addPropertyFormContainer .feature-block .feature-blockOpener:hover {
+  background: #608ce8;
   color: #fff;
 }
 
@@ -1069,6 +1108,12 @@
   .addPropertyFormContainer .image-uploading-area {
     margin: 30px -5px 0;
   }
+}
+
+.addPropertyFormContainer .image-uploading-area.error .error-text {
+  display: block;
+  padding: 3px;
+  text-align: left;
 }
 
 .addPropertyFormContainer .image-uploading-area li {

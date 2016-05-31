@@ -132,7 +132,6 @@ $media-expressions: (
 			}
 			
 			li{
-				width: 30%;
 				padding: 7px;
 				border-radius: 4px;
 				color: $red;
@@ -403,6 +402,20 @@ $media-expressions: (
 			padding: 0 0 50px;
 		}
 		
+		.error-text {
+			display: none;
+			width: 100%;
+			font-size: 12px !important;
+			line-height: 15px !important;
+			font-weight: 600 !important;
+			color: $red !important;
+			padding: 5px 0 0 110px;
+			
+			@include media('<tablet'){
+				padding: 3px;
+			}
+		}
+		
 		input[type="text"],
 		input[type="search"],
 		input[type="number"],
@@ -564,8 +577,26 @@ $media-expressions: (
 			@include align-reset(top,12,15);
 			text-transform: capitalize;
 			
+			&.error {
+				.fake-radio{
+					border-color: $red;	
+				}
+				
+				li {
+					&.error-text{
+						@include align(top);
+					}
+				}
+			}
+			
 			li{
 				padding: 0 10px 10px;
+				
+				&.error-text {
+					padding: 5px 0 0;
+					width: auto !important;
+					display: none;
+				}
 				
 				label{
 					@include align(top);
@@ -648,6 +679,13 @@ $media-expressions: (
 					padding: 0 0 20px;
 				}
 				
+				&.error {
+					.error-text{ display: block;}
+					select,
+					textarea,
+					input[type="text"],input[type="search"],input[type="email"],input[type="password"],input[type="number"],input[type="tel"]{ border-color: $red;}
+				}
+				
 				&.add{
 					width: 100%;
 				}
@@ -684,7 +722,6 @@ $media-expressions: (
 			}
 		}
 		.tab-content{
-			max-width: 490px;
 			margin:10px 0 0;
 			padding: 0 0 0 20px;
 		}
@@ -699,7 +736,7 @@ $media-expressions: (
 		margin: 30px 0 0;
 		
 		@include media('<desktop'){
-			@include font(14,16);
+			@include font(14,20);
 		}
 		
 		span{
@@ -738,8 +775,9 @@ $media-expressions: (
 			-moz-transition: color 0.4s ease, background 0.4s ease;
 			-ms-transition: color 0.4s ease, background 0.4s ease;
 			
+			&.active,
 			&:hover{
-				background: $black;
+				background: lighten($defualt-blue, 35%);
 				color: $white;
 			}
 		}
@@ -846,6 +884,14 @@ $media-expressions: (
 		
 		@include media('<tablet'){
 			margin: 30px -5px 0;
+		}
+		
+		&.error {
+			.error-text{
+				display: block;
+				padding: 3px;
+				text-align: left;
+			}
 		}
 		
 		li{

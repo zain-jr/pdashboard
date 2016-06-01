@@ -11,23 +11,14 @@ $(document).ready(function() {
 function previewAddPropertyImg(file, target)
  {
 	previewFile(file, target);
-	$(file).closest('li').find('.image-holder').css({
-		 'opacity':'1',
-		 'z-index':'5'
-	});
-	$(file).closest('.file-uploader').addClass('after-none');
+	$(file).closest('li').addClass('image-loaded');
 	$(file).closest('li').find('.picture-name').focus();
  }
  
  $(document).on('click', '.propertyDocumentCloseBtn', function(){
-	 $(this).closest('.image-holder').css({
-		 'opacity':'0',
-		 'z-index':'-1'
-	 });
-	 $(this).closest('.file-uploader').removeClass('after-none');
-	 $(this).closest('li').find('.picture-name').addClass('disableInput');
 	 $(this).closest('li').find('.picture-name').val('');
 	 $(this).closest('li').find('img').attr('src', '#');
+	 $(this).closest('li').removeClass('image-loaded');
  });
  
  $(document).on('click', '.listing-opener', function(){

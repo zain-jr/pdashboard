@@ -886,14 +886,6 @@ $media-expressions: (
 			margin: 30px -5px 0;
 		}
 		
-		&.error {
-			.error-text{
-				display: block;
-				padding: 3px;
-				text-align: left;
-			}
-		}
-		
 		li{
 			width: 16.66%;
 			position: relative;
@@ -906,6 +898,24 @@ $media-expressions: (
 			
 			@include media('<desktop'){
 				width: 50%;
+			}
+			
+			&.error {
+				.error-text{
+					display: block;
+					padding: 3px;
+					text-align: left;
+				}
+			}
+			
+			&.image-loaded {
+				.image-holder {
+					opacity: 1;
+					z-index: 9;
+				}
+				.picture-name {
+					pointer-events: inherit;
+				}
 			}
 			
 			&:first-child{
@@ -950,10 +960,6 @@ $media-expressions: (
 						&:after{ color: $green;}
 					}
 					
-					&.after-none{
-						&:after{ display: none !important;}
-					}
-					
 					&:after{
 						position: absolute;
 						top: 50%;
@@ -995,15 +1001,11 @@ $media-expressions: (
 				border-color: $gray;
 				height: 50px;
 				@include font(14,18);
+				pointer-events: none;
 				transition: border 0.4s ease;
 				-webkit-transition: border 0.4s ease;
 				-ms-transition: border 0.4s ease;
 				-moz-transition: border 0.4s ease;
-				
-				&.disableInput{
-					opacity: 0.5;
-					pointer-events: none;
-				}
 				
 				&:hover, &:focus{
 					border-width:0 0 3px;

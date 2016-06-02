@@ -41,6 +41,13 @@ $media-expressions: (
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/forms';
+
+@import 'add-agency-user';
+@import 'add-property-form';
+@import 'list-agency-user';
+@import 'property-listing';
+@import 'user-registeration';
+
 .text-left{ text-align: left !important;}
 .text-right { text-align: right !important;}
 .text-uppercase{ text-transform: uppercase !important;}
@@ -89,27 +96,53 @@ a{ outline: none;}
 			background: red;
 			content: '';
 			animation-name: pagelodaer-progress;
+			-moz-animation-name: pagelodaer-progress;
+			-webkit-animation-name: pagelodaer-progress;
 			animation-duration: 7s;
+			-moz-animation-duration: 7s;
+			-webkit-animation-duration: 7s;
 			animation-iteration-count: 1;
+			-webkit-animation-iteration-count: 1;
+			-moz-animation-iteration-count: 1;
 			animation-timing-function: ease-out;
+			-moz-animation-timing-function: ease-out;
+			-webkit-animation-timing-function: ease-out;
 		}
 	}
 	.page-loader-hold &{
 		
 		&:before{
 			animation-name: pagelodaer-progress;
+			-webkit-animation-name: pagelodaer-progress;
+			-moz-animation-name: pagelodaer-progress;
 			animation-duration: 4s;
+			-webkit-animation-duration: 4s;
+			-moz-animation-duration: 4s;
 			animation-iteration-count: 1;
+			-webkit-animation-iteration-count: 1;
+			-moz-animation-iteration-count: 1;
 			animation-timing-function: ease-out;
+			-webkit-animation-timing-function: ease-out;
+			-moz-animation-timing-function: ease-out;
 			animation-play-state: paused;
+			-webkit-animation-play-state: paused;
+			-moz-animation-play-state: paused;
 		}
 	}
 	.page-loader-complete &{
 		&:before{
 			animation-name: pagelodaer-complete;
+			-webkit-animation-name: pagelodaer-complete;
+			-moz-animation-name: pagelodaer-complete;
 			animation-duration: 0.5s;
+			-webkit-animation-duration: 0.5s;
+			-moz-animation-duration: 0.5s;
 			animation-iteration-count: 1;
+			-webkit-animation-iteration-count: 1;
+			-moz-animation-iteration-count: 1;
 			animation-timing-function: ease-out;
+			-webkit-animation-timing-function: ease-out;
+			-moz-animation-timing-function: ease-out;
 		}
 	}
 	.please-wait & {
@@ -554,7 +587,7 @@ a{ outline: none;}
 		@include align(top);
 		text-decoration: none;
 		color: $light-gray;
-		@include font(16px,19px);
+		@include font(16,19);
 		letter-spacing: 1px;
 		transition: color 0.4s ease;
 		-webkit-transition: color 0.4s ease;

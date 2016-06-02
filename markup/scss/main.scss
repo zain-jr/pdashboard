@@ -48,6 +48,70 @@ $media-expressions: (
 @import 'property-listing';
 @import 'user-registeration';
 
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	
+	&:after{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		content: '';
+		transition: opacity 0.5s linear, visibility 0.5s linear, z-index 0.5s linear, background 0.5s linear;
+		-webkit-transition: opacity 0.5s linear, visibility 0.5s linear, z-index 0.5s linear, background 0.5s linear;
+		-moz-transition: opacity 0.5s linear, visibility 0.5s linear, z-index 0.5s linear, background 0.5s linear;
+		opacity: 0;
+		visibility: hidden;
+		background: transparent;
+	}
+	&.loading-resources {
+		height: 100vh;
+		overflow: hidden;
+		
+		.lodaing-page{ display: block !important;}
+		
+		&:after{
+			z-index: 99999;
+			opacity: 1;
+			visibility: visible;
+			background: $defualt-blue;
+		}
+	}
+}
+
+.lodaing-page {
+	display: none !important;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 999991;
+	color: $white;
+	@include font(60,65);
+	margin: -115px 0 0 -220px;
+	font-weight: bold;
+	font-style: italic;
+	
+	@include media('<tablet') {
+		@include font(40,45);
+		margin: -110px 0 0 -140px;
+	}
+	
+	&:before{
+		display: block;
+		background: url(../images/ring.gif);
+		width: 72px;
+		height: 72px;
+		content: '';
+		margin: 0 auto;
+	}
+}
 .text-left{ text-align: left !important;}
 .text-right { text-align: right !important;}
 .text-uppercase{ text-transform: uppercase !important;}
@@ -74,7 +138,11 @@ a{ outline: none;}
 #wrapper {
 	position: relative;
 	width: 100%;
+	height: 100%;
 	overflow: hidden;
+	display: table;
+	table-layout: fixed;
+	border-collapse: collapse;
 }
 /*dashboard header*/
 #header {
@@ -415,6 +483,59 @@ a{ outline: none;}
 	position: relative;
 	overflow: hidden;
 	min-height: 785px;
+	
+	&.loading-content{
+		&:before,
+		&:after{
+			opacity: 1;
+			visibility: visible;
+			z-index: 82;			
+		}
+		&:before{
+			z-index: 83;
+		}
+	}
+	
+	&:after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba($white, 0.88);
+		content: '';
+		z-index: -1;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
+		-webkit-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
+		-moz-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
+		-ms-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
+	}
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: url(../images/ring1.gif);
+		content: '';
+		width: 72px;
+		height: 72px;
+		z-index: -1;
+		margin: -100px 0 0 54px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
+		-webkit-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
+		-moz-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
+		-ms-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
+		
+		@include media('<widescreen') {
+			margin: -100px 0 0 104px;
+		}
+		@include media('<tablet') {
+			margin: -36px 0 0 -36px;
+		}
+	}
 	
 	@include media('<desktop'){
 		min-height: 695px;
@@ -810,6 +931,9 @@ a{ outline: none;}
 #footer{
 	background: $dove-black;
 	position: relative;
+	display: table-footer-group;
+	height: 1%;
+	width: 100%;
 	
 	.please-wait & {
 		&:after{

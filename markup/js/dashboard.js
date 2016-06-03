@@ -1,10 +1,5 @@
 $(document).ready(function() {
-    
-    // Execute on load
     checkWidth();
-    // Bind event listener
-    $(window).resize(checkWidth);
-     
 });
 
 $(document).on('click', '.sideBar-opener', function(){
@@ -24,12 +19,11 @@ $(document).on('click', '.form-openerMobile', function(){
    $('.searhForm-holder').toggleClass('searh-dashboard-active'); 
 });
 
-
 function checkWidth() {
     var $window = $(window);
     var windowsize = $window.width();
     if (windowsize < 768) {
-        $('body').removeClass('sideBar-active');   
+        $('body').removeClass('sideBar-active');
     }
     else{
         $('body').addClass('sideBar-active');

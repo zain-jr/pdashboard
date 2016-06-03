@@ -232,6 +232,7 @@ a{ outline: none;}
 		position: relative;
 		margin: 16px 0 0 20px;
 		cursor: pointer;
+		z-index: 99;
 		
 		@include media('<tablet'){
 			position: absolute;
@@ -1008,6 +1009,15 @@ a{ outline: none;}
 			@include font(18,21);
 			font-weight: 600;
 			margin: 0 0 10px;
+		}
+	}
+}
+.accordion{
+	.slide {
+		display: none !important;
+		
+		&.slide-active {
+			display: block !important;
 		}
 	}
 }

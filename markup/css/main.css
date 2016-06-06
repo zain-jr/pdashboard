@@ -4541,6 +4541,22 @@ a {
   z-index: 83;
 }
 
+.sideBar-active .pages-holder:before {
+  margin: 0 0 0 54px;
+}
+
+@media (max-width: 1199px) {
+  .sideBar-active .pages-holder:before {
+    margin: 0 0 0 104px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sideBar-active .pages-holder:before {
+    margin: 0 0 0 -36px;
+  }
+}
+
 .pages-holder:after {
   position: absolute;
   top: 0;
@@ -4560,7 +4576,7 @@ a {
 
 .pages-holder:before {
   position: absolute;
-  top: 50%;
+  top: 380px;
   left: 50%;
   background: url(../images/ring1.gif);
   background-size: cover;
@@ -4568,24 +4584,18 @@ a {
   width: 72px;
   height: 72px;
   z-index: -1;
-  margin: -100px 0 0 54px;
+  margin: 0 0 0 -56px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
-  -webkit-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
-  -moz-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
-  -ms-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease;
-}
-
-@media (max-width: 1199px) {
-  .pages-holder:before {
-    margin: -100px 0 0 104px;
-  }
+  transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease,  margin 0.4s ease;
+  -webkit-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease,  margin 0.4s ease;
+  -moz-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease,  margin 0.4s ease;
+  -ms-transition: opacity 0.4s ease,  visibility 0.4s ease, z-index 0.4s ease,  margin 0.4s ease;
 }
 
 @media (max-width: 767px) {
   .pages-holder:before {
-    margin: -36px 0 0 -36px;
+    margin: 0 0 0 -36px;
   }
 }
 

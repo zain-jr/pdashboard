@@ -280,6 +280,17 @@ a{ outline: none;}
 				border-left: 5px solid $dove-gray;
 			}
 		}
+		&:focus, &:active {
+			span{
+				&:before{
+					left: 0;
+				}
+				&:after{
+					right: 0;
+				}
+			}
+		}
+		
 		.sideBar-active &,
 		&:hover {
 			span{
@@ -518,6 +529,7 @@ a{ outline: none;}
 		top: 50%;
 		left: 50%;
 		background: url(../images/ring1.gif);
+		background-size: cover;
 		content: '';
 		width: 72px;
 		height: 72px;
@@ -968,7 +980,7 @@ a{ outline: none;}
 				padding: 0 0 0 290px;
 			}
 			@include media('<desktop'){
-				padding: 0 0 0 170px;
+				padding: 0 0 0 239px;
 			}
 			@include media('<tablet'){
 				padding: 0;
@@ -980,9 +992,19 @@ a{ outline: none;}
 			color: $light-gray;
 			padding: 30px 10px;
 			
-			@include media('<tablet'){
+			@include media('<widescreen'){
+				padding: 30px 0;
+			}
+			
+			@include media('<desktop'){
 				width: 50%;
 				padding: 30px 5px 0;
+			}
+			
+			@include media('<tablet'){
+				width: 100%;
+				display: block;
+				padding: 30px 5px;
 			}
 			
 			address{
@@ -1009,6 +1031,75 @@ a{ outline: none;}
 			@include font(18,21);
 			font-weight: 600;
 			margin: 0 0 10px;
+		}
+		.contact {
+			overflow: hidden;
+			padding: 0 3px;
+			text-align: left;
+			
+			.input-holder {
+				width: 100%;
+				margin: 0 0 10px;
+				
+				&.error {
+					.error-text {
+						display: block;
+					}
+				}
+			}
+			.error-text {
+				color: $red;
+				@include font(13,16);
+				display: none;
+				padding: 5px 0 0;
+			}
+			textarea,
+			input[type="text"],input[type="email"]{
+				width: 100%;
+				display: block;
+				height: 30px;
+				border: 2px solid $gray;
+				padding: 5px;
+				@include font(14,18);
+				background: transparent;
+				transition: all 0.4s ease;
+				-webkit-transition: all 0.4s ease;
+				-moz-transition: all 0.4s ease;
+				-ms-transition: all 0.4s ease;
+				
+				@include placeholder {
+					color: $gray;
+				}
+				&:focus {
+					background: $gray;
+					color: $white;
+					
+					@include placeholder {
+						color: $white;
+					}
+				}
+			}
+			textarea {
+				resize: none;
+				height: 100px;
+				overflow: auto;
+			}
+			input[type="submit"] {
+				display: block;
+				border: 0;
+				width: 100%;
+				padding: 5px;
+				background: $mix-blue;
+				border-radius: 2px;
+				transition: background 0.4s ease;
+				-webkit-transition: background 0.4s ease;
+				-moz-transition: background 0.4s ease;
+				-ms-transition: background 0.4s ease;
+				
+				&:hover {
+					background: darken($mix-blue, 10%);
+				}
+			}
 		}
 	}
 }

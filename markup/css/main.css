@@ -4229,6 +4229,14 @@ a {
   border-left: 5px solid #edf2f8;
 }
 
+#header .sideBar-opener:focus span:before, #header .sideBar-opener:active span:before {
+  left: 0;
+}
+
+#header .sideBar-opener:focus span:after, #header .sideBar-opener:active span:after {
+  right: 0;
+}
+
 .sideBar-active #header .sideBar-opener span:before, #header .sideBar-opener:hover span:before {
   left: -18px;
 }
@@ -4555,6 +4563,7 @@ a {
   top: 50%;
   left: 50%;
   background: url(../images/ring1.gif);
+  background-size: cover;
   content: '';
   width: 72px;
   height: 72px;
@@ -5196,7 +5205,7 @@ a {
 
 @media (max-width: 1023px) {
   .sideBar-active #footer .cols-holder {
-    padding: 0 0 0 170px;
+    padding: 0 0 0 239px;
   }
 }
 
@@ -5212,10 +5221,24 @@ a {
   padding: 30px 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
+  #footer .cols-holder .col {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 1023px) {
   #footer .cols-holder .col {
     width: 50%;
     padding: 30px 5px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer .cols-holder .col {
+    width: 100%;
+    display: block;
+    padding: 30px 5px;
   }
 }
 
@@ -5246,6 +5269,126 @@ a {
   line-height: 21px;
   font-weight: 600;
   margin: 0 0 10px;
+}
+
+#footer .cols-holder .contact {
+  overflow: hidden;
+  padding: 0 3px;
+  text-align: left;
+}
+
+#footer .cols-holder .contact .input-holder {
+  width: 100%;
+  margin: 0 0 10px;
+}
+
+#footer .cols-holder .contact .input-holder.error .error-text {
+  display: block;
+}
+
+#footer .cols-holder .contact .error-text {
+  color: #e14646;
+  font-size: 13px;
+  line-height: 16px;
+  display: none;
+  padding: 5px 0 0;
+}
+
+#footer .cols-holder .contact textarea,
+#footer .cols-holder .contact input[type="text"], #footer .cols-holder .contact input[type="email"] {
+  width: 100%;
+  display: block;
+  height: 30px;
+  border: 2px solid #999;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  background: transparent;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+}
+
+#footer .cols-holder .contact textarea::-webkit-input-placeholder,
+#footer .cols-holder .contact input[type="text"]::-webkit-input-placeholder, #footer .cols-holder .contact input[type="email"]::-webkit-input-placeholder {
+  color: #999;
+}
+
+#footer .cols-holder .contact textarea::-moz-placeholder,
+#footer .cols-holder .contact input[type="text"]::-moz-placeholder, #footer .cols-holder .contact input[type="email"]::-moz-placeholder {
+  opacity: 1;
+  color: #999;
+}
+
+#footer .cols-holder .contact textarea:-moz-placeholder,
+#footer .cols-holder .contact input[type="text"]:-moz-placeholder, #footer .cols-holder .contact input[type="email"]:-moz-placeholder {
+  color: #999;
+}
+
+#footer .cols-holder .contact textarea:-ms-input-placeholder,
+#footer .cols-holder .contact input[type="text"]:-ms-input-placeholder, #footer .cols-holder .contact input[type="email"]:-ms-input-placeholder {
+  color: #999;
+}
+
+#footer .cols-holder .contact textarea.placeholder,
+#footer .cols-holder .contact input[type="text"].placeholder, #footer .cols-holder .contact input[type="email"].placeholder {
+  color: #999;
+}
+
+#footer .cols-holder .contact textarea:focus,
+#footer .cols-holder .contact input[type="text"]:focus, #footer .cols-holder .contact input[type="email"]:focus {
+  background: #999;
+  color: #fff;
+}
+
+#footer .cols-holder .contact textarea:focus::-webkit-input-placeholder,
+#footer .cols-holder .contact input[type="text"]:focus::-webkit-input-placeholder, #footer .cols-holder .contact input[type="email"]:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#footer .cols-holder .contact textarea:focus::-moz-placeholder,
+#footer .cols-holder .contact input[type="text"]:focus::-moz-placeholder, #footer .cols-holder .contact input[type="email"]:focus::-moz-placeholder {
+  opacity: 1;
+  color: #fff;
+}
+
+#footer .cols-holder .contact textarea:focus:-moz-placeholder,
+#footer .cols-holder .contact input[type="text"]:focus:-moz-placeholder, #footer .cols-holder .contact input[type="email"]:focus:-moz-placeholder {
+  color: #fff;
+}
+
+#footer .cols-holder .contact textarea:focus:-ms-input-placeholder,
+#footer .cols-holder .contact input[type="text"]:focus:-ms-input-placeholder, #footer .cols-holder .contact input[type="email"]:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+#footer .cols-holder .contact textarea:focus.placeholder,
+#footer .cols-holder .contact input[type="text"]:focus.placeholder, #footer .cols-holder .contact input[type="email"]:focus.placeholder {
+  color: #fff;
+}
+
+#footer .cols-holder .contact textarea {
+  resize: none;
+  height: 100px;
+  overflow: auto;
+}
+
+#footer .cols-holder .contact input[type="submit"] {
+  display: block;
+  border: 0;
+  width: 100%;
+  padding: 5px;
+  background: #489ddd;
+  border-radius: 2px;
+  transition: background 0.4s ease;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  -ms-transition: background 0.4s ease;
+}
+
+#footer .cols-holder .contact input[type="submit"]:hover {
+  background: #2685cc;
 }
 
 .accordion .slide {

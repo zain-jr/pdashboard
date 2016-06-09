@@ -1824,6 +1824,7 @@ input[type='submit'] {
   line-height: 0;
   letter-spacing: -4px;
   text-transform: capitalize;
+  max-width: 500px;
 }
 
 .addPropertyFormContainer .property-add .radio-holder > * {

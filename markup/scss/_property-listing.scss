@@ -177,6 +177,8 @@
 					
 					.numbering{
 						@include font(13,17);
+						@include align(middle);
+						min-width: 36px;
 						
 						&:before, &:after{
 							@include align(middle);

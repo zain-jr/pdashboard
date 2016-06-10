@@ -22,11 +22,15 @@
 		input[type="search"],
 		input[type="number"],
 		input[type="email"]{
-			max-width: 115px !important;
+			
+			@include media('<desktop'){max-width: 115px !important;}
 
 			@include media('<tablet'){
 				max-width: inherit !important;
 			}
+		}
+		textarea{
+			@include media('<desktop'){max-width: 350px !important;}
 		}
 	}
 	
@@ -444,7 +448,7 @@
 			}
 			
 			@include media('<desktop'){
-				max-width: 165px;
+				max-width: 245px;
 			}
 			
 			@include media('<tablet'){
@@ -535,7 +539,7 @@
 			}
 			
 			@include media('<desktop'){
-				max-width: 350px;
+				max-width: 610px;
 			}
 			@include media('<tablet'){
 				max-width: inherit;
@@ -713,7 +717,7 @@
 					}
 					
 					@include media('<desktop'){
-						width: 165px;
+						width: 245px;
 					}
 					
 					@include media('<tablet'){
@@ -898,10 +902,6 @@
 		@include media('<desktop'){
 			max-width: 480px;
 			margin: 30px auto 0;
-		}
-
-		@include media('<tablet'){
-			margin: 30px -5px 0;
 		}
 		
 		li{

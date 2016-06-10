@@ -1124,12 +1124,14 @@ input[type='submit'] {
   }
 }
 
-.sideBar-active .addPropertyFormContainer select,
-.sideBar-active .addPropertyFormContainer input[type="text"],
-.sideBar-active .addPropertyFormContainer input[type="search"],
-.sideBar-active .addPropertyFormContainer input[type="number"],
-.sideBar-active .addPropertyFormContainer input[type="email"] {
-  max-width: 115px !important;
+@media (max-width: 1023px) {
+  .sideBar-active .addPropertyFormContainer select,
+  .sideBar-active .addPropertyFormContainer input[type="text"],
+  .sideBar-active .addPropertyFormContainer input[type="search"],
+  .sideBar-active .addPropertyFormContainer input[type="number"],
+  .sideBar-active .addPropertyFormContainer input[type="email"] {
+    max-width: 115px !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1139,6 +1141,12 @@ input[type='submit'] {
   .sideBar-active .addPropertyFormContainer input[type="number"],
   .sideBar-active .addPropertyFormContainer input[type="email"] {
     max-width: inherit !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .sideBar-active .addPropertyFormContainer textarea {
+    max-width: 350px !important;
   }
 }
 
@@ -1668,7 +1676,7 @@ input[type='submit'] {
   .addPropertyFormContainer .property-add input[type="search"],
   .addPropertyFormContainer .property-add input[type="number"],
   .addPropertyFormContainer .property-add input[type="email"] {
-    max-width: 165px;
+    max-width: 245px;
   }
 }
 
@@ -1782,7 +1790,7 @@ input[type='submit'] {
 
 @media (max-width: 1023px) {
   .addPropertyFormContainer .property-add textarea {
-    max-width: 350px;
+    max-width: 610px;
   }
 }
 
@@ -1996,7 +2004,7 @@ input[type='submit'] {
 
 @media (max-width: 1023px) {
   .addPropertyFormContainer .property-add .layout .layout-holder select {
-    width: 165px;
+    width: 245px;
   }
 }
 
@@ -2239,12 +2247,6 @@ input[type='submit'] {
   .addPropertyFormContainer .image-uploading-area {
     max-width: 480px;
     margin: 30px auto 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .image-uploading-area {
-    margin: 30px -5px 0;
   }
 }
 

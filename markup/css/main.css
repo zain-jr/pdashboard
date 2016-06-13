@@ -4481,6 +4481,39 @@ a {
   float: left;
   background: #1ab394;
   padding: 15px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo:after {
+  position: absolute;
+  top: 13px;
+  left: -35px;
+  width: 100px;
+  background: #e14646;
+  content: 'Beta';
+  text-align: center;
+  font-size: 17px;
+  line-height: 17px;
+  transform: rotate(-54deg);
+  -webkit-transform: rotate(-54deg);
+  -moz-transform: rotate(-54deg);
+  -ms-transform: rotate(-54deg);
+}
+
+@media (max-width: 767px) {
+  .logo:after {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    font-size: 12px;
+    line-height: 12px;
+  }
 }
 
 @media (max-width: 767px) {

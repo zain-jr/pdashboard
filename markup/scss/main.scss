@@ -421,6 +421,35 @@ a{ outline: none;}
 	float: left;
 	background: $sharp-musterd;
 	padding: 15px 30px;
+	position: relative;
+	overflow: hidden;
+
+	&:after{
+		position: absolute;
+		top: 13px;
+		left: -35px;
+		width: 100px;
+		background: $red;
+		content: 'Beta';
+		text-align: center;
+		@include font(17,17);
+		transform: rotate(-54deg);
+		-webkit-transform: rotate(-54deg);
+		-moz-transform: rotate(-54deg);
+		-ms-transform: rotate(-54deg);	
+
+		@include media('<tablet'){
+			transform: none;
+			-webkit-transform: none;
+			-moz-transform: none;
+			-ms-transform: none;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: auto;
+			@include font(12,12);
+		}
+	}
 	
 	@include media('<tablet'){
 		@include font(16,18);

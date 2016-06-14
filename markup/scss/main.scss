@@ -494,7 +494,7 @@ a{ outline: none;}
 	float: right;
 	color: $white;
 	text-decoration: none;
-	margin: 15px 40px 0 30px;
+	margin: 15px 10px 0 20px;
 	
 	@include media('<desktop'){
 		margin: 15px 10px 0 5px;
@@ -510,6 +510,26 @@ a{ outline: none;}
 	}
 	
 	&:hover{ opacity: 0.8;}
+}
+.our-contactNum {
+	float: right;
+	color: $white;
+	@include font(14,17);
+	padding: 17px 10px;
+	border-left: 1px solid darken($mix-blue, 15%);
+
+	@include media('<tablet'){
+		display: none;
+	}
+
+	a{
+		color: $white;
+		text-decoration: none;
+
+		&:hover {
+			color: $sharp-musterd;
+		}
+	}
 }
 /*mian content of the page*/
 #main{

@@ -442,11 +442,12 @@
         background: $light-gray;
         z-index: 6;
         
-        &.hover{
+        &.image-loaded{
             &:hover{
                 .delete{ display: block;}
             }
             .name-tag{ display: none;}
+            .picture-holder{ display: block;}
         }
         
         .picture-holder{

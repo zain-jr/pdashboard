@@ -3916,12 +3916,16 @@ input[type='submit'] {
   z-index: 6;
 }
 
-.registration-form .company-logo.hover:hover .delete {
+.registration-form .company-logo.image-loaded:hover .delete {
   display: block;
 }
 
-.registration-form .company-logo.hover .name-tag {
+.registration-form .company-logo.image-loaded .name-tag {
   display: none;
+}
+
+.registration-form .company-logo.image-loaded .picture-holder {
+  display: block;
 }
 
 .registration-form .company-logo .picture-holder {

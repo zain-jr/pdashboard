@@ -639,7 +639,7 @@ th {
   content: "\e911";
 }
 
-.addAgency-user .addAgency-user-form .input-feilds, .addPropertyFormContainer .errors ul, .addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .property-listing-holder .listing-cetegories-links ul, .property-listing-holder .property-filter .by-user-sorting ul, .property-listing-holder .property-filter .by-id-sorting ul, .property-listing-holder .properties-table, .registration-form .roles .role-listing, #sidebar-dashboard .notifications-links, #sidebar-dashboard .sideBar-links, #sidebar-dashboard .sideBar-links li .sub-links, .social-networks, .pager, #footer .cols-holder ul {
+.addAgency-user .addAgency-user-form .input-feilds, .addPropertyFormContainer .errors ul, .addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .property-listing-holder .quick-links, .property-listing-holder .listing-cetegories-links ul, .property-listing-holder .property-filter .by-user-sorting ul, .property-listing-holder .property-filter .by-id-sorting ul, .property-listing-holder .properties-table, .registration-form .roles .role-listing, #sidebar-dashboard .notifications-links, #sidebar-dashboard .sideBar-links, #sidebar-dashboard .sideBar-links li .sub-links, .social-networks, .pager, #footer .cols-holder ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2648,6 +2648,48 @@ input[type='submit'] {
   }
 }
 
+.property-listing-holder .quick-links {
+  padding: 5px 0 0;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.property-listing-holder .quick-links > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.property-listing-holder .quick-links li {
+  padding: 0 5px;
+  margin: 0 0 10px;
+}
+
+.property-listing-holder .quick-links li a {
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 5px;
+  display: block;
+}
+
+.property-listing-holder .quick-links li a span[class^="icon-"], .property-listing-holder .quick-links li a span[class*="icon-"] {
+  padding: 0 5px 0 0;
+}
+
+.property-listing-holder .quick-links li a:hover {
+  opacity: 0.9;
+}
+
+.property-listing-holder .quick-links li a.delete {
+  border-color: #bc1e1e;
+  color: #bc1e1e;
+  background: rgba(225, 70, 70, 0.3);
+}
+
 .property-listing-holder .listing-cetegories-links {
   position: fixed;
   top: 52px;
@@ -2815,13 +2857,13 @@ input[type='submit'] {
 
 @media (max-width: 1425px) {
   .property-listing-holder .listing-cetegories-links ul li a {
-    padding: 15px 25px;
+    padding: 15px 18px;
   }
 }
 
 @media (max-width: 1199px) {
   .property-listing-holder .listing-cetegories-links ul li a {
-    padding: 15px 14px;
+    padding: 15px 7px;
   }
 }
 
@@ -4610,7 +4652,7 @@ a {
   border-left: 1px solid #2277b7;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .our-contactNum {
     display: none;
   }
@@ -5205,6 +5247,8 @@ a {
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
+    max-width: 300px;
+    margin: 0 auto;
   }
   .pager > * {
     display: inline-block;
@@ -5219,6 +5263,12 @@ a {
   padding: 0 3px;
   margin: 0 0 5px;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .pager li {
+    display: block;
+  }
 }
 
 .pager li b {

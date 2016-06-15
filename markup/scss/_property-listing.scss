@@ -37,6 +37,39 @@
 		}
 	}
 	
+	.quick-links {
+		@extend %listreset;
+		padding: 5px 0 0;
+		@include align-reset(top, 14, 20);
+
+		li{
+			padding: 0 5px;
+			margin: 0 0 10px;
+
+			a {
+				text-decoration: none;
+				border: 1px solid transparent;
+				border-radius: 2px;
+				padding: 5px;
+				display: block;
+
+				span[class^="icon-"],span[class*="icon-"]{
+					padding: 0 5px 0 0;
+				}
+
+				&:hover {
+					opacity: 0.9;
+				}
+
+				&.delete {
+					border-color: darken($red, 15%);
+					color: darken($red, 15%);
+					background: rgba($red, 0.3);
+				}
+			}
+		}
+	}
+
 	.listing-cetegories-links {
 		position: fixed;
 		top: 52px;
@@ -164,11 +197,11 @@
 					text-decoration: none;
 					
 					@include media('<1426px'){
-						padding: 15px 25px;
+						padding: 15px 18px;
 					}
 					
 					@include media('<widescreen'){
-						padding: 15px 14px;
+						padding: 15px 7px;
 					}
 					
 					&:hover{

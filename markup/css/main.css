@@ -5158,15 +5158,71 @@ a {
 
 #sidebar-dashboard .notifications-links li {
   padding: 0 10px 10px;
+  position: relative;
+}
+
+#sidebar-dashboard .notifications-links li.display-badge .badge {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
 }
 
 #sidebar-dashboard .notifications-links li a {
   text-decoration: none;
   color: #dde2e8;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+#sidebar-dashboard .notifications-links li a > * {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: 0;
 }
 
 #sidebar-dashboard .notifications-links li a:hover {
   color: #fff;
+}
+
+#sidebar-dashboard .notifications-links li a span[class^="icon-"], #sidebar-dashboard .notifications-links li a span[class*="icon-"] {
+  position: relative;
+  z-index: 9;
+}
+
+#sidebar-dashboard .notifications-links li a .badge {
+  font-size: 11px !important;
+  line-height: 15px !important;
+  font-weight: 600;
+  text-align: center !important;
+  min-width: 28px;
+  max-width: 28px;
+  color: #fff;
+  border-radius: 4px;
+  background: #e14646;
+  padding: 3px 0;
+  position: absolute;
+  top: -20px;
+  right: 4px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: opacity 0.4s ease, visibility 0.4s ease, z-index 0.4s ease;
+  -webkit-transition: opacity 0.4s ease, visibility 0.4s ease, z-index 0.4s ease;
+  -moz--webkit-transition: opacity 0.4s ease, visibility 0.4s ease, z-index 0.4s ease;
+  -ms--webkit-transition: opacity 0.4s ease, visibility 0.4s ease, z-index 0.4s ease;
+}
+
+#sidebar-dashboard .notifications-links li a .badge:after {
+  position: absolute;
+  bottom: -14px;
+  right: 3px;
+  border: 8px solid transparent;
+  border-top: 8px solid #e14646;
+  content: '';
+  border-left: 0;
 }
 
 #sidebar-dashboard .layout {
@@ -5288,7 +5344,7 @@ a {
 }
 
 #sidebar-dashboard .sideBar-links li a [class^="icon-"]:before, #sidebar-dashboard .sideBar-links li a [class*="icon-"]:before {
-  font-size: 22px;
+  font-size: 23px;
   line-height: 1;
 }
 

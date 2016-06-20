@@ -528,6 +528,10 @@
 					color: $red;
 					&:hover{ color: darken($red, 15%);}
 				}
+				&.undo {
+					color: $light-blue;
+					&:hover { color: darken($light-blue, 15%);}
+				}
 			}
 			.slide{
 				display: block;

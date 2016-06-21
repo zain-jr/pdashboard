@@ -3620,6 +3620,30 @@ input[type='submit'] {
   overflow-x: hidden;
 }
 
+.changePassword-form .societiesBlock-listing li,
+.registration-form .societiesBlock-listing li {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.changePassword-form .societiesBlock-listing li:hover,
+.registration-form .societiesBlock-listing li:hover {
+  background: #edf1f4;
+}
+
+.changePassword-form .societiesBlock-listing li input[type="checkbox"],
+.registration-form .societiesBlock-listing li input[type="checkbox"] {
+  float: left;
+  width: 10%;
+  margin: 4px 0 0;
+}
+
+.changePassword-form .societiesBlock-listing li label,
+.registration-form .societiesBlock-listing li label {
+  float: left;
+  width: 90%;
+}
+
 .changePassword-form .calculatedSocieties,
 .registration-form .calculatedSocieties {
   position: absolute;

@@ -647,8 +647,10 @@ th {
   content: "\e911";
 }
 
-.addAgency-user .addAgency-user-form .input-feilds, .addPropertyFormContainer .errors ul, .addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .property-listing-holder .quick-links, .property-listing-holder .listing-cetegories-links ul, .property-listing-holder .property-filter .by-user-sorting ul, .property-listing-holder .property-filter .by-id-sorting ul, .property-listing-holder .properties-table, .changePassword-form .roles .role-listing,
-.registration-form .roles .role-listing, #sidebar-dashboard .notifications-links, #sidebar-dashboard .sideBar-links, #sidebar-dashboard .sideBar-links li .sub-links, .social-networks, .pager, #footer .cols-holder ul {
+.addAgency-user .addAgency-user-form .input-feilds, .addPropertyFormContainer .errors ul, .addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .property-listing-holder .quick-links, .property-listing-holder .listing-cetegories-links ul, .property-listing-holder .property-filter .by-user-sorting ul, .property-listing-holder .property-filter .by-id-sorting ul, .property-listing-holder .properties-table, .changePassword-form .societiesBlock-listing,
+.changePassword-form .role-listing,
+.registration-form .societiesBlock-listing,
+.registration-form .role-listing, #sidebar-dashboard .notifications-links, #sidebar-dashboard .sideBar-links, #sidebar-dashboard .sideBar-links li .sub-links, .social-networks, .pager, #footer .cols-holder ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3533,16 +3535,20 @@ input[type='submit'] {
   right: 0;
 }
 
-.changePassword-form .roles .role-listing,
-.registration-form .roles .role-listing {
+.changePassword-form .societiesBlock-listing,
+.changePassword-form .role-listing,
+.registration-form .societiesBlock-listing,
+.registration-form .role-listing {
   padding: 10px 0 0;
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
 }
 
-.changePassword-form .roles .role-listing > *,
-.registration-form .roles .role-listing > * {
+.changePassword-form .societiesBlock-listing > *,
+.changePassword-form .role-listing > *,
+.registration-form .societiesBlock-listing > *,
+.registration-form .role-listing > * {
   display: inline-block;
   vertical-align: top;
   font-size: 16px;
@@ -3551,14 +3557,18 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
-  .changePassword-form .roles .role-listing,
-  .registration-form .roles .role-listing {
+  .changePassword-form .societiesBlock-listing,
+  .changePassword-form .role-listing,
+  .registration-form .societiesBlock-listing,
+  .registration-form .role-listing {
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
   }
-  .changePassword-form .roles .role-listing > *,
-  .registration-form .roles .role-listing > * {
+  .changePassword-form .societiesBlock-listing > *,
+  .changePassword-form .role-listing > *,
+  .registration-form .societiesBlock-listing > *,
+  .registration-form .role-listing > * {
     display: inline-block;
     vertical-align: top;
     font-size: 13px;
@@ -3567,27 +3577,69 @@ input[type='submit'] {
   }
 }
 
-.changePassword-form .roles .role-listing li,
-.registration-form .roles .role-listing li {
+.changePassword-form .societiesBlock-listing li,
+.changePassword-form .role-listing li,
+.registration-form .societiesBlock-listing li,
+.registration-form .role-listing li {
   width: 33.33%;
   overflow: hidden;
   padding: 5px;
 }
 
 @media (max-width: 767px) {
-  .changePassword-form .roles .role-listing li,
-  .registration-form .roles .role-listing li {
+  .changePassword-form .societiesBlock-listing li,
+  .changePassword-form .role-listing li,
+  .registration-form .societiesBlock-listing li,
+  .registration-form .role-listing li {
     width: 100%;
   }
 }
 
-.changePassword-form .roles .role-listing li label,
-.changePassword-form .roles .role-listing li input[type="checkbox"],
-.registration-form .roles .role-listing li label,
-.registration-form .roles .role-listing li input[type="checkbox"] {
+.changePassword-form .societiesBlock-listing li label,
+.changePassword-form .societiesBlock-listing li input[type="checkbox"],
+.changePassword-form .role-listing li label,
+.changePassword-form .role-listing li input[type="checkbox"],
+.registration-form .societiesBlock-listing li label,
+.registration-form .societiesBlock-listing li input[type="checkbox"],
+.registration-form .role-listing li label,
+.registration-form .role-listing li input[type="checkbox"] {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+}
+
+.changePassword-form .societiesBlock-listing,
+.registration-form .societiesBlock-listing {
+  padding: 0;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 0 1px 1px;
+  margin: -5px 0 0;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.changePassword-form .calculatedSocieties,
+.registration-form .calculatedSocieties {
+  position: absolute;
+  top: 50%;
+  margin: -7px 0 0;
+  color: #133783;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  right: 10px;
+  display: block;
+  max-width: 165px;
+}
+
+@media (max-width: 767px) {
+  .changePassword-form .calculatedSocieties,
+  .registration-form .calculatedSocieties {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 .changePassword-form .input-holder,
@@ -3605,6 +3657,11 @@ input[type='submit'] {
   width: 100%;
   clear: both;
   overflow: hidden;
+}
+
+.changePassword-form .input-holder.no-indent,
+.registration-form .input-holder.no-indent {
+  margin: 0;
 }
 
 @media (max-width: 767px) {
@@ -3697,6 +3754,28 @@ input[type='submit'] {
   outline: none;
   background: transparent;
   padding: 6px 10px 6px 50px;
+}
+
+.changePassword-form .input-holder textarea#search-society,
+.changePassword-form .input-holder input[type="text"]#search-society, .changePassword-form .input-holder input[type="tel"]#search-society, .changePassword-form .input-holder input[type="email"]#search-society, .changePassword-form .input-holder input[type="password"]#search-society,
+.registration-form .input-holder textarea#search-society,
+.registration-form .input-holder input[type="text"]#search-society,
+.registration-form .input-holder input[type="tel"]#search-society,
+.registration-form .input-holder input[type="email"]#search-society,
+.registration-form .input-holder input[type="password"]#search-society {
+  padding: 6px 170px 6px 50px;
+}
+
+@media (max-width: 767px) {
+  .changePassword-form .input-holder textarea#search-society,
+  .changePassword-form .input-holder input[type="text"]#search-society, .changePassword-form .input-holder input[type="tel"]#search-society, .changePassword-form .input-holder input[type="email"]#search-society, .changePassword-form .input-holder input[type="password"]#search-society,
+  .registration-form .input-holder textarea#search-society,
+  .registration-form .input-holder input[type="text"]#search-society,
+  .registration-form .input-holder input[type="tel"]#search-society,
+  .registration-form .input-holder input[type="email"]#search-society,
+  .registration-form .input-holder input[type="password"]#search-society {
+    padding: 6px 125px 6px 30px;
+  }
 }
 
 @media (max-width: 1199px) {

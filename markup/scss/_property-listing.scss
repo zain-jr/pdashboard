@@ -512,6 +512,9 @@
 				margin: 0 5px;
 				color: $black;
 				cursor: pointer;
+				padding: 0;
+				width: auto;
+				max-width: inherit;
 				
 				&.details{
 					color: $mix-blue;

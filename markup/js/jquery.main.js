@@ -1,4 +1,5 @@
  $(function() {
+	 initLightbox();
 	 if ($(".addPropertyFormContainer")[0]){
 		handleAddPropertyFormScrolling();
 		$(document).on("scroll", onScroll);

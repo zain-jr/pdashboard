@@ -3,8 +3,8 @@ $(document).ready(function() {
 	 $('.feature-block').find('.form-heading').hide();
 	$(document).on('click', '.feature-blockOpener', function(){
 		$(this).toggleClass('active');
-		$(this).closest('.feature-block').find('.holder').slideToggle();
-		$(this).closest('.feature-block').find('.form-heading').slideToggle();
+		$('.feature-block').find('.holder').slideToggle();
+		$('.feature-block').find('.form-heading').slideToggle();
 	});
 });
 

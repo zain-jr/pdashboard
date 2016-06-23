@@ -66,9 +66,9 @@
 			margin: -10px;
 		}
 		
-		&.successfully-saved {
-			display: block !important;
-		}
+		// &.successfully-saved {
+		// 	display: block !important;
+		// }
 	}
 	
 	.please-wait & {
@@ -127,7 +127,7 @@
 	}
 	
 	.attactment-block, .basics-block, .feature-block, .contact-information{
-		padding: 75px 20px 0;
+		padding: 0 20px 0;
 		
 		@include media('<tablet'){
 			padding: 75px 10px 0;
@@ -136,6 +136,7 @@
 	
 	.errors{
 		overflow: hidden;
+		display: none;
 		
 		ul {
 			@extend %listreset;
@@ -205,6 +206,7 @@
 	}
 	
 	.section-listing {
+		display: none;
 		@extend %listreset;
 		@include align-reset(top, 18, 21);
 		position: relative;
@@ -214,6 +216,10 @@
 		-moz-transition: padding 0.4s ease;
 		-ms-transition: padding 0.4s ease;
 		
+		@include media('<tablet'){
+			display: block;
+		}
+
 		.sideBar-active &{
 			padding: 0 0 0 300px;
 			
@@ -398,10 +404,11 @@
 		}
 	}
 	.calculatedPrice{
+		display: block;
+		padding: 0 0 0 110px;
 		color: $dove-black;
 		font-style: italic;
 		position: relative;
-		padding: 0 0 5px;
 	}
 	.tab-content{
 		overflow: hidden;
@@ -561,6 +568,10 @@
 			color: $mix-grays;
 			@include font(14,17);
 			
+			@include media('<desktop'){
+				@include font(12,16);
+			}
+
 			@include media('<tablet'){
 				float: none;
 				display: block;
@@ -593,6 +604,7 @@
 			@include align-reset(top,12,15);
 			text-transform: capitalize;
 			max-width: 500px;
+			padding: 0 0 0 20px;
 			
 			&.error {
 				.fake-radio{
@@ -607,8 +619,8 @@
 			}
 			
 			li{
-				padding: 0 10px 10px;
-				
+				padding: 0 0 3px;
+
 				&.error-text {
 					padding: 5px 0 0;
 					width: auto !important;
@@ -618,30 +630,112 @@
 				label{
 					@include align(top);
 					cursor: pointer;
-					padding: 2px 0 0;
 					
-					.fake-radio,
-					.fake-label {
-						@include align(middle);
-						
+					&.hasChild {
+						.fake-label {
+							&:before {
+								position: absolute;
+								bottom: 0;
+								left: 50%;
+								border: 5px solid transparent;
+								border-top: 5px solid $mix-blue;
+								content: '';
+								margin: 0 0 0 -5px;
+								transition: bottom 0.4s ease, opacity 0.4s ease;
+								opacity: 0;
+							}
+						}
 					}
-					.fake-radio {
-						@include squar(20px, 20px);
-						border: 2px solid $mix-grays;
-						margin: -2px 0 0;
-						position: relative;
+
+					&.withCheck {
 						
+						.fake-radio{
+							@include align(top);
+							border: 2px solid $mix-grays;
+							position: relative;
+
+							&:after{
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								color: $white;
+								content: "\e903";
+								font-family: 'icomoon';
+								@include font(10,14);
+								margin: 0-6px 0 0 -6px;
+								display: none;
+							}
+						}
+						.fake-label {
+							@include align(top);
+							margin: 0 0 0 -5px;
+							border: 0;
+							padding: 2px 0 0;
+							
+							&:hover{
+								color: $mix-blue;
+							}
+							
+							&:after{
+								display: none;
+							}
+						}
+						input[type="radio"]{
+							&:checked ~ {
+								.fake-label { color:$mix-blue;}
+								.fake-radio{
+									background: $mix-blue;
+									border-color: $mix-blue;
+									&:after{ display: block;}
+								}
+							}
+						}
+					}
+
+					.fake-label {
+						display: block;
+						padding: 6px;
+						min-width: 50px;
+						text-align: center;
+						color: $mix-grays;
+						font-weight: 600;
+						border: 1px solid $mix-blue;
+						position: relative;
+						z-index: 1;
+						transition: all 0.4s ease;
+
+						&:hover{
+							color: $white;
+							&:before {
+								bottom: -10px;
+								opacity: 1;
+							}
+							&:after{
+								opacity: 1;
+								visibility: visible;
+								top: 0;
+								right: 0;
+								bottom: 0;
+								left: 0;
+								border-radius: 0;
+							}
+						}
+
 						&:after{
 							position: absolute;
 							top: 50%;
+							right: 50%;
 							left: 50%;
-							margin: -5px 0 0 -5px;
-							color: $white;
-							content: "\e903";
-							font-family: 'icomoon';
-							@include font(10,10);
-							display: none;
+							bottom: 50%;
+							background: $mix-blue;
+							content: '';
+							z-index: -1;
+							opacity: 0;
+							visibility: hidden;
+							border-radius: 100%;
+							transition: all 0.4s ease;
 						}
+						
 					}
 				}
 				
@@ -653,21 +747,30 @@
 					left: -999px;
 					
 					&:checked ~ {
-						.fake-radio{
-							border: 2px solid $defualt-blue;
-							background: $defualt-blue;
-							
-							&:after{ display: block;}
-						}
 						.fake-label { 
-							color: $defualt-blue;
+							color: $white;
+
+							&:before{
+								bottom: -10px;
+								opacity: 1;
+							}
+
+							&:after {
+								opacity: 1;
+								visibility: visible;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								border-radius: 0;
+							}
 						}
 					}
 				}
 			}
 		}
 		.layout{
-			padding: 20px 0 5px;
+			padding: 10px 0 0;
 			
 			&.add{
 				max-width: 885px;
@@ -682,60 +785,88 @@
 					margin: 0;
 				}
 			}
+		}
+		
+		.layout-holder{
+			float: left;
+			width: 50%;
+			margin: 0 auto 5px;
 			
-			.layout-holder{
-				float: left;
-				width: 50%;
-				margin: 0 auto 10px;
+			@include media('<tablet'){
+				float: none;
+				display: block;
+				width: 100%;
+				margin: 0;
+				padding: 0 0 20px;
+			}
+			
+			&.error {
+				.error-text{ display: block;}
+				select,
+				textarea,
+				input[type="text"],input[type="search"],input[type="email"],input[type="password"],input[type="number"],input[type="tel"]{ border-color: $red;}
+			}
+			
+			&.add{
+				width: 100%;
+			}
+			
+			select{
+				margin: 0 0 0 9px;
+				height: 30px;
+				width:262px;
+				
+				@include media('<widescreen'){
+					width: 186px;
+				}
+				
+				@include media('<desktop'){
+					width: 245px;
+				}
 				
 				@include media('<tablet'){
-					float: none;
-					display: block;
 					width: 100%;
 					margin: 0;
-					padding: 0 0 20px;
 				}
+			}
+			
+			.title{
+				max-width: 125px;
+				width: inherit;
+				float: none;
+				@include align(top);
 				
-				&.error {
-					.error-text{ display: block;}
-					select,
-					textarea,
-					input[type="text"],input[type="search"],input[type="email"],input[type="password"],input[type="number"],input[type="tel"]{ border-color: $red;}
+				@include media('<desktop'){
+					max-width: 90px;
 				}
-				
-				&.add{
-					width: 100%;
+
+				@include media('<tablet'){
+					max-width: inherit;
 				}
-				
-				select{
-					margin: 0 0 0 9px;
-					height: 30px;
-					width:262px;
-					
-					@include media('<widescreen'){
-						width: 186px;
-					}
-					
-					@include media('<desktop'){
-						width: 245px;
-					}
-					
-					@include media('<tablet'){
-						width: 100%;
-						margin: 0;
-					}
-				}
-				
-				.title{
-					max-width: 95px;
-					width: inherit;
-					float: none;
-					@include align(top);
-					
-					@include media('<tablet'){
-						max-width: inherit;
-					}
-				}
+			}
+		}
+		.feature-blockOpener{
+			width: 260px;
+			text-align: center;
+			cursor: pointer;
+			display: block;
+			margin: 0 43px 0 auto;
+			color: $black;
+			border: 1px solid $green;
+			color: $green;
+			@include font(14,18);
+			text-transform: capitalize;
+			font-weight: 600;
+			padding: 5px;
+			transition: color 0.4s ease, background 0.4s ease;
+			-webkit-transition: color 0.4s ease, background 0.4s ease;
+			-moz-transition: color 0.4s ease, background 0.4s ease;
+			-ms-transition: color 0.4s ease, background 0.4s ease;
+			
+			&.active,
+			&:hover{
+				background: lighten($defualt-blue, 35%);
+				color: $white;
 			}
 		}
 		.tab-content{
@@ -750,7 +881,7 @@
 		@include font(16,20);
 		font-weight: 600;
 		border-bottom: 1px solid $defualt-blue;
-		margin: 30px 0 0;
+		margin: 15px 0 0;
 		
 		@include media('<desktop'){
 			@include font(14,20);
@@ -775,29 +906,6 @@
 		}
 	}
 	.feature-block{
-		
-		.feature-blockOpener{
-			width: 300px;
-			text-align: center;
-			cursor: pointer;
-			display: block;
-			margin: 30px auto 0;
-			color: $black;
-			border: 1px solid $black;
-			text-transform: capitalize;
-			font-weight: 600;
-			padding: 10px;
-			transition: color 0.4s ease, background 0.4s ease;
-			-webkit-transition: color 0.4s ease, background 0.4s ease;
-			-moz-transition: color 0.4s ease, background 0.4s ease;
-			-ms-transition: color 0.4s ease, background 0.4s ease;
-			
-			&.active,
-			&:hover{
-				background: lighten($defualt-blue, 35%);
-				color: $white;
-			}
-		}
 		
 		.holder{
 			overflow: hidden;
@@ -897,7 +1005,8 @@
 		@extend %listreset;
 		@include align-reset(top,14,17);
 		text-align: center;
-		margin: 30px 0 0;
+		margin: 10px auto;
+		max-width: 1024px;
 		
 		@include media('<desktop'){
 			max-width: 480px;
@@ -907,7 +1016,7 @@
 		li{
 			width: 16.66%;
 			position: relative;
-			padding: 10px 5px;
+			padding:0 10px 10px;
 			
 			@include media('<desktop'){
 				width: 33.33%;
@@ -945,8 +1054,8 @@
 					
 					&:before{
 						position: absolute;
-						top: 19px;
-						left: -39px;
+						top: 15px;
+						left: -45px;
 						content: 'Main Image';
 						text-transform: capitalize;
 						@include font(13,16);
@@ -962,7 +1071,7 @@
 			}
 			
 			.file-uploader{
-					@include squar(100%, 200px);
+					@include squar(100%, 110px);
 					margin: 0 auto;
 					background: $dove-gray;
 					position: relative;
@@ -1027,7 +1136,8 @@
 				border-width:0 0 2px;
 				border-style: solid;
 				border-color: $gray;
-				height: 50px;
+				height: 35px;
+				padding: 6px 10px;
 				@include font(14,18);
 				pointer-events: none;
 				transition: border 0.4s ease;

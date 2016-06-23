@@ -128,10 +128,6 @@
 	
 	.attactment-block, .basics-block, .feature-block, .contact-information{
 		padding: 0 20px 0;
-		
-		@include media('<tablet'){
-			padding: 75px 10px 0;
-		}
 	}
 	
 	.errors{
@@ -173,6 +169,7 @@
 		z-index: 99;
 		clear: both;
 		
+
 		.sideBar-active &{
 			@extend .text-left;
 		}
@@ -185,18 +182,23 @@
 			right: -9999px;
 			z-index: -1;
 			background: $light-gray;
-			content: '';	
+			content: '';
+			
+			@include media('<tablet'){ display: none;}
 		}
 		
 		.listing-opener{
 			text-align: center;
 			text-decoration: none;
 			color: $black;
-			@include font(40,36);
+			@include font(35,35);
 			cursor: pointer;
 			z-index: 5;
 			display: block;
-			
+			background: $light-gray;
+			padding: 0 5px;
+			float: right;
+
 			@include media('>=tablet'){ display: none;}
 			
 			&:hover{
@@ -231,7 +233,7 @@
 		
 		@include media('<tablet'){
 			position: absolute;
-			top: 100%;
+			top: 0;
 			left: -10px;
 			right: -10px;
 			z-index: -1;
@@ -863,6 +865,22 @@
 			-moz-transition: color 0.4s ease, background 0.4s ease;
 			-ms-transition: color 0.4s ease, background 0.4s ease;
 			
+			@include media('<tvscreen'){
+				margin: 0 26px 0 auto;
+			}
+			@include media('<widescreen'){
+				margin: 0 13px 0 auto;
+			}
+			@include media('<desktop'){
+				margin: 0 17px 0 auto;
+				@include font(12,15);
+				width: 195px;
+			}
+			@include media('<tablet'){
+				width: 100%;
+				margin: 0;
+			}
+			
 			&.active,
 			&:hover{
 				background: lighten($defualt-blue, 35%);
@@ -1010,7 +1028,7 @@
 		
 		@include media('<desktop'){
 			max-width: 480px;
-			margin: 30px auto 0;
+			margin: 10px auto;
 		}
 		
 		li{
@@ -1018,13 +1036,13 @@
 			position: relative;
 			padding:0 10px 10px;
 			
+			@include media('<widescreen'){
+				padding:  0 5px 10px;
+			}
+
 			@include media('<desktop'){
 				width: 33.33%;
-				padding: 10px 5px;
-			}
-			
-			@include media('<desktop'){
-				width: 50%;
+				padding: 0 5px 10px;
 			}
 			
 			&.error {
@@ -1078,17 +1096,6 @@
 					z-index: 1;
 					overflow: hidden;
 					
-					@include media('<1425px'){
-						@include squar(100%, 150px);
-					}
-					
-					@include media('<widescreen'){
-						@include squar(100%, 110px);
-					}
-					
-					@include media('<desktop'){
-						@include squar(100%, 180px);
-					}
 					@include media('<tablet'){
 						@include squar(100%, 150px);
 					}

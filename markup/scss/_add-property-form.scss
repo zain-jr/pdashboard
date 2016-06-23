@@ -8,7 +8,7 @@
 	overflow: hidden;
 	
 	.sideBar-active & {
-		padding: 0 10px 0 300px;
+		padding: 20px 10px 0 300px;
 		
 		@include media('<desktop'){
 			padding: 0 10px 0 245px;
@@ -66,9 +66,9 @@
 			margin: -10px;
 		}
 		
-		// &.successfully-saved {
-		// 	display: block !important;
-		// }
+		&.successfully-saved {
+			display: block !important;
+		}
 	}
 	
 	.please-wait & {
@@ -132,7 +132,6 @@
 	
 	.errors{
 		overflow: hidden;
-		display: none;
 		
 		ul {
 			@extend %listreset;

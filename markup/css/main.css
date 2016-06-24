@@ -1144,12 +1144,6 @@ input[type='submit'] {
   }
 }
 
-@media (max-width: 1023px) {
-  .sideBar-active .addPropertyFormContainer textarea {
-    max-width: 350px !important;
-  }
-}
-
 .sideBar-active.sideBar-active .addPropertyFormContainer:after {
   left: 300px;
 }
@@ -1561,31 +1555,6 @@ input[type='submit'] {
   padding: 10px;
 }
 
-@media (max-width: 1599px) {
-  .addPropertyFormContainer .property-add textarea {
-    max-width: 650px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .addPropertyFormContainer .property-add textarea {
-    max-width: 523px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .property-add textarea {
-    max-width: 610px;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add textarea {
-    max-width: inherit;
-    margin: 0;
-  }
-}
-
 .addPropertyFormContainer .property-add textarea:hover {
   border-color: #000;
 }
@@ -1886,6 +1855,30 @@ input[type='submit'] {
   width: 25%;
 }
 
+.addPropertyFormContainer .property-add .layout-holder .title.less-width {
+  width: 12%;
+}
+
+@media (max-width: 1599px) {
+  .addPropertyFormContainer .property-add .layout-holder .title.less-width {
+    width: 16%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .addPropertyFormContainer .property-add .layout-holder .title.less-width {
+    width: 17%;
+  }
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .property-add .layout-holder .title.less-width {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+}
+
 @media (max-width: 1599px) {
   .addPropertyFormContainer .property-add .layout-holder .title {
     width: 33%;
@@ -1902,6 +1895,31 @@ input[type='submit'] {
 
 .addPropertyFormContainer .property-add .layout-holder .input-holder {
   float: right;
+}
+
+.addPropertyFormContainer .property-add .layout-holder .input-holder.add {
+  width: 88%;
+  padding: 0 0 0 8px;
+}
+
+@media (max-width: 1599px) {
+  .addPropertyFormContainer .property-add .layout-holder .input-holder.add {
+    width: 84%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .addPropertyFormContainer .property-add .layout-holder .input-holder.add {
+    width: 83%;
+  }
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .property-add .layout-holder .input-holder.add {
+    width: 100%;
+    display: block;
+    float: none;
+  }
 }
 
 @media (max-width: 1599px) {

@@ -11,10 +11,10 @@
 		padding: 20px 10px 0 300px;
 		
 		@include media('<desktop'){
-			padding: 0 10px 0 245px;
+			padding: 10px 10px 0 245px;
 		}
 		@include media('<tablet'){
-			padding:0;
+			padding:10px 0 0;
 		}
 
 		select,
@@ -292,11 +292,15 @@
 		input[type="email"]{
 			@include font(12,15);
 			@include squar(100%, 30px);
-			max-width: 260px;
+			max-width: 235px;
 			margin: 0 0 0 10px;
 			padding: 6px 10px;
 			outline: none;
 			
+			@include media('<tvscreen'){
+				max-width: 225px;
+			}
+
 			@include media('<widescreen'){
 				max-width: 185px;
 			}
@@ -384,10 +388,14 @@
 			@include font(12,15);
 			margin: 0 0 0 9px;
 			@include squar(100%, 120px);
-			max-width: 710px;
+			max-width: 680px;
 			resize: none;
 			padding: 10px;
 			
+			@include media('<tvscreen'){
+				max-width: 650px;
+			}
+
 			@include media('<widescreen'){
 				max-width: 523px;
 			}
@@ -515,9 +523,10 @@
 						}
 						.fake-label {
 							@include align(top);
-							margin: 0 0 0 -5px;
 							border: 0;
-							padding: 2px 0 0;
+							padding: 2px 5px 0;
+							max-width: 150px;
+							text-align: left;
 							
 							&:hover{
 								color: $mix-blue;
@@ -626,6 +635,10 @@
 				@extend %clearfix;
 				clear: both;
 				
+				@include media('<desktop'){
+					max-width: 469px;
+				}
+
 				@include media('<tablet'){
 					max-width: inherit;
 					width: 100%;
@@ -678,11 +691,15 @@
 			}
 			
 			.title{
-				max-width: 125px;
+				max-width: 185px;
 				width: inherit;
 				float: none;
 				@include align(top);
 				
+				@include media('<widescreen'){
+					max-width: 120px;
+				}
+
 				@include media('<desktop'){
 					max-width: 90px;
 				}
@@ -697,7 +714,7 @@
 			text-align: center;
 			cursor: pointer;
 			display: block;
-			margin: 0 43px 0 auto;
+			margin: 0;
 			color: $black;
 			border: 1px solid $green;
 			color: $green;
@@ -710,11 +727,8 @@
 			-moz-transition: color 0.4s ease, background 0.4s ease;
 			-ms-transition: color 0.4s ease, background 0.4s ease;
 			
-			@include media('<tvscreen'){
-				margin: 0 26px 0 auto;
-			}
 			@include media('<widescreen'){
-				margin: 0 13px 0 auto;
+				margin: 0 18px 0 auto;
 			}
 			@include media('<desktop'){
 				margin: 0 17px 0 auto;
@@ -758,8 +772,8 @@
 			
 			&:after{
 				position: absolute;	
-				top: 0;
-				right: 0;
+				top: -1px;
+				right: -1px;
 				border: 32px solid transparent;
 				border-top: 32px solid $white;
 				border-right: 0;

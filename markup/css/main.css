@@ -1154,32 +1154,6 @@ input[type='submit'] {
   }
 }
 
-.addPropertyFormContainer .success-message {
-  color: #2b5037;
-  background: #99c8a7;
-  border: 1px solid #2b5037;
-  display: none !important;
-  border-radius: 4px;
-  max-width: 300px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 10px;
-}
-
-.addPropertyFormContainer .success-message:before {
-  content: "\e903";
-  font-family: 'icomoon';
-  float: left;
-  border-right: 1px solid;
-  color: #3d714d;
-  padding: 10px;
-  margin: -10px;
-}
-
-.addPropertyFormContainer .success-message.successfully-saved {
-  display: block !important;
-}
-
 .please-wait .addPropertyFormContainer {
   height: 100vh;
 }
@@ -4604,7 +4578,7 @@ body.loading-resources:after {
   text-transform: uppercase !important;
 }
 
-.text-center, .addPropertyFormContainer .success-message, .addPropertyFormContainer .listing-holder, .property-listing-holder .property-filter .by-user-sorting ul li label, .property-listing-holder .property-filter .by-id-sorting ul li label, #header .searhForm-holder, #sidebar-dashboard .user-picture, .pager {
+.text-center, .addPropertyFormContainer .listing-holder, .property-listing-holder .property-filter .by-user-sorting ul li label, .property-listing-holder .property-filter .by-id-sorting ul li label, #header .searhForm-holder, #sidebar-dashboard .user-picture, .pager, .success-message {
   text-align: center !important;
 }
 
@@ -6090,6 +6064,32 @@ a {
 
 #footer .cols-holder .contact input[type="submit"]:hover {
   background: #2685cc;
+}
+
+.success-message {
+  color: #2b5037;
+  background: #99c8a7;
+  border: 1px solid #2b5037;
+  display: none !important;
+  border-radius: 4px;
+  max-width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.success-message:before {
+  content: "\e903";
+  font-family: 'icomoon';
+  float: left;
+  border-right: 1px solid;
+  color: #3d714d;
+  padding: 10px;
+  margin: -10px;
+}
+
+.success-message.successfully-saved {
+  display: block !important;
 }
 
 .accordion .slide {

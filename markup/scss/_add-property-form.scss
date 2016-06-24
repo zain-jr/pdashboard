@@ -28,33 +28,6 @@
 		}
 	}
 	
-	.success-message {
-		color: darken($green, 25%);
-		background: lighten($green, 20%);
-		border: 1px solid darken($green, 25%);
-		display: none !important;
-		@extend .text-center;
-		border-radius: 4px;
-		max-width: 300px;
-		margin: 0 auto;
-		overflow: hidden;
-		padding: 10px;
-		
-		&:before {
-			content: "\e903";
-			font-family: 'icomoon';
-			float: left;
-			border-right: 1px solid;
-			color: darken($green, 15%);
-			padding: 10px;
-			margin: -10px;
-		}
-		
-		&.successfully-saved {
-			display: block !important;
-		}
-	}
-	
 	.please-wait & {
 		height: 100vh;
 		

@@ -17,18 +17,6 @@
 			padding:10px 0 0;
 		}
 
-		select,
-		input[type="text"],
-		input[type="search"],
-		input[type="number"],
-		input[type="email"]{
-			
-			@include media('<desktop'){max-width: 115px !important;}
-
-			@include media('<tablet'){
-				max-width: inherit !important;
-			}
-		}
 		textarea{
 			@include media('<desktop'){max-width: 350px !important;}
 		}
@@ -292,27 +280,10 @@
 		input[type="email"]{
 			@include font(12,15);
 			@include squar(100%, 30px);
-			max-width: 235px;
-			margin: 0 0 0 10px;
+			width: 100%;
+			display: block;
 			padding: 6px 10px;
 			outline: none;
-			
-			@include media('<tvscreen'){
-				max-width: 225px;
-			}
-
-			@include media('<widescreen'){
-				max-width: 185px;
-			}
-			
-			@include media('<desktop'){
-				max-width: 245px;
-			}
-			
-			@include media('<tablet'){
-				max-width: inherit;
-				margin: 0;
-			}
 			
 			&:focus,
 			&:hover{
@@ -386,9 +357,7 @@
 		
 		textarea {
 			@include font(12,15);
-			margin: 0 0 0 9px;
 			@include squar(100%, 120px);
-			max-width: 680px;
 			resize: none;
 			padding: 10px;
 			
@@ -444,6 +413,7 @@
 		.input-holder{
 			float: left;
 			width: 75%;
+			padding: 0 0 0 5px;
 			
 			@include media('<tablet'){
 				float: none;
@@ -631,9 +601,6 @@
 			&.add{
 				max-width: 885px;
 				margin: 0 auto;
-				overflow: visible;
-				@extend %clearfix;
-				clear: both;
 				
 				@include media('<desktop'){
 					max-width: 469px;
@@ -650,6 +617,7 @@
 		.layout-holder{
 			float: left;
 			width: 50%;
+			padding: 0 5px;
 			margin: 0 auto 5px;
 			
 			@include media('<tablet'){
@@ -672,45 +640,38 @@
 			}
 			
 			select{
-				margin: 0 0 0 9px;
 				height: 30px;
-				width:262px;
-				
-				@include media('<widescreen'){
-					width: 186px;
-				}
-				
-				@include media('<desktop'){
-					width: 245px;
+				width:100%;
+			}
+			
+			.title{
+				float: left;
+				width: 25%;
+
+				@include media('<tvscreen'){
+					width: 33%;
 				}
 				
 				@include media('<tablet'){
 					width: 100%;
-					margin: 0;
+					display: block;
+					float: none;
 				}
 			}
-			
-			.title{
-				max-width: 185px;
-				width: inherit;
-				float: none;
-				@include align(top);
+			.input-holder{
+				float:right;
 				
-				@include media('<widescreen'){
-					max-width: 120px;
+				@include media('<tvscreen'){
+					width: 67%;
 				}
-
-				@include media('<desktop'){
-					max-width: 90px;
-				}
-
 				@include media('<tablet'){
-					max-width: inherit;
+					width: 100%;
+					display: block;
+					float: none;
 				}
 			}
 		}
 		.feature-blockOpener{
-			width: 260px;
 			text-align: center;
 			cursor: pointer;
 			display: block;
@@ -727,17 +688,12 @@
 			-moz-transition: color 0.4s ease, background 0.4s ease;
 			-ms-transition: color 0.4s ease, background 0.4s ease;
 			
-			@include media('<widescreen'){
-				margin: 0 18px 0 auto;
+			@include media('<tvscreen'){
+				@include font(13,17);
 			}
+
 			@include media('<desktop'){
-				margin: 0 17px 0 auto;
 				@include font(12,15);
-				width: 195px;
-			}
-			@include media('<tablet'){
-				width: 100%;
-				margin: 0;
 			}
 			
 			&.active,
@@ -825,7 +781,7 @@
 		}
 		
 		li{
-			padding: 0 10px 15px;
+			padding: 0 10px 8px;
 			width: 50%;
 			
 			@include media('<desktop'){

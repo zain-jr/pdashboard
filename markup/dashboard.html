@@ -185,52 +185,66 @@
 							<div class="layout add">
 								<div class="layout-holder">
 									<span class="title">Price:</span>
-									<input type="number" name="price" ng-model="form.data.price" placeholder="Please enter your price">
-									<span class="error-text">This is error</span>
-									<span class="calculatedPrice"></span>
+									<div class="input-holder">
+										<input type="number" name="price" ng-model="form.data.price" placeholder="Please enter your price">
+										<span class="error-text">This is error</span>
+										<span class="calculatedPrice"></span>
+									</div>
 								</div>
 								<div class="layout-holder">
 									<span class="title">Property Title:</span>
-									<input type="text" name="propertyTitle" ng-model="form.data.propertyTitle" placeholder="Please enter property title">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="text" name="propertyTitle" ng-model="form.data.propertyTitle" placeholder="Please enter property title">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 							</div>
 							<div class="layout add">
 								<div class="layout-holder">
 									<span class="title">Land Area:</span>
-									<input type="number" step="any" ng-model="form.data.landArea" placeholder="Please enter land area">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="number" step="any" ng-model="form.data.landArea" placeholder="Please enter land area">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 								<div class="layout-holder">
 									<span class="title">Unit:</span>
-									<select name="land_unit" ng-model="form.data.landUnit">
-										<option value="1" selected disabled>Select Unit</option>
-										<option value="2">Squar Feet</option>
-										<option value="3">Squar Yards</option>
-									</select>
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<select name="land_unit" ng-model="form.data.landUnit">
+											<option value="1" selected disabled>Select Unit</option>
+											<option value="2">Squar Feet</option>
+											<option value="3">Squar Yards</option>
+										</select>
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 							</div>
 							<div class="layout add">
 								<div class="layout-holder add">
-									<span class="title">Description:</span>
-									<textarea name="propertyDescription" ng-model="form.data.propertyDescription" placeholder="Please enter description"></textarea>
-									<span class="error-text">This is error</span>
+									<span class="title">Description of property:</span>
+									<div class="input-holder">
+										<textarea name="propertyDescription" ng-model="form.data.propertyDescription" placeholder="Please enter description"></textarea>
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 							</div>
 							<div class="layout add">
 								<div class="layout-holder">
 									<span class="title">Number of store Rooms:</span>
-									<input type="checkbox">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="checkbox">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 								<div class="layout-holder">
 									<span class="title">Bedrooms:</span>
-									<input type="number" placeholder="Number of bedrooms">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="number" placeholder="Number of bedrooms">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 								<div class="layout-holder">
-									<a class="feature-blockOpener">Click here to see extra feature</a>
+									<div class="input-holder"><a class="feature-blockOpener">see extra feature</a></div>
 								</div>
 							</div>
 						</section>
@@ -545,39 +559,51 @@
 							<div class="layout add">
 								<div class="layout-holder">
 									<span class="title">owner:</span>
-									<select name="owner" ng-model="form.data.owner">
-										<option value="1">Noman Tufail</option>
-									</select>
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<select name="owner" ng-model="form.data.owner">
+											<option value="1">Noman Tufail</option>
+										</select>
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 								<div class="layout-holder">
 									<span class="title">contact person:</span>
-									<input type="text" name="contact_person" ng-model="form.data.contactPerson" placeholder="Please Enter your contact person">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="text" name="contact_person" ng-model="form.data.contactPerson" placeholder="Please Enter your contact person">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 							</div>
 							<div class="layout add">
 								<div class="layout-holder">
 									<span class="title">Phone:</span>
-									<input type="text" name="phone" ng-model="form.data.phone" placeholder="Please enter phone number">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="text" name="phone" ng-model="form.data.phone" placeholder="Please enter phone number">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 								<div class="layout-holder">
 									<span class="title">Cell:</span>
-									<input type="text" name="cell" ng-model="form.data.cell" placeholder="Please enter cell number">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="text" name="cell" ng-model="form.data.cell" placeholder="Please enter cell number">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 							</div>
 							<div class="layout add">
 								<div class="layout-holder">
 									<span class="title">fax:</span>
-									<input type="text" name="title" ng-model="form.data.fax" placeholder="please enter Fax">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="text" name="title" ng-model="form.data.fax" placeholder="please enter Fax">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 								<div class="layout-holder">
 									<span class="title">email:</span>
-									<input type="email" name="email" ng-model="form.data.email" placeholder="Please enter your email">
-									<span class="error-text">This is error</span>
+									<div class="input-holder">
+										<input type="email" name="email" ng-model="form.data.email" placeholder="Please enter your email">
+										<span class="error-text">This is error</span>
+									</div>
 								</div>
 							</div>
 						</section>

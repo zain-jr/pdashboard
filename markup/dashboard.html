@@ -77,537 +77,220 @@
 				</ul>
 			</aside>
 			<div class="pages-holder">
-				<div class="addPropertyFormContainer" ng-controller="AddPropertyController" ng-init="initialize()">
-					<form class="property-add" ng-submit="submitProperty()">
-						<section class="basics-block" id="basics-block">
-							<span class="success-message successfully-saved">Property Saved</span>
-							<div class="errors">
-								<ul>
-									<li data-ng-repeat="error in errors">Owner is invalid</li>
+				<div class="registrationFormHolder">
+					<form class="registration-form">
+						<strong class="heading-profile">My Profile.</strong>
+						<div class="input-holder error">
+							<label class="icon-envelope" for="fname"></label>
+							<input type="email" placeholder="Enter Your First Name" id="fname" name="fname" required>
+							<span class="border"></span>
+							<span class="error-text">This is error</span>
+						</div>
+						<div class="input-holder error">
+							<label class="icon-envelope" for="lname"></label>
+							<input type="email" placeholder="Enter Your Last Name" id="lname" name="lname" required>
+							<span class="border"></span>
+							<span class="error-text">This is error</span>
+						</div>
+						<div class="input-holder">
+							<label class="icon-key" for="pass1"></label>
+							<input type="password" placeholder="Enter Your Password" id="pass1" name="password" required>
+							<span class="border"></span>
+						</div>
+						<div class="input-holder error">
+							<label class="icon-key" for="cpass"></label>
+							<input type="password"  placeholder="Confirm Password" name="passwordAgain" id="cpass" required>
+							<span class="border"></span>
+							<span class="error-text">This is error</span>
+						</div>
+						<div class="input-holder error">
+							<label class="icon-envelope" for="email1"></label>
+							<input type="email" placeholder="Enter Your Email Address" id="email1" name="email" required>
+							<span class="border"></span>
+							<span class="error-text">This is error</span>
+						</div>
+						<h1>Contact Information</h1>
+						<div class="input-holder">
+							<label class="icon-phone" for="phone"></label>
+							<input type="tel" placeholder="Enter Your Phone Number" name="phone" id="phone" required>
+							<span class="border"></span>
+						</div>
+						<div class="input-holder error">
+							<label class="icon-phone_iphone" for="cell"></label>
+							<input type="tel" placeholder="Enter Your Cell / Mobile Number" name="mobile" id="cell" required>
+							<span class="border"></span>
+							<span class="error-text">This is error</span>
+						</div>
+						<div class="input-holder error">
+							<label class="icon-fax" for="fax"></label>
+							<input type="tel" placeholder="Enter Fax Details" name="fax" id="fax" required>
+							<span class="border"></span>
+							<span class="error-text">This is error</span>
+						</div>
+						<div class="input-holder error">
+							<label class="icon-directions" for="address"></label>
+							<input type="text" placeholder="Enter Your Address" name="address" id="address" required>
+							<span class="border"></span>
+							<span class="error-text">This is error</span>
+						</div>
+						<div class="input-holder error">
+							<label class="icon-file-zip" for="zip"></label>
+							<input type="text" placeholder="Enter Zip Code" name="zipCode" id="zip" required>
+							<span class="border"></span>
+							<span class="error-text">This is error</span>
+						</div>
+						<div class="input-holder">
+							<label for="agent" class="agent-check">
+								<input type="checkbox" class="hidden-checkfield agent-brokerCheckbox" id="agent">
+								<span class="fake-checkbox">
+									<span class="fake-button"></span>
+								</span>
+								<span class="fake-label">Are you an Agent</span>
+							</label>
+						</div>
+						<div class="input-holder full-width error">
+							<div class="roles">
+								<a class="role-opener">Other Roles:</a>
+								<span class="error-text">This is error</span>
+								<ul class="role-listing">
+									<li>
+										<input type="checkbox" id="owner-investor" class="userRole-checkbox" name="owner-investor">
+										<label for="owner-investor">Owner / Investor</label>
+									</li>
+									<li>
+										<input type="checkbox" id="tenant" class="userRole-checkbox" name="tenant">
+										<label for="tenant">Tenant</label>
+									</li>
+									<li>
+										<input type="checkbox" id="agent-2" class="userRole-checkbox agent-brokerCheckbox" name="agent-broker">
+										<label for="agent-2">Agent/Broker</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Apprraiser" class="userRole-checkbox" name="apprraiser">
+										<label for="Apprraiser">Apprraiser</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Architect" class="userRole-checkbox" name="architect">
+										<label for="Architect">Architect</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Builder" class="userRole-checkbox" name="builder">
+										<label for="Builder">Builder</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Corporate-Investor" class="userRole-checkbox" name="corporate-investor">
+										<label for="Corporate-Investor">Corporate Investor</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Developer" class="userRole-checkbox" name="developer">
+										<label for="Developer">Developer</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Listing-Administrator" class="userRole-checkbox" name="listing-admin">
+										<label for="Listing-Administrator">Listing Administrator</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Mortgage-Broker" class="userRole-checkbox" name="mortgage-broker">
+										<label for="Mortgage-Broker">Mortgage Broker</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Property/Asset Manger" class="userRole-checkbox" name="property-manager">
+										<label for="Property/Asset Manger">Property/Asset Manger</label>
+									</li>
+									<li>
+										<input type="checkbox" id="Researcher" class="userRole-checkbox" name="researcher">
+										<label for="Researcher">Researcher</label>
+									</li>
 								</ul>
 							</div>
-							<strong class="form-heading"><span>Property Type and Location</span></strong>
-							<div class="layout">
-								<span class="title">purpose:</span>
-								<div class="input-holder">
-									<ul class="radio-holder">
-										<li>
-											<label for="sale">
-												<input type="radio" ng-model="form.data.propertyPurpose" value="1" name="propertyPurpose" id="sale">
-												<span class="fake-label">For Sale</span>
-											</label>
-										</li>
-										<li>
-											<label for="rent">
-												<input type="radio" ng-model="form.data.propertyPurpose" value="2" name="propertyPurpose" id="rent">
-												<span class="fake-label">For Rent</span>
-											</label>
-										</li>
-										<li class="error-text">Oh ! this is error</li>
-									</ul>
-								</div>
+						</div>
+						<div class="agent-information">
+							<h1>Agency Information</h1>
+							<div class="input-holder error">
+								<label for="agency-name" class="icon-agency"></label>
+								<input type="text" placeholder="Enter An Agency Name" id="agency-name" name="agencyName" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
 							</div>
-							<div class="layout">
-								<span class="title">Property Type:</span>
-								<div class="input-holder">
-									<ul class="radio-holder">
-										<li>
-											<label for="homes" class="hasChild">
-												<input type="radio" name="propertyType" value="1" id="homes">
-												<span class="fake-label">homes</span>
-											</label>
-										</li>
-										<li>
-											<label for="plot" class="hasChild">
-												<input type="radio" name="propertyType" value="1" id="plot">
-												<span class="fake-label">plot</span>
-											</label>
-										</li>
-										<li>
-											<label for="commercial" class="hasChild">
-												<input type="radio" name="propertyType" value="1" id="commercial">
-												<span class="fake-label">commercial</span>
-											</label>
-										</li>
-										<li class="error-text">Oh ! this is error</li>
-									</ul>
-									<div class="tab-content">
-										<div id="tab1">
-											<ul class="radio-holder">
-												<li>
-													<label for="house" class="withCheck">
-														<input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="house" value="house">
-														<span class="fake-radio"></span>
-														<span class="fake-label">house</span>
-													</label>
-												</li>
-												<li>
-													<label for="flat" class="withCheck">
-														<input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="flat" value="flat">
-														<span class="fake-radio"></span>
-														<span class="fake-label">flat</span>
-													</label>
-												</li>
-												<li>
-													<label for="ploot" class="withCheck">
-														<input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="ploot" value="ploot">
-														<span class="fake-radio"></span>
-														<span class="fake-label">ploot</span>
-													</label>
-												</li>
-												<li class="error-text">Oh ! this is error</li>
-											</ul>
-										</div>
-									</div>
+							<div class="input-holder onTop-mobile error">
+								<div class="company-logo">
+									<input type="file" name="companyLogo" onchange="companyLogoUploader(this , '.company-profileP')">
+									<div class="picture-holder"><img src="" class="company-profileP" alt="Company logo"></div>
+									<a class="delete"><span class="icon-bin"></span></a>
+									<span class="name-tag">Add Company Logo</span>
 								</div>
+								<span class="error-text">Image is too large</span>
 							</div>
-							<div class="layout add">
-								<!--<div class="layout-holder">
-									<span class="title">Society:</span>
-									<ui-select ng-model="temp.society" theme="select2" ng-disabled="ctrl.disabled" style="min-width: 300px;" title="Choose a Society">
-										<ui-select-match placeholder="select a society...">{{$select.selected.name}}</ui-select-match>
-										<ui-select-choices repeat="society in societies | propsFilter: {name: $select.search}">
-											<div ng-bind-html="society.name | highlight: $select.search"></div>
-										</ui-select-choices>
-									</ui-select>
-								</div>
-								<div class="layout-holder">
-									<span class="title">Block:</span>
-									<ui-select ng-model="temp.block" theme="select2" ng-disabled="ctrl.disabled" style="min-width: 300px;" title="Choose a Block">
-										<ui-select-match placeholder="select a Block...">{{$select.selected.name}}</ui-select-match>
-										<ui-select-choices repeat="block in blocks | propsFilter: {name: $select.search}">
-											<div ng-bind-html="block.name | highlight: $select.search"></div>
-										</ui-select-choices>
-									</ui-select>
-								</div>-->
+							<div class="input-holder full-width error">
+								<label for="D-services" class="icon-technical-support"></label>
+								<textarea id="D-services" name="agencyDescription" placeholder="Description of Services"></textarea>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
 							</div>
-							<strong class="form-heading"><span>Property &amp; Area</span></strong>
-							<div class="layout add">
-								<div class="layout-holder">
-									<span class="title">Price:</span>
-									<div class="input-holder">
-										<input type="number" name="price" ng-model="form.data.price" placeholder="Please enter your price">
-										<span class="error-text">This is error</span>
-										<span class="calculatedPrice"></span>
-									</div>
-								</div>
-								<div class="layout-holder">
-									<span class="title">Property Title:</span>
-									<div class="input-holder">
-										<input type="text" name="propertyTitle" ng-model="form.data.propertyTitle" placeholder="Please enter property title">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
+							<div class="input-holder full-width no-indent">
+								<label for="search-society" class="icon-society"></label>
+								<input type="text" placeholder="Select Societies You Deal In:" id="search-society" name="SelectDealSociety" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
+								<span class="calculatedSocieties"></span>
 							</div>
-							<div class="layout add">
-								<div class="layout-holder">
-									<span class="title">Land Area:</span>
-									<div class="input-holder">
-										<input type="number" step="any" ng-model="form.data.landArea" placeholder="Please enter land area">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
-								<div class="layout-holder">
-									<span class="title">Unit:</span>
-									<div class="input-holder">
-										<select name="land_unit" ng-model="form.data.landUnit">
-											<option value="1" selected disabled>Select Unit</option>
-											<option value="2">Squar Feet</option>
-											<option value="3">Squar Yards</option>
-										</select>
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
+							<div class="input-holder full-width">
+								<ul class="societiesBlock-listing">
+									<li>
+										<input type="checkbox" id="society1" class="selectSociety-checkbox">
+										<label for="society1">DHA</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society2" class="selectSociety-checkbox">
+										<label for="society2">Garden Town</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society3" class="selectSociety-checkbox">
+										<label for="society3">Model Town</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society4" class="selectSociety-checkbox">
+										<label for="society4">wapda Town</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society5" class="selectSociety-checkbox">
+										<label for="society5">Behria Town</label>
+									</li>
+									<li>
+										<input type="checkbox" id="society6" class="selectSociety-checkbox">
+										<label for="society6">Alflah town</label>
+									</li>
+								</ul>
 							</div>
-							<div class="layout add">
-								<div class="layout-holder add">
-									<span class="title less-width">Description:</span>
-									<div class="input-holder add">
-										<textarea name="propertyDescription" ng-model="form.data.propertyDescription" placeholder="Please enter description"></textarea>
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
+							<h1> Agency Contact Details</h1>
+							<div class="input-holder error">
+								<label for="compny-phone" class="icon-phone"></label>
+								<input type="tel" placeholder="Enter Company Phone Number" name="companyPhone" id="compny-phone" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
 							</div>
-							<div class="layout add">
-								<div class="layout-holder">
-									<span class="title">Number of store Rooms:</span>
-									<div class="input-holder">
-										<input type="checkbox">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
-								<div class="layout-holder">
-									<span class="title">Bedrooms:</span>
-									<div class="input-holder">
-										<input type="number" placeholder="Number of bedrooms">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
-								<div class="layout-holder">
-									<div class="input-holder"><a class="feature-blockOpener">see extra feature</a></div>
-								</div>
+							<div class="input-holder error">
+								<label for="compny-mobile" class="icon-phone_iphone"></label>
+								<input type="tel" placeholder="Enter Company Mobile Number" name="companyMobile" id="compny-mobile" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
 							</div>
-						</section>
-						<section class="feature-block" id="feature-block">
-							<strong class="form-heading"><span>extra features</span></strong>
-							<div class="holder">
-								<div class="features-section-holder">
-									<span class="tag">Main Features</span>
-									<ul class="feature-list">
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<select>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-												</select>
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="radio">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="checkbox">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="features-section-holder">
-									<span class="tag">Main Features</span>
-									<ul class="feature-list">
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<select>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-												</select>
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="radio">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="checkbox">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="features-section-holder">
-									<span class="tag">Main Features</span>
-									<ul class="feature-list">
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<select>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-												</select>
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="radio">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="checkbox">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="features-section-holder">
-									<span class="tag">Main Features</span>
-									<ul class="feature-list">
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<select>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-												</select>
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="radio">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="checkbox">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="features-section-holder">
-									<span class="tag">Main Features</span>
-									<ul class="feature-list">
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<select>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-												</select>
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="radio">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="checkbox">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-										<li>
-											<label>Bedrooms:</label>
-											<div class="input-holder">
-												<input type="number" placeholder="Number of bedrooms">
-											</div>
-										</li>
-									</ul>
-								</div>
+							<div class="input-holder full-width error">
+								<label for="compny-address" class="icon-directions"></label>
+								<input type="text" placeholder="Enter Company Address" name="companyAddress" id="compny-address" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
 							</div>
-						</section>
-						<section class="attactment-block" id="attactment-block">
-							<strong class="form-heading"><span>attactments</span></strong>
-							<ul class="image-uploading-area">
-								<li>
-									<div class="file-uploader">
-										<input type="file" ngf-select ng-model="form.data.files.mainFile.file" onchange="previewAddPropertyImg(this , '.img-thumb1')" class="upload-img">
-										<div class="image-holder">
-											<img src="#" class="img-thumb1" alt="image Description">
-											<span class="propertyDocumentCloseBtn" ng-click="cancelFile(0)"><span class="icon-trash"></span></span>
-										</div>
-									</div>
-									<input type="text" ng-model="form.data.files.mainFile.title" class="picture-name" placeholder="Title">
-									<span class="error-text">This is error</span>
-								</li>
-								<li>
-									<div class="file-uploader">
-										<input type="file" ngf-select ng-model="form.data.files.twoFile.file" onchange="previewAddPropertyImg(this , '.img-thumb2')" class="upload-img">
-										<div class="image-holder">
-											<img src="#" class="img-thumb2" alt="image Description">
-											<span class="propertyDocumentCloseBtn" ng-click="cancelFile(1)"><span class="icon-trash"></span></span>
-										</div>
-									</div>
-									<input type="text" ng-model="form.data.files.twoFile.title" class="picture-name" placeholder="Title">
-									<span class="error-text">This is error</span>
-								</li>
-								<li>
-									<div class="file-uploader">
-										<input type="file" ngf-select ng-model="form.data.files.threeFile.file" onchange="previewAddPropertyImg(this , '.img-thumb3')" class="upload-img">
-										<div class="image-holder">
-											<img src="#" class="img-thumb3" alt="image Description">
-											<span class="propertyDocumentCloseBtn" ng-click="cancelFile(2)"><span class="icon-trash"></span></span>
-										</div>
-									</div>
-									<input type="text" ng-model="form.data.files.threeFile.title" class="picture-name" placeholder="Title">
-									<span class="error-text">This is error</span>
-								</li>
-								<li>
-									<div class="file-uploader">
-										<input type="file" ng-model="form.data.files.fourFile.file" onchange="previewAddPropertyImg(this , '.img-thumb4')" class="upload-img">
-										<div class="image-holder">
-											<img src="#" class="img-thumb4" alt="image Description">
-											<span class="propertyDocumentCloseBtn"><span class="icon-trash"></span></span>
-										</div>
-									</div>
-									<input type="text" ng-model="form.data.files.fourFile.title" class="picture-name" placeholder="Title">
-									<span class="error-text">This is error</span>
-								</li>
-								<li>
-									<div class="file-uploader">
-										<input type="file" ng-model="form.data.files.fiveFile.file" onchange="previewAddPropertyImg(this , '.img-thumb5')" class="upload-img">
-										<div class="image-holder">
-											<img src="#" class="img-thumb5" alt="image Description">
-											<span class="propertyDocumentCloseBtn"><span class="icon-trash"></span></span>
-										</div>
-									</div>
-									<input type="text" ng-model="form.data.files.fiveFile.title" class="picture-name" placeholder="Title">
-									<span class="error-text">This is error</span>
-								</li>
-								<li>
-									<div class="file-uploader">
-										<input type="file" ng-model="form.data.files.sixFile.file" onchange="previewAddPropertyImg(this , '.img-thumb6')" class="upload-img">
-										<div class="image-holder">
-											<img src="#" class="img-thumb6" alt="image Description">
-											<span class="propertyDocumentCloseBtn"><span class="icon-trash"></span></span>
-										</div>
-									</div>
-									<input type="text" ng-model="form.data.files.sixFile.title" class="picture-name" placeholder="Title">
-									<span class="error-text">This is error</span>
-								</li>
-							</ul>
-						</section>
-						<section class="contact-information" id="contact-information">
-							<strong class="form-heading"><span>Contact info</span></strong>
-							<div class="layout add">
-								<div class="layout-holder">
-									<span class="title">owner:</span>
-									<div class="input-holder">
-										<select name="owner" ng-model="form.data.owner">
-											<option value="1">Noman Tufail</option>
-										</select>
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
-								<div class="layout-holder">
-									<span class="title">contact person:</span>
-									<div class="input-holder">
-										<input type="text" name="contact_person" ng-model="form.data.contactPerson" placeholder="Please Enter your contact person">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
+							<div class="input-holder error">
+								<label for="compny-email" class="icon-envelope"></label>
+								<input type="email" placeholder="Enter Company Email" name="companyEmail" id="compny-email" required>
+								<span class="border"></span>
+								<span class="error-text">This is error</span>
 							</div>
-							<div class="layout add">
-								<div class="layout-holder">
-									<span class="title">Phone:</span>
-									<div class="input-holder">
-										<input type="text" name="phone" ng-model="form.data.phone" placeholder="Please enter phone number">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
-								<div class="layout-holder">
-									<span class="title">Cell:</span>
-									<div class="input-holder">
-										<input type="text" name="cell" ng-model="form.data.cell" placeholder="Please enter cell number">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
-							</div>
-							<div class="layout add">
-								<div class="layout-holder">
-									<span class="title">fax:</span>
-									<div class="input-holder">
-										<input type="text" name="title" ng-model="form.data.fax" placeholder="please enter Fax">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
-								<div class="layout-holder">
-									<span class="title">email:</span>
-									<div class="input-holder">
-										<input type="email" name="email" ng-model="form.data.email" placeholder="Please enter your email">
-										<span class="error-text">This is error</span>
-									</div>
-								</div>
-							</div>
-						</section>
-						<button type="submit"><span class="icon-arrows"></span>Save Property</button>
+						</div>
+						<div class="input-holder full-width">
+							<button type="submit">Update profile</button>
+						</div>
 					</form>
 				</div>
 			</div>

@@ -395,6 +395,7 @@
 				border-radius: 4px;
 			}
 			
+			&.restoring,
 			&.deleting {
                &:after{
                    position: absolute;
@@ -412,6 +413,12 @@
 				   display: block;
                }
            }
+		   &.restoring {
+			   &:after{
+					content: 'Restoring...';
+					color: $mix-blue;
+			   }
+		   }
 			
 			.t-head{
 				text-align: left;

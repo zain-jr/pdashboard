@@ -3024,7 +3024,7 @@ input[type='submit'] {
   border-radius: 4px;
 }
 
-.property-listing-holder .properties-table li.deleting:after {
+.property-listing-holder .properties-table li.restoring:after, .property-listing-holder .properties-table li.deleting:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3039,6 +3039,11 @@ input[type='submit'] {
   text-align: center;
   letter-spacing: 0;
   display: block;
+}
+
+.property-listing-holder .properties-table li.restoring:after {
+  content: 'Restoring...';
+  color: #489ddd;
 }
 
 .property-listing-holder .properties-table li .t-head {

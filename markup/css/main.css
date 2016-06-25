@@ -5648,6 +5648,9 @@ a {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.4;
 }
 
 #sidebar-dashboard .notifications-links li a > * {
@@ -5656,10 +5659,6 @@ a {
   font-size: 24px;
   line-height: 27px;
   letter-spacing: 0;
-}
-
-#sidebar-dashboard .notifications-links li a:hover {
-  color: #fff;
 }
 
 #sidebar-dashboard .notifications-links li a span[class^="icon-"], #sidebar-dashboard .notifications-links li a span[class*="icon-"] {

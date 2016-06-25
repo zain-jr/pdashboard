@@ -1,4 +1,5 @@
 /*Listing page with table */
+.favorite-property-holder,
 .property-listing-holder{
 	overflow: hidden;
 	padding: 60px 10px 0;
@@ -586,6 +587,37 @@
 						background: $orange;
 						border-bottom: 4px solid darken($orange, 15%);
 					}
+				}
+			}
+		}
+	}
+}
+.favorite-property-holder {
+	padding: 15px 10px 0;
+	
+	.sideBar-active &{
+		padding: 15px 10px 0 320px;
+		
+		@include media('<widescreen'){
+			padding: 15px 10px 0 310px;
+		}
+		
+		@include media('<desktop'){
+			padding: 15px 10px 0 260px;
+		}
+		@include media('<tablet'){
+			padding: 15px 10px 0;
+		}
+		
+		.listing-cetegories-links {
+			ul{
+				padding: 0 10px 0 300px;
+				
+				@include media('<desktop'){
+					padding: 0 10px 0 250px;
+				}
+				@include media('<tablet'){
+					padding: 0;
 				}
 			}
 		}

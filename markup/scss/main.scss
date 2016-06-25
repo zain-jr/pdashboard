@@ -1107,9 +1107,10 @@ a{ outline: none;}
 		.sideBar-active & {
 			padding: 0 0 0 180px;
 			
-			@include media('<widescreen'){
+			@include media('<tvscreen'){
 				padding: 0 0 0 290px;
 			}
+
 			@include media('<desktop'){
 				padding: 0 0 0 239px;
 			}
@@ -1303,12 +1304,23 @@ a{ outline: none;}
 			width: 25%;
 			padding: 0 10px 10px;
 
+			@include media('<tablet'){
+				width: 100%;
+				display: block;
+				text-align: center;
+			}
+
 			&:first-child{
 				width: 75%;
-
+				
+				@include media('<tablet'){
+					width: 100%;
+					display: block;
+				}
 				a{
 					background: darken($red, 5%);
 					color: $white;
+					display: block;
 					border-color: darken($red, 5%);
 
 					&:hover {
@@ -1326,6 +1338,10 @@ a{ outline: none;}
 				color: $mix-grays;
 				border: 1px solid $mix-grays;
 				border-radius: 2px;
+
+				@include media('<tablet'){
+					@include align(top);
+				}
 
 				span[class^="icon-"],span[class*="icon-"]{
 					position: absolute;

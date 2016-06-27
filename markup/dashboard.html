@@ -11,73 +11,33 @@
 	<!-- google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
-<body class="sideBar-active">
+<body>
     <span class="lodaing-page">Property42.pk</span>
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<header id="header">
 			<a href="#" class="logo">P<span class="hidden-xs">roperty</span>42</a>
 			<a class="sideBar-opener"><span></span></a>
-            <span class="our-contactNum">Contact us: <a href="tel:03004595541">03004595541</a></span>
 			<a href="#" class="logout" title="Logout"><span class="icon-logout"></span> <span class="hidden-xs">Logout</span></a>
-			<a href="#" class="add-property"><span class="hidden-xs">Add a</span> property</a>
-			<div class="searhForm-holder">
-				<a class="form-openerMobile"><span class="icon-search"></span></a>
-				<form class="searh-dashboard">
-					<input type="search" placeholder="Searh by ID">
-					<button type="submit"><span class="icon-search"></span></button>
-				</form>
-			</div>
 		</header>
 		<main id="main" role="main">
 			<aside id="sidebar-dashboard">
 				<div class="user-picture">
 					<div class="layout">
-						<a href="#" class="image-thumb"><img src="images/user1.jpg" width="388" height="395" alt="user-image"></a>
+						<a href="#" class="image-thumb"><img src="images/user-img.png" width="388" height="395" alt="user-image"></a>
 						<div class="layout">
 							<a href="#" class="user-name">Zain ali</a>
 							<span class="account-type">premium</span>
 						</div>
 					</div>
-					<ul class="notifications-links">
-						<li class="display-badge">
-                            <a title="Email Alerts">
-                                <span class="icon-service-courier"></span>
-                                <!--<span class="badge">10</span>-->
-                            </a>
-                        </li>
-						<li class="display-badge">
-                            <a  title="Messages Alerts">
-                                <span class="icon-facebook-chat-balloons"></span>
-                                <!--<span class="badge">99+</span>-->
-                            </a>
-                        </li>
-					</ul>
-				</div>
-				<div class="form-holder">
-					<form class="search-sideBar">
-						<input type="search" placeholder="Search Links" class="search-links">
-						<button type="submit"><span class="icon-search"></span></button>
-					</form>
 				</div>
 				<ul class="sideBar-links">
 					<li><a href="#"><span class="icon-home-button"></span>dashboard</a></li>
-					<li class="active">
-						<a><span class="icon-list"></span>listings <span class="badge">134</span></a>
-						<ul class="sub-links">
-							<li><a href="#"><span class="icon-clothes-tag"></span> for sale <span class="badge small">34</span></a></li>
-							<li><a href="#"><span class="icon-rent"></span> for rent <span class="badge small">99</span></a></li>
-						</ul>
-					</li>
-					<li><a href="#"><span class="icon-favourites-filled-star-symbol"></span>favorites<span class="badge">346</span></a></li>
-                    <li><a href="#"><span class="icon-facebook-chat-balloons"></span>Messages<span class="badge">300</span></a></li>
-                    <li><a href="#"><span class="icon-service-courier"></span>Email Alerts<span class="badge">55</span></a></li>
-					<li><a href="#"><span class="icon-user2"></span>My profile</a></li>
-                    <li><a href="#"><span class="icon-key"></span>Change Password</a></li>
+					<li class="active"><a><span class="icon-list"></span>listings <span class="badge">134</span></a></li>
 				</ul>
 			</aside>
 			<div class="pages-holder">
-				<div class="favorite-property-holder">
+				<div class="pendingForAdmin-property-holder">
 					<div class="property-form-table">
 						<div class="property-filter">
 							<form class="by-user-sorting">
@@ -99,11 +59,11 @@
 									</li>
 								</ul>
 							</form>
-						</div>
-						<div class="table-responsive">
 							<ul class="quick-links">
 								<li><a href="#" class="delete"><span class="icon-bin"></span>Delete</a></li>
 							</ul>
+						</div>
+						<div class="table-responsive">
 							<ul class="properties-table accordion">
 								<li>
 									<div class="t-head by-id">
@@ -130,8 +90,9 @@
 									</div>
 									<div class="t-data by-view">55</div>
 									<div class="t-data">
+										<a class="accept" title="Accept"><span class="icon-checkmark"></span></a>
+										<a class="delete" title="Delete the property"><span class="icon-sign"></span></a>
 										<a class="details opener" title="Details"><span class="icon-notebook"></span></a>
-										<a href="#" class="delete" title="Delete the property"><span class="icon-trash"></span></a>
 									</div>
 									<div class="slide">
 										<div class="two-cols">
@@ -206,13 +167,7 @@
 	</div>
 	<!-- include jQuery library -->
 	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js" defer><\/script>')</script>
-	<script type="text/javascript" src="js/lightBox.js" defer></script>
-	<script type="text/javascript" src="js/select2.full.js" defer></script>
 	<!-- include custom JavaScript -->
-	<script type="text/javascript" src="js/tabset-plugin.js" defer></script>
-	<script type="text/javascript" src="js/helper.js" defer></script>
-	<script type="text/javascript" src="js/placeholder.js" defer></script>
-	<script type="text/javascript" src="js/add-propertyFrom.js" defer></script>
 	<script type="text/javascript" src="js/dashboard.js" defer></script>
 	<script type="text/javascript" src="js/jquery.main.js" defer></script>
 </body>

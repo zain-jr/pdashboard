@@ -651,15 +651,7 @@ th {
   content: "\e911";
 }
 
-.addAgency-user .addAgency-user-form .input-feilds, .addPropertyFormContainer .errors ul, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .favorite-property-holder .quick-links,
-.property-listing-holder .quick-links, .favorite-property-holder .listing-cetegories-links ul,
-.property-listing-holder .listing-cetegories-links ul, .favorite-property-holder .property-filter .by-user-sorting ul, .favorite-property-holder .property-filter .by-id-sorting ul,
-.property-listing-holder .property-filter .by-user-sorting ul,
-.property-listing-holder .property-filter .by-id-sorting ul, .favorite-property-holder .properties-table,
-.property-listing-holder .properties-table, .changePassword-form .societiesBlock-listing,
-.changePassword-form .role-listing,
-.registration-form .societiesBlock-listing,
-.registration-form .role-listing, #sidebar-dashboard .notifications-links, #sidebar-dashboard .sideBar-links, #sidebar-dashboard .sideBar-links li .sub-links, .social-networks, .pager, #footer .cols-holder ul, .alert-modal .links {
+.pendingForAdmin-property-holder .quick-links, .pendingForAdmin-property-holder .listing-cetegories-links ul, .pendingForAdmin-property-holder .property-filter .by-user-sorting ul, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul, .pendingForAdmin-property-holder .properties-table, #sidebar-dashboard .notifications-links, #sidebar-dashboard .sideBar-links, #sidebar-dashboard .sideBar-links li .sub-links, .social-networks, .pager, #footer .cols-holder ul, .alert-modal .links {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -918,1449 +910,6 @@ input[type='submit'] {
   outline: none !important;
 }
 
-/*Add Agency User Form*/
-.addAgency-user {
-  overflow: hidden;
-  padding: 20px 20px 0;
-  transition: padding 0.4s ease;
-  -moz-transition: padding 0.4s ease;
-  -ms-transition: padding 0.4s ease;
-  -webkit-transition: padding 0.4s ease;
-}
-
-.sideBar-active .addAgency-user {
-  padding: 20px 20px 0 320px;
-}
-
-@media (max-width: 1023px) {
-  .sideBar-active .addAgency-user {
-    padding: 20px 20px 0 260px;
-  }
-}
-
-@media (max-width: 767px) {
-  .sideBar-active .addAgency-user {
-    padding: 20px 20px 0;
-  }
-}
-
-.addAgency-user .addAgency-user-form {
-  max-width: 790px;
-  margin: 0 auto;
-}
-
-.addAgency-user .addAgency-user-form h1 {
-  font-style: italic;
-  font-weight: 600;
-  color: #133783;
-  text-transform: capitalize;
-  font-size: 30px;
-  line-height: 33px;
-  text-align: center;
-  margin: 0 0 40px;
-}
-
-.addAgency-user .addAgency-user-form .input-feilds {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  margin: 0 -10px;
-  padding: 0 0 30px;
-}
-
-.addAgency-user .addAgency-user-form .input-feilds > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0;
-}
-
-.addAgency-user .addAgency-user-form .input-feilds li {
-  width: 50%;
-  padding: 0 10px;
-  margin: 0 0 10px;
-}
-
-@media (max-width: 1199px) {
-  .addAgency-user .addAgency-user-form .input-feilds li {
-    width: 50%;
-  }
-}
-
-@media (max-width: 767px) {
-  .addAgency-user .addAgency-user-form .input-feilds li {
-    width: 100%;
-  }
-}
-
-.addAgency-user .addAgency-user-form .input-feilds li.error .error-text {
-  display: block;
-}
-
-.addAgency-user .addAgency-user-form .input-feilds li.error input[type="text"], .addAgency-user .addAgency-user-form .input-feilds li.error input[type="email"], .addAgency-user .addAgency-user-form .input-feilds li.error input[type="password"], .addAgency-user .addAgency-user-form .input-feilds li.error input[type="tel"] {
-  border-color: #e14646;
-}
-
-.addAgency-user .addAgency-user-form .input-feilds li label {
-  float: left;
-  width: 85px;
-  font-size: 14px;
-  line-height: 18px;
-  color: #133783;
-}
-
-@media (max-width: 1023px) {
-  .addAgency-user .addAgency-user-form .input-feilds li label {
-    font-size: 12px;
-    line-height: 15px;
-    width: 100px;
-  }
-}
-
-.addAgency-user .addAgency-user-form .input-feilds li .input-holder {
-  overflow: hidden;
-}
-
-.addAgency-user .addAgency-user-form input[type="text"], .addAgency-user .addAgency-user-form input[type="email"], .addAgency-user .addAgency-user-form input[type="password"], .addAgency-user .addAgency-user-form input[type="tel"] {
-  display: block;
-  padding: 5px;
-  width: 100%;
-  height: 30px;
-  font-size: 13px;
-  line-height: 16px;
-  border: 1px solid #133783;
-  transition: border 0.4s ease;
-  -webkit-transition: border 0.4s ease;
-  -moz-transition: border 0.4s ease;
-  -ms-transition: border 0.4s ease;
-}
-
-.addAgency-user .addAgency-user-form input[type="text"]:focus, .addAgency-user .addAgency-user-form input[type="email"]:focus, .addAgency-user .addAgency-user-form input[type="password"]:focus, .addAgency-user .addAgency-user-form input[type="tel"]:focus {
-  border-color: #489ddd;
-}
-
-.addAgency-user .addAgency-user-form input[type="text"]:focus::-webkit-input-placeholder, .addAgency-user .addAgency-user-form input[type="email"]:focus::-webkit-input-placeholder, .addAgency-user .addAgency-user-form input[type="password"]:focus::-webkit-input-placeholder, .addAgency-user .addAgency-user-form input[type="tel"]:focus::-webkit-input-placeholder {
-  color: #000;
-}
-
-.addAgency-user .addAgency-user-form input[type="text"]:focus::-moz-placeholder, .addAgency-user .addAgency-user-form input[type="email"]:focus::-moz-placeholder, .addAgency-user .addAgency-user-form input[type="password"]:focus::-moz-placeholder, .addAgency-user .addAgency-user-form input[type="tel"]:focus::-moz-placeholder {
-  opacity: 1;
-  color: #000;
-}
-
-.addAgency-user .addAgency-user-form input[type="text"]:focus:-moz-placeholder, .addAgency-user .addAgency-user-form input[type="email"]:focus:-moz-placeholder, .addAgency-user .addAgency-user-form input[type="password"]:focus:-moz-placeholder, .addAgency-user .addAgency-user-form input[type="tel"]:focus:-moz-placeholder {
-  color: #000;
-}
-
-.addAgency-user .addAgency-user-form input[type="text"]:focus:-ms-input-placeholder, .addAgency-user .addAgency-user-form input[type="email"]:focus:-ms-input-placeholder, .addAgency-user .addAgency-user-form input[type="password"]:focus:-ms-input-placeholder, .addAgency-user .addAgency-user-form input[type="tel"]:focus:-ms-input-placeholder {
-  color: #000;
-}
-
-.addAgency-user .addAgency-user-form input[type="text"]:focus.placeholder, .addAgency-user .addAgency-user-form input[type="email"]:focus.placeholder, .addAgency-user .addAgency-user-form input[type="password"]:focus.placeholder, .addAgency-user .addAgency-user-form input[type="tel"]:focus.placeholder {
-  color: #000;
-}
-
-.addAgency-user .addAgency-user-form .error-text {
-  display: none;
-  width: 100%;
-  font-size: 13px;
-  line-height: 17px;
-  font-weight: 600;
-  color: #e14646;
-  padding: 3px;
-}
-
-@media (max-width: 1199px) {
-  .addAgency-user .addAgency-user-form .error-text {
-    text-align: left;
-  }
-}
-
-.addAgency-user .addAgency-user-form button[type="submit"] {
-  display: block;
-  color: #fff;
-  background: #58a36f;
-  width: 300px;
-  margin: 0 auto;
-  font-weight: 600;
-  border: 0;
-  border-radius: 4px;
-  padding: 0;
-}
-
-@media (max-width: 767px) {
-  .addAgency-user .addAgency-user-form button[type="submit"] {
-    width: 200px;
-  }
-}
-
-.addAgency-user .addAgency-user-form button[type="submit"] span {
-  padding: 10px 5px;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.addAgency-user .addAgency-user-form button[type="submit"] span:after {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  right: 0;
-  bottom: 0;
-  background: #489ddd;
-  content: '';
-  z-index: -1;
-  transition: left 0.4s ease, background 0.4s ease;
-  -webkit-transition: left 0.4s ease, background 0.4s ease;
-  -moz-transition: left 0.4s ease, background 0.4s ease;
-  -ms-transition: left 0.4s ease, background 0.4s ease;
-  border-radius: 4px;
-}
-
-.addAgency-user .addAgency-user-form button[type="submit"]:hover span:after {
-  left: 0;
-}
-
-/*Add a property full form*/
-.addPropertyFormContainer {
-  transition: padding 0.5s ease;
-  -webkit-transition: padding 0.5s ease;
-  -ms-transition: padding 0.5s ease;
-  -moz-transition: padding 0.5s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.sideBar-active .addPropertyFormContainer {
-  padding: 20px 10px 0 300px;
-}
-
-@media (max-width: 1023px) {
-  .sideBar-active .addPropertyFormContainer {
-    padding: 10px 10px 0 245px;
-  }
-}
-
-@media (max-width: 767px) {
-  .sideBar-active .addPropertyFormContainer {
-    padding: 10px 0 0;
-  }
-}
-
-.sideBar-active.sideBar-active .addPropertyFormContainer:after {
-  left: 300px;
-}
-
-@media (max-width: 1023px) {
-  .sideBar-active.sideBar-active .addPropertyFormContainer:after {
-    left: 250px;
-  }
-}
-
-.please-wait .addPropertyFormContainer {
-  height: 100vh;
-}
-
-.please-wait .addPropertyFormContainer:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 99;
-  background: rgba(255, 255, 255, 0.9);
-  content: '';
-  transition: left 0.4s ease;
-  -webkit-transition: left 0.4s ease;
-  -moz-transition: left 0.4s ease;
-  -ms-transition: left 0.4s ease;
-}
-
-.please-wait .addPropertyFormContainer:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: url("../images/rolling.gif") no-repeat;
-  background-size: 100% , 100%;
-  z-index: 991;
-  content: 'Please wait...';
-  width: 100px;
-  height: 100px;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 600;
-  margin: -150px 0 0;
-  text-align: center;
-  padding: 120px 0 0 10px;
-  color: #737373;
-}
-
-@media (max-width: 1424px) {
-  .please-wait .addPropertyFormContainer:before {
-    margin: -150px 0 0 100px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .please-wait .addPropertyFormContainer:before {
-    margin: -150px 0 0 -55px;
-  }
-}
-
-.addPropertyFormContainer .attactment-block, .addPropertyFormContainer .basics-block, .addPropertyFormContainer .feature-block, .addPropertyFormContainer .contact-information {
-  padding: 0 20px 0;
-}
-
-.addPropertyFormContainer .errors {
-  overflow: hidden;
-}
-
-.addPropertyFormContainer .errors ul {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.addPropertyFormContainer .errors ul > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 14px;
-  line-height: 15px;
-  letter-spacing: 0;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .errors ul {
-    font-size: 0;
-    line-height: 0;
-    letter-spacing: -4px;
-  }
-  .addPropertyFormContainer .errors ul > * {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0;
-  }
-}
-
-.addPropertyFormContainer .errors ul li {
-  padding: 7px;
-  border-radius: 4px;
-  color: #e14646;
-  margin: 0 5px 10px;
-  border: 1px solid #e14646;
-  background: #fae0e0;
-  text-align: center;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .errors ul li {
-    padding: 5px;
-    width: 45%;
-  }
-}
-
-.addPropertyFormContainer .listing-holder {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  z-index: 99;
-  clear: both;
-}
-
-.addPropertyFormContainer .listing-holder:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -9999px;
-  right: -9999px;
-  z-index: -1;
-  background: #dde2e8;
-  content: '';
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .listing-holder:after {
-    display: none;
-  }
-}
-
-.addPropertyFormContainer .listing-holder .listing-opener {
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  font-size: 35px;
-  line-height: 35px;
-  cursor: pointer;
-  z-index: 5;
-  display: block;
-  background: #dde2e8;
-  padding: 0 5px;
-  float: right;
-}
-
-@media (min-width: 768px) {
-  .addPropertyFormContainer .listing-holder .listing-opener {
-    display: none;
-  }
-}
-
-.addPropertyFormContainer .listing-holder .listing-opener:hover {
-  color: #606060;
-}
-
-.addPropertyFormContainer .tabset {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  text-transform: capitalize;
-}
-
-.addPropertyFormContainer .tabset > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0;
-}
-
-.addPropertyFormContainer .tabset li {
-  padding: 0 10px 10px;
-}
-
-.addPropertyFormContainer .tabset li.active a {
-  color: #133783;
-}
-
-.addPropertyFormContainer .tabset li.active a .round {
-  background: #133783;
-  border-color: #133783;
-}
-
-.addPropertyFormContainer .tabset li.active a .round:after {
-  display: block;
-}
-
-.addPropertyFormContainer .tabset li a {
-  display: inline-block;
-  vertical-align: top;
-  color: #000;
-  position: relative;
-  text-decoration: none;
-  transition: color 0.4s ease;
-  -webkit-transition: color 0.4s ease;
-  -moz-transition: color 0.4s ease;
-  -ms-transition: color 0.4s ease;
-}
-
-.addPropertyFormContainer .tabset li a .round {
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #606060;
-  margin: -2px 4px 0 0;
-  content: '';
-  position: relative;
-  transition: border 0.4s ease;
-  -webkit-transition: border 0.4s ease;
-  -moz-transition: border 0.4s ease;
-  -ms-transition: border 0.4s ease;
-}
-
-.addPropertyFormContainer .tabset li a .round:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -5px 0 0 -5px;
-  color: #fff;
-  content: "\e903";
-  font-family: 'icomoon';
-  font-size: 10px;
-  line-height: 10px;
-  display: none;
-}
-
-.addPropertyFormContainer .calculatedPrice {
-  display: block;
-  padding: 0 0 0 110px;
-  color: #363636;
-  font-style: italic;
-  position: relative;
-}
-
-.addPropertyFormContainer .tab-content {
-  overflow: hidden;
-}
-
-.addPropertyFormContainer .tab-content .fake-radio {
-  width: 18px !important;
-  height: 18px !important;
-}
-
-.addPropertyFormContainer .property-add {
-  padding: 0 0 50px;
-  overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add {
-    padding: 0 0 50px;
-  }
-}
-
-.addPropertyFormContainer .property-add .error-text {
-  display: none;
-  width: 100%;
-  font-size: 12px !important;
-  line-height: 15px !important;
-  font-weight: 600 !important;
-  color: #e14646 !important;
-  padding: 5px 0 0 110px;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .error-text {
-    padding: 3px;
-  }
-}
-
-.addPropertyFormContainer .property-add select,
-.addPropertyFormContainer .property-add input[type="text"],
-.addPropertyFormContainer .property-add input[type="search"],
-.addPropertyFormContainer .property-add input[type="number"],
-.addPropertyFormContainer .property-add input[type="email"] {
-  font-size: 12px;
-  line-height: 15px;
-  width: 100%;
-  height: 30px;
-  width: 100%;
-  display: block;
-  padding: 6px 10px;
-  outline: none;
-}
-
-.addPropertyFormContainer .property-add select:focus, .addPropertyFormContainer .property-add select:hover,
-.addPropertyFormContainer .property-add input[type="text"]:focus,
-.addPropertyFormContainer .property-add input[type="text"]:hover,
-.addPropertyFormContainer .property-add input[type="search"]:focus,
-.addPropertyFormContainer .property-add input[type="search"]:hover,
-.addPropertyFormContainer .property-add input[type="number"]:focus,
-.addPropertyFormContainer .property-add input[type="number"]:hover,
-.addPropertyFormContainer .property-add input[type="email"]:focus,
-.addPropertyFormContainer .property-add input[type="email"]:hover {
-  border: 1px solid #000;
-}
-
-.addPropertyFormContainer .property-add button[type="submit"] {
-  border: 0;
-  padding: 12px 25px;
-  display: block;
-  text-transform: capitalize;
-  width: 250px;
-  margin: 20px auto;
-  font-size: 16px;
-  line-height: 19px;
-  position: relative;
-  z-index: 1;
-  border-radius: 5px;
-  overflow: hidden;
-  background: #58a36f;
-  color: #fff;
-  font-weight: 600;
-  outline: none;
-}
-
-.addPropertyFormContainer .property-add button[type="submit"] [class^="icon"], .addPropertyFormContainer .property-add button[type="submit"] [class*="icon"] {
-  position: absolute;
-  top: 50%;
-  right: -100px;
-  margin: -9px 0 0;
-  transition: right 0.4s ease;
-  -webkit-transition: right 0.4s ease;
-  -moz-transition: right 0.4s ease;
-  -ms-transition: right 0.4s ease;
-}
-
-.addPropertyFormContainer .property-add button[type="submit"] [class^="icon"]:before, .addPropertyFormContainer .property-add button[type="submit"] [class*="icon"]:before {
-  font-size: 12px;
-  line-height: 1;
-}
-
-.addPropertyFormContainer .property-add button[type="submit"]:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 100%;
-  background: #489ddd;
-  z-index: -1;
-  content: '';
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-}
-
-.addPropertyFormContainer .property-add button[type="submit"]:hover:after {
-  left: 0;
-}
-
-.addPropertyFormContainer .property-add button[type="submit"]:hover [class^="icon"], .addPropertyFormContainer .property-add button[type="submit"]:hover [class*="icon"] {
-  right: 20px;
-}
-
-.addPropertyFormContainer .property-add select {
-  display: inline-block;
-  vertical-align: top;
-  height: 30px;
-}
-
-.addPropertyFormContainer .property-add select:focus, .addPropertyFormContainer .property-add select:hover {
-  border: 1px solid #000;
-}
-
-.addPropertyFormContainer .property-add textarea {
-  font-size: 12px;
-  line-height: 15px;
-  width: 100%;
-  height: 120px;
-  resize: none;
-  padding: 10px;
-}
-
-.addPropertyFormContainer .property-add textarea:hover {
-  border-color: #000;
-}
-
-.addPropertyFormContainer .property-add .title {
-  padding: 2px 0 0;
-  float: left;
-  text-align: right;
-  width: 25%;
-  font-weight: 600;
-  text-transform: capitalize;
-  color: #606060;
-  font-size: 14px;
-  line-height: 17px;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .property-add .title {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .title {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 0 0 10px;
-  }
-}
-
-.addPropertyFormContainer .property-add .title:after {
-  display: inline-block;
-  vertical-align: top;
-  content: '\2217';
-  color: #e14646;
-}
-
-.addPropertyFormContainer .property-add .input-holder {
-  float: left;
-  width: 75%;
-  padding: 0 0 0 5px;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .input-holder {
-    float: none;
-    width: 100%;
-    display: block;
-  }
-}
-
-.addPropertyFormContainer .property-add .field-holder {
-  overflow: hidden;
-}
-
-.addPropertyFormContainer .property-add .radio-holder {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  text-transform: capitalize;
-  max-width: 500px;
-  padding: 0 0 0 20px;
-}
-
-.addPropertyFormContainer .property-add .radio-holder > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0;
-}
-
-.addPropertyFormContainer .property-add .radio-holder.error .fake-radio {
-  border-color: #e14646;
-}
-
-.addPropertyFormContainer .property-add .radio-holder.error li.error-text {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li {
-  padding: 0 0 3px;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li.error-text {
-  padding: 5px 0 0;
-  width: auto !important;
-  display: none;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label {
-  display: inline-block;
-  vertical-align: top;
-  cursor: pointer;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.hasChild .fake-label:before {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  border: 5px solid transparent;
-  border-top: 5px solid #489ddd;
-  content: '';
-  margin: 0 0 0 -5px;
-  transition: bottom 0.4s ease, opacity 0.4s ease;
-  opacity: 0;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.withCheck .fake-radio {
-  display: inline-block;
-  vertical-align: top;
-  border: 2px solid #606060;
-  position: relative;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.withCheck .fake-radio:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #fff;
-  content: "\e903";
-  font-family: 'icomoon';
-  font-size: 10px;
-  line-height: 14px;
-  margin: -6px 0 0 -6px;
-  display: none;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.withCheck .fake-label {
-  display: inline-block;
-  vertical-align: top;
-  border: 0;
-  padding: 2px 5px 0;
-  max-width: 150px;
-  text-align: left;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.withCheck .fake-label:hover {
-  color: #489ddd;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.withCheck .fake-label:after {
-  display: none;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.withCheck input[type="radio"]:checked ~ .fake-label {
-  color: #489ddd;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.withCheck input[type="radio"]:checked ~ .fake-radio {
-  background: #489ddd;
-  border-color: #489ddd;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.withCheck input[type="radio"]:checked ~ .fake-radio:after {
-  display: block;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label {
-  display: block;
-  padding: 6px;
-  min-width: 50px;
-  text-align: center;
-  color: #606060;
-  font-weight: 600;
-  border: 1px solid #489ddd;
-  position: relative;
-  z-index: 1;
-  transition: all 0.4s ease;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label:hover {
-  color: #fff;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label:hover:before {
-  bottom: -10px;
-  opacity: 1;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label:hover:after {
-  opacity: 1;
-  visibility: visible;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 0;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label:after {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  left: 50%;
-  bottom: 50%;
-  background: #489ddd;
-  content: '';
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  border-radius: 100%;
-  transition: all 0.4s ease;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li input[type="radio"] {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  top: -999px;
-  left: -999px;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-label {
-  color: #fff;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-label:before {
-  bottom: -10px;
-  opacity: 1;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-label:after {
-  opacity: 1;
-  visibility: visible;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 0;
-}
-
-.addPropertyFormContainer .property-add .layout {
-  padding: 10px 0 0;
-}
-
-.addPropertyFormContainer .property-add .layout.add {
-  max-width: 885px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .property-add .layout.add {
-    max-width: 469px;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .layout.add {
-    max-width: inherit;
-    width: 100%;
-    margin: 0;
-  }
-}
-
-.addPropertyFormContainer .property-add .layout-holder {
-  float: left;
-  width: 50%;
-  padding: 0 5px;
-  margin: 0 auto 5px;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .layout-holder {
-    float: none;
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0 0 20px;
-  }
-}
-
-.addPropertyFormContainer .property-add .layout-holder.error .error-text {
-  display: block;
-}
-
-.addPropertyFormContainer .property-add .layout-holder.error select,
-.addPropertyFormContainer .property-add .layout-holder.error textarea,
-.addPropertyFormContainer .property-add .layout-holder.error input[type="text"], .addPropertyFormContainer .property-add .layout-holder.error input[type="search"], .addPropertyFormContainer .property-add .layout-holder.error input[type="email"], .addPropertyFormContainer .property-add .layout-holder.error input[type="password"], .addPropertyFormContainer .property-add .layout-holder.error input[type="number"], .addPropertyFormContainer .property-add .layout-holder.error input[type="tel"] {
-  border-color: #e14646;
-}
-
-.addPropertyFormContainer .property-add .layout-holder.add {
-  width: 100%;
-}
-
-.addPropertyFormContainer .property-add .layout-holder select {
-  height: 30px;
-  width: 100%;
-}
-
-.addPropertyFormContainer .property-add .layout-holder .title {
-  float: left;
-  width: 25%;
-}
-
-.addPropertyFormContainer .property-add .layout-holder .title.less-width {
-  width: 12%;
-}
-
-@media (max-width: 1599px) {
-  .addPropertyFormContainer .property-add .layout-holder .title.less-width {
-    width: 16%;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .property-add .layout-holder .title.less-width {
-    width: 17%;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .layout-holder .title.less-width {
-    width: 100%;
-    display: block;
-    float: none;
-  }
-}
-
-@media (max-width: 1599px) {
-  .addPropertyFormContainer .property-add .layout-holder .title {
-    width: 33%;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .layout-holder .title {
-    width: 100%;
-    display: block;
-    float: none;
-  }
-}
-
-.addPropertyFormContainer .property-add .layout-holder .input-holder {
-  float: right;
-}
-
-.addPropertyFormContainer .property-add .layout-holder .input-holder.add {
-  width: 88%;
-  padding: 0 0 0 8px;
-}
-
-@media (max-width: 1599px) {
-  .addPropertyFormContainer .property-add .layout-holder .input-holder.add {
-    width: 84%;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .property-add .layout-holder .input-holder.add {
-    width: 83%;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .layout-holder .input-holder.add {
-    width: 100%;
-    display: block;
-    float: none;
-  }
-}
-
-@media (max-width: 1599px) {
-  .addPropertyFormContainer .property-add .layout-holder .input-holder {
-    width: 67%;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .property-add .layout-holder .input-holder {
-    width: 100%;
-    display: block;
-    float: none;
-  }
-}
-
-.addPropertyFormContainer .property-add .feature-blockOpener {
-  text-align: center;
-  cursor: pointer;
-  display: block;
-  margin: 0;
-  color: #000;
-  border: 1px solid #58a36f;
-  color: #58a36f;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: capitalize;
-  font-weight: 600;
-  padding: 5px;
-  transition: color 0.4s ease, background 0.4s ease;
-  -webkit-transition: color 0.4s ease, background 0.4s ease;
-  -moz-transition: color 0.4s ease, background 0.4s ease;
-  -ms-transition: color 0.4s ease, background 0.4s ease;
-}
-
-@media (max-width: 1599px) {
-  .addPropertyFormContainer .property-add .feature-blockOpener {
-    font-size: 13px;
-    line-height: 17px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .property-add .feature-blockOpener {
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
-
-.addPropertyFormContainer .property-add .feature-blockOpener.active, .addPropertyFormContainer .property-add .feature-blockOpener:hover {
-  background: #608ce8;
-  color: #fff;
-}
-
-.addPropertyFormContainer .property-add .tab-content {
-  margin: 10px 0 0;
-  padding: 0 0 0 20px;
-}
-
-.addPropertyFormContainer .form-heading {
-  display: block;
-  color: #fff;
-  text-transform: capitalize;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
-  border-bottom: 1px solid #133783;
-  margin: 15px 0 0;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .form-heading {
-    font-size: 14px;
-    line-height: 20px;
-  }
-}
-
-.addPropertyFormContainer .form-heading span {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  background: #133783;
-  padding: 6px 50px 6px 10px;
-}
-
-.addPropertyFormContainer .form-heading span:after {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  border: 32px solid transparent;
-  border-top: 32px solid #fff;
-  border-right: 0;
-  content: '';
-}
-
-.addPropertyFormContainer .feature-block .holder {
-  overflow: hidden;
-  padding: 10px 0 0;
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-}
-
-.addPropertyFormContainer .feature-block .holder > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0;
-}
-
-.addPropertyFormContainer .feature-block .holder .features-section-holder {
-  width: 50%;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .feature-block .holder .features-section-holder {
-    width: 100%;
-  }
-}
-
-.addPropertyFormContainer .feature-block .holder .tag {
-  display: block;
-  padding: 10px;
-  text-align: center;
-}
-
-.addPropertyFormContainer .tag {
-  display: block;
-  text-transform: capitalize;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 600;
-}
-
-.addPropertyFormContainer .feature-list {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  position: relative;
-  padding: 0 0 20px;
-}
-
-.addPropertyFormContainer .feature-list > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 0;
-}
-
-.addPropertyFormContainer .feature-list:after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  content: '';
-  background: #e7e7e7;
-}
-
-.addPropertyFormContainer .feature-list li {
-  padding: 0 10px 8px;
-  width: 50%;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .feature-list li {
-    padding: 0 5px 10px;
-  }
-}
-
-.addPropertyFormContainer .feature-list li label {
-  text-transform: capitalize;
-  cursor: pointer;
-  float: left;
-  width: 35%;
-  padding: 3px 0 0;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-@media (max-width: 1199px) {
-  .addPropertyFormContainer .feature-list li label {
-    width: 50%;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .feature-list li label {
-    float: left;
-  }
-}
-
-.addPropertyFormContainer .feature-list li select,
-.addPropertyFormContainer .feature-list li input[type="text"], .addPropertyFormContainer .feature-list li input[type="search"], .addPropertyFormContainer .feature-list li input[type="email"], .addPropertyFormContainer .feature-list li input[type="password"], .addPropertyFormContainer .feature-list li input[type="number"], .addPropertyFormContainer .feature-list li input[type="tel"] {
-  margin: 0;
-  width: 100%;
-  height: 25px;
-  max-width: inherit;
-  padding: 3px 10px;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.addPropertyFormContainer .feature-list li .input-holder {
-  padding: 0 0 0 10px;
-  width: 65%;
-}
-
-@media (max-width: 1199px) {
-  .addPropertyFormContainer .feature-list li .input-holder {
-    width: 50%;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .feature-list li .input-holder {
-    float: left;
-  }
-}
-
-.addPropertyFormContainer .feature-list li input[type="radio"],
-.addPropertyFormContainer .feature-list li input[type="checkbox"] {
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: bottom;
-  margin: 7px 0 0;
-}
-
-.addPropertyFormContainer .image-uploading-area {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  text-align: center;
-  margin: 10px auto;
-  max-width: 1024px;
-}
-
-.addPropertyFormContainer .image-uploading-area > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .image-uploading-area {
-    max-width: 480px;
-    margin: 10px auto;
-  }
-}
-
-.addPropertyFormContainer .image-uploading-area li {
-  width: 16.66%;
-  position: relative;
-  padding: 0 10px 10px;
-}
-
-@media (max-width: 1199px) {
-  .addPropertyFormContainer .image-uploading-area li {
-    padding: 0 5px 10px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .image-uploading-area li {
-    width: 33.33%;
-    padding: 0 5px 10px;
-  }
-}
-
-.addPropertyFormContainer .image-uploading-area li.error .error-text {
-  display: block;
-  padding: 3px;
-  text-align: left;
-}
-
-.addPropertyFormContainer .image-uploading-area li.image-loaded .image-holder {
-  opacity: 1;
-  z-index: 9;
-}
-
-.addPropertyFormContainer .image-uploading-area li.image-loaded .picture-name {
-  pointer-events: inherit;
-}
-
-.addPropertyFormContainer .image-uploading-area li.image-loaded .file-uploader:after {
-  display: none;
-}
-
-.addPropertyFormContainer .image-uploading-area li:first-child .file-uploader:before {
-  position: absolute;
-  top: 15px;
-  left: -45px;
-  content: 'Main Image';
-  text-transform: capitalize;
-  font-size: 13px;
-  line-height: 16px;
-  padding: 3px;
-  transform: rotate(-39deg);
-  width: 150px;
-  color: #fff;
-  z-index: 999;
-  background: rgba(225, 70, 70, 0.8);
-  word-spacing: 1px;
-}
-
-.addPropertyFormContainer .image-uploading-area li .file-uploader {
-  width: 100%;
-  height: 110px;
-  margin: 0 auto;
-  background: #edf2f8;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContainer .image-uploading-area li .file-uploader {
-    width: 100%;
-    height: 150px;
-  }
-}
-
-.addPropertyFormContainer .image-uploading-area li .file-uploader:hover:after {
-  color: #58a36f;
-}
-
-.addPropertyFormContainer .image-uploading-area li .file-uploader:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  content: "\e900";
-  font-family: 'icomoon';
-  font-size: 50px;
-  line-height: 1;
-  z-index: -1;
-  margin: -25px 0 0 -25px;
-  color: #9da2a8;
-  transition: color 0.4s ease;
-  -webkit-transition: color 0.4s ease;
-  -ms-transition: color 0.4s ease;
-  -moz-transition: color 0.4s ease;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContainer .image-uploading-area li .file-uploader:after {
-    font-size: 60px;
-    margin: -30px 0 0 -30px;
-  }
-}
-
-.addPropertyFormContainer .image-uploading-area li .file-uploader input[type="file"] {
-  display: block;
-  overflow: hidden;
-  border: 0;
-  outline: none;
-  opacity: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.addPropertyFormContainer .image-uploading-area li .picture-name {
-  display: block;
-  max-width: inherit !important;
-  margin: 0;
-  width: 100%;
-  border-width: 0 0 2px;
-  border-style: solid;
-  border-color: #999;
-  height: 35px;
-  padding: 6px 10px;
-  font-size: 14px;
-  line-height: 18px;
-  pointer-events: none;
-  transition: border 0.4s ease;
-  -webkit-transition: border 0.4s ease;
-  -ms-transition: border 0.4s ease;
-  -moz-transition: border 0.4s ease;
-}
-
-.addPropertyFormContainer .image-uploading-area li .picture-name:hover, .addPropertyFormContainer .image-uploading-area li .picture-name:focus {
-  border-width: 0 0 3px;
-  border-color: #606060;
-}
-
-.addPropertyFormContainer .image-uploading-area li .image-holder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  outline: none;
-  overflow: hidden;
-  z-index: -1;
-  opacity: 0;
-  transition: z-index 0.9s ease, opacity 0.9s ease;
-  -webkit-transition: z-index 0.9s ease, opacity 0.9s ease;
-  -moz-transition: z-index 0.9s ease, opacity 0.9s ease;
-  -ms-transition: z-index 0.9s ease, opacity 0.9s ease;
-}
-
-.addPropertyFormContainer .image-uploading-area li .image-holder:after {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.7);
-  content: '';
-  transition: top 0.4s ease;
-  -webkit-transition: top 0.4s ease;
-  -moz-transition: top 0.4s ease;
-  -ms-transition: top 0.4s ease;
-}
-
-.addPropertyFormContainer .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  color: #e14646;
-  text-decoration: none;
-  z-index: 6;
-  font-size: 50px;
-  line-height: 50px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
-  -webkit-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
-  -ms-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
-  -moz-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
-  cursor: pointer;
-  margin: -25px -25px 0 0;
-}
-
-@media (max-width: 1424px) {
-  .addPropertyFormContainer .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
-    font-size: 50px;
-    line-height: 50px;
-  }
-}
-
-.addPropertyFormContainer .image-uploading-area li .image-holder img {
-  width: 100%;
-  height: auto;
-  display: block;
-  height: 100%;
-  border: 0;
-}
-
-.addPropertyFormContainer .image-uploading-area li .image-holder:hover:after {
-  top: 0;
-}
-
-.addPropertyFormContainer .image-uploading-area li .image-holder:hover .propertyDocumentCloseBtn {
-  opacity: 1;
-  visibility: visible;
-}
-
 /*list Agency User*/
 .listAgency-user {
   overflow: hidden;
@@ -2483,73 +1032,63 @@ input[type='submit'] {
 }
 
 /*Listing page with table */
-.favorite-property-holder,
-.property-listing-holder {
+.pendingForAdmin-property-holder {
   overflow: hidden;
   padding: 60px 10px 0;
   transition: padding 0.4s ease;
 }
 
-.favorite-property-holder.slide-onMobile-active .slide-onMobile,
-.property-listing-holder.slide-onMobile-active .slide-onMobile {
+.pendingForAdmin-property-holder.slide-onMobile-active .slide-onMobile {
   display: block !important;
 }
 
-.sideBar-active .favorite-property-holder, .sideBar-active
-.property-listing-holder {
+.sideBar-active .pendingForAdmin-property-holder {
   padding: 60px 10px 0 320px;
 }
 
 @media (max-width: 1199px) {
-  .sideBar-active .favorite-property-holder, .sideBar-active
-  .property-listing-holder {
+  .sideBar-active .pendingForAdmin-property-holder {
     padding: 60px 10px 0 310px;
   }
 }
 
 @media (max-width: 1023px) {
-  .sideBar-active .favorite-property-holder, .sideBar-active
-  .property-listing-holder {
+  .sideBar-active .pendingForAdmin-property-holder {
     padding: 60px 10px 0 260px;
   }
 }
 
 @media (max-width: 767px) {
-  .sideBar-active .favorite-property-holder, .sideBar-active
-  .property-listing-holder {
+  .sideBar-active .pendingForAdmin-property-holder {
     padding: 60px 10px 0;
   }
 }
 
-.sideBar-active .favorite-property-holder .listing-cetegories-links ul, .sideBar-active
-.property-listing-holder .listing-cetegories-links ul {
+.sideBar-active .pendingForAdmin-property-holder .listing-cetegories-links ul {
   padding: 0 10px 0 300px;
 }
 
 @media (max-width: 1023px) {
-  .sideBar-active .favorite-property-holder .listing-cetegories-links ul, .sideBar-active
-  .property-listing-holder .listing-cetegories-links ul {
+  .sideBar-active .pendingForAdmin-property-holder .listing-cetegories-links ul {
     padding: 0 10px 0 250px;
   }
 }
 
 @media (max-width: 767px) {
-  .sideBar-active .favorite-property-holder .listing-cetegories-links ul, .sideBar-active
-  .property-listing-holder .listing-cetegories-links ul {
+  .sideBar-active .pendingForAdmin-property-holder .listing-cetegories-links ul {
     padding: 0;
   }
 }
 
-.favorite-property-holder .quick-links,
-.property-listing-holder .quick-links {
+.pendingForAdmin-property-holder .quick-links {
+  float: right;
   padding: 5px 0 0;
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
 }
 
-.favorite-property-holder .quick-links > *,
-.property-listing-holder .quick-links > * {
+.pendingForAdmin-property-holder .quick-links > * {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
@@ -2557,14 +1096,12 @@ input[type='submit'] {
   letter-spacing: 0;
 }
 
-.favorite-property-holder .quick-links li,
-.property-listing-holder .quick-links li {
+.pendingForAdmin-property-holder .quick-links li {
   padding: 0 5px;
   margin: 0 0 10px;
 }
 
-.favorite-property-holder .quick-links li a,
-.property-listing-holder .quick-links li a {
+.pendingForAdmin-property-holder .quick-links li a {
   text-decoration: none;
   border: 1px solid transparent;
   border-radius: 2px;
@@ -2572,26 +1109,21 @@ input[type='submit'] {
   display: block;
 }
 
-.favorite-property-holder .quick-links li a span[class^="icon-"], .favorite-property-holder .quick-links li a span[class*="icon-"],
-.property-listing-holder .quick-links li a span[class^="icon-"],
-.property-listing-holder .quick-links li a span[class*="icon-"] {
+.pendingForAdmin-property-holder .quick-links li a span[class^="icon-"], .pendingForAdmin-property-holder .quick-links li a span[class*="icon-"] {
   padding: 0 5px 0 0;
 }
 
-.favorite-property-holder .quick-links li a:hover,
-.property-listing-holder .quick-links li a:hover {
+.pendingForAdmin-property-holder .quick-links li a:hover {
   opacity: 0.9;
 }
 
-.favorite-property-holder .quick-links li a.delete,
-.property-listing-holder .quick-links li a.delete {
+.pendingForAdmin-property-holder .quick-links li a.delete {
   border-color: #bc1e1e;
   color: #bc1e1e;
   background: rgba(225, 70, 70, 0.3);
 }
 
-.favorite-property-holder .listing-cetegories-links,
-.property-listing-holder .listing-cetegories-links {
+.pendingForAdmin-property-holder .listing-cetegories-links {
   position: fixed;
   top: 52px;
   left: 0;
@@ -2602,22 +1134,19 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .favorite-property-holder .listing-cetegories-links,
-  .property-listing-holder .listing-cetegories-links {
+  .pendingForAdmin-property-holder .listing-cetegories-links {
     top: 48px;
   }
 }
 
-.favorite-property-holder .listing-cetegories-links ul,
-.property-listing-holder .listing-cetegories-links ul {
+.pendingForAdmin-property-holder .listing-cetegories-links ul {
   transition: padding 0.4s ease;
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
 }
 
-.favorite-property-holder .listing-cetegories-links ul > *,
-.property-listing-holder .listing-cetegories-links ul > * {
+.pendingForAdmin-property-holder .listing-cetegories-links ul > * {
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
@@ -2626,14 +1155,12 @@ input[type='submit'] {
 }
 
 @media (max-width: 1199px) {
-  .favorite-property-holder .listing-cetegories-links ul,
-  .property-listing-holder .listing-cetegories-links ul {
+  .pendingForAdmin-property-holder .listing-cetegories-links ul {
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
   }
-  .favorite-property-holder .listing-cetegories-links ul > *,
-  .property-listing-holder .listing-cetegories-links ul > * {
+  .pendingForAdmin-property-holder .listing-cetegories-links ul > * {
     display: inline-block;
     vertical-align: top;
     font-size: 16px;
@@ -2642,36 +1169,30 @@ input[type='submit'] {
   }
 }
 
-.favorite-property-holder .listing-cetegories-links ul.navFor-mobile,
-.property-listing-holder .listing-cetegories-links ul.navFor-mobile {
+.pendingForAdmin-property-holder .listing-cetegories-links ul.navFor-mobile {
   text-align: center;
 }
 
 @media (min-width: 1024px) {
-  .favorite-property-holder .listing-cetegories-links ul.navFor-mobile,
-  .property-listing-holder .listing-cetegories-links ul.navFor-mobile {
+  .pendingForAdmin-property-holder .listing-cetegories-links ul.navFor-mobile {
     display: none;
   }
 }
 
-.favorite-property-holder .listing-cetegories-links ul.navFor-mobile li,
-.property-listing-holder .listing-cetegories-links ul.navFor-mobile li {
+.pendingForAdmin-property-holder .listing-cetegories-links ul.navFor-mobile li {
   display: block;
   position: relative;
 }
 
-.favorite-property-holder .listing-cetegories-links ul.navFor-mobile li .slide-onMobile-opener,
-.property-listing-holder .listing-cetegories-links ul.navFor-mobile li .slide-onMobile-opener {
+.pendingForAdmin-property-holder .listing-cetegories-links ul.navFor-mobile li .slide-onMobile-opener {
   cursor: pointer;
 }
 
-.favorite-property-holder .listing-cetegories-links ul.navFor-mobile li .slide-onMobile-opener:hover,
-.property-listing-holder .listing-cetegories-links ul.navFor-mobile li .slide-onMobile-opener:hover {
+.pendingForAdmin-property-holder .listing-cetegories-links ul.navFor-mobile li .slide-onMobile-opener:hover {
   background: none;
 }
 
-.favorite-property-holder .listing-cetegories-links ul.navFor-mobile li .tag,
-.property-listing-holder .listing-cetegories-links ul.navFor-mobile li .tag {
+.pendingForAdmin-property-holder .listing-cetegories-links ul.navFor-mobile li .tag {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2682,8 +1203,7 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .favorite-property-holder .listing-cetegories-links ul.navFor-mobile li .tag,
-  .property-listing-holder .listing-cetegories-links ul.navFor-mobile li .tag {
+  .pendingForAdmin-property-holder .listing-cetegories-links ul.navFor-mobile li .tag {
     font-size: 12px;
     line-height: 15px;
     padding: 17px 8px;
@@ -2691,33 +1211,28 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
-  .favorite-property-holder .listing-cetegories-links ul.slide-onMobile,
-  .property-listing-holder .listing-cetegories-links ul.slide-onMobile {
+  .pendingForAdmin-property-holder .listing-cetegories-links ul.slide-onMobile {
     display: none;
   }
-  .favorite-property-holder .listing-cetegories-links ul.slide-onMobile li,
-  .property-listing-holder .listing-cetegories-links ul.slide-onMobile li {
+  .pendingForAdmin-property-holder .listing-cetegories-links ul.slide-onMobile li {
     display: block;
     font-size: 14px;
     line-height: 17px;
   }
 }
 
-.favorite-property-holder .listing-cetegories-links ul li.active-nav a,
-.property-listing-holder .listing-cetegories-links ul li.active-nav a {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li.active-nav a {
   background: #fff;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong,
-.property-listing-holder .listing-cetegories-links ul li strong {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong {
   display: inline-block;
   vertical-align: top;
   font-weight: 600;
   position: relative;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong:before,
-.property-listing-holder .listing-cetegories-links ul li strong:before {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong:before {
   font-family: 'icomoon';
   display: inline-block;
   vertical-align: top;
@@ -2725,58 +1240,47 @@ input[type='submit'] {
   font-weight: 400;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.active,
-.property-listing-holder .listing-cetegories-links ul li strong.active {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.active {
   color: #58a36f;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.active:before,
-.property-listing-holder .listing-cetegories-links ul li strong.active:before {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.active:before {
   content: "\e91d";
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.pending,
-.property-listing-holder .listing-cetegories-links ul li strong.pending {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.pending {
   color: #489ddd;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.pending:before,
-.property-listing-holder .listing-cetegories-links ul li strong.pending:before {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.pending:before {
   content: "\e90d";
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.rejected,
-.property-listing-holder .listing-cetegories-links ul li strong.rejected {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.rejected {
   color: #bc5858;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.rejected:before,
-.property-listing-holder .listing-cetegories-links ul li strong.rejected:before {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.rejected:before {
   content: "\e920";
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.expired,
-.property-listing-holder .listing-cetegories-links ul li strong.expired {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.expired {
   color: #cf8511;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.expired:before,
-.property-listing-holder .listing-cetegories-links ul li strong.expired:before {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.expired:before {
   content: "\e912";
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.deleted,
-.property-listing-holder .listing-cetegories-links ul li strong.deleted {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.deleted {
   color: #e14646;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li strong.deleted:before,
-.property-listing-holder .listing-cetegories-links ul li strong.deleted:before {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li strong.deleted:before {
   content: "\e910";
 }
 
-.favorite-property-holder .listing-cetegories-links ul li a,
-.property-listing-holder .listing-cetegories-links ul li a {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li a {
   display: block;
   padding: 15px 48px;
   transition: color 0.4s ease, background 0.4s ease;
@@ -2785,26 +1289,22 @@ input[type='submit'] {
 }
 
 @media (max-width: 1425px) {
-  .favorite-property-holder .listing-cetegories-links ul li a,
-  .property-listing-holder .listing-cetegories-links ul li a {
+  .pendingForAdmin-property-holder .listing-cetegories-links ul li a {
     padding: 15px 18px;
   }
 }
 
 @media (max-width: 1199px) {
-  .favorite-property-holder .listing-cetegories-links ul li a,
-  .property-listing-holder .listing-cetegories-links ul li a {
+  .pendingForAdmin-property-holder .listing-cetegories-links ul li a {
     padding: 15px 7px;
   }
 }
 
-.favorite-property-holder .listing-cetegories-links ul li a:hover,
-.property-listing-holder .listing-cetegories-links ul li a:hover {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li a:hover {
   background: #fff;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li a .numbering,
-.property-listing-holder .listing-cetegories-links ul li a .numbering {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li a .numbering {
   font-size: 13px;
   line-height: 17px;
   display: inline-block;
@@ -2812,76 +1312,28 @@ input[type='submit'] {
   min-width: 36px;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li a .numbering:before, .favorite-property-holder .listing-cetegories-links ul li a .numbering:after,
-.property-listing-holder .listing-cetegories-links ul li a .numbering:before,
-.property-listing-holder .listing-cetegories-links ul li a .numbering:after {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li a .numbering:before, .pendingForAdmin-property-holder .listing-cetegories-links ul li a .numbering:after {
   display: inline-block;
   vertical-align: middle;
   content: '(';
   margin: -4px 0 0;
 }
 
-.favorite-property-holder .listing-cetegories-links ul li a .numbering:after,
-.property-listing-holder .listing-cetegories-links ul li a .numbering:after {
+.pendingForAdmin-property-holder .listing-cetegories-links ul li a .numbering:after {
   content: ')';
 }
 
-.favorite-property-holder .property-filter,
-.property-listing-holder .property-filter {
+.pendingForAdmin-property-holder .property-filter {
   overflow: hidden;
 }
 
-.favorite-property-holder .property-filter .by-user-sorting, .favorite-property-holder .property-filter .by-id-sorting,
-.property-listing-holder .property-filter .by-user-sorting,
-.property-listing-holder .property-filter .by-id-sorting {
-  display: block;
-  width: 40%;
+.pendingForAdmin-property-holder .property-filter .by-user-sorting, .pendingForAdmin-property-holder .property-filter .by-id-sorting {
   overflow: hidden;
   margin: 0 0 10px;
   float: left;
 }
 
-@media (max-width: 1425px) {
-  .favorite-property-holder .property-filter .by-user-sorting, .favorite-property-holder .property-filter .by-id-sorting,
-  .property-listing-holder .property-filter .by-user-sorting,
-  .property-listing-holder .property-filter .by-id-sorting {
-    width: 50%;
-  }
-}
-
-@media (max-width: 1199px) {
-  .favorite-property-holder .property-filter .by-user-sorting, .favorite-property-holder .property-filter .by-id-sorting,
-  .property-listing-holder .property-filter .by-user-sorting,
-  .property-listing-holder .property-filter .by-id-sorting {
-    width: 54%;
-  }
-}
-
-@media (max-width: 767px) {
-  .favorite-property-holder .property-filter .by-user-sorting, .favorite-property-holder .property-filter .by-id-sorting,
-  .property-listing-holder .property-filter .by-user-sorting,
-  .property-listing-holder .property-filter .by-id-sorting {
-    width: 100% !important;
-    float: none !important;
-    overflow: hidden;
-    margin: 0 0 10px !important;
-  }
-}
-
-@media (max-width: 1023px) {
-  .sideBar-active .favorite-property-holder .property-filter .by-user-sorting, .sideBar-active .favorite-property-holder .property-filter .by-id-sorting, .sideBar-active
-  .property-listing-holder .property-filter .by-user-sorting, .sideBar-active
-  .property-listing-holder .property-filter .by-id-sorting {
-    width: 100% !important;
-    float: none !important;
-    overflow: hidden;
-    margin: 0 0 10px !important;
-  }
-}
-
-.favorite-property-holder .property-filter .by-user-sorting ul, .favorite-property-holder .property-filter .by-id-sorting ul,
-.property-listing-holder .property-filter .by-user-sorting ul,
-.property-listing-holder .property-filter .by-id-sorting ul {
+.pendingForAdmin-property-holder .property-filter .by-user-sorting ul, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul {
   float: left;
   font-size: 0;
   line-height: 0;
@@ -2889,9 +1341,7 @@ input[type='submit'] {
   text-transform: capitalize;
 }
 
-.favorite-property-holder .property-filter .by-user-sorting ul > *, .favorite-property-holder .property-filter .by-id-sorting ul > *,
-.property-listing-holder .property-filter .by-user-sorting ul > *,
-.property-listing-holder .property-filter .by-id-sorting ul > * {
+.pendingForAdmin-property-holder .property-filter .by-user-sorting ul > *, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul > * {
   display: inline-block;
   vertical-align: middle;
   font-size: 14px;
@@ -2900,16 +1350,12 @@ input[type='submit'] {
 }
 
 @media (max-width: 1199px) {
-  .favorite-property-holder .property-filter .by-user-sorting ul, .favorite-property-holder .property-filter .by-id-sorting ul,
-  .property-listing-holder .property-filter .by-user-sorting ul,
-  .property-listing-holder .property-filter .by-id-sorting ul {
+  .pendingForAdmin-property-holder .property-filter .by-user-sorting ul, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul {
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
   }
-  .favorite-property-holder .property-filter .by-user-sorting ul > *, .favorite-property-holder .property-filter .by-id-sorting ul > *,
-  .property-listing-holder .property-filter .by-user-sorting ul > *,
-  .property-listing-holder .property-filter .by-id-sorting ul > * {
+  .pendingForAdmin-property-holder .property-filter .by-user-sorting ul > *, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul > * {
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
@@ -2919,9 +1365,7 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .favorite-property-holder .property-filter .by-user-sorting ul, .favorite-property-holder .property-filter .by-id-sorting ul,
-  .property-listing-holder .property-filter .by-user-sorting ul,
-  .property-listing-holder .property-filter .by-id-sorting ul {
+  .pendingForAdmin-property-holder .property-filter .by-user-sorting ul, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul {
     float: none;
     overflow: hidden;
     display: block;
@@ -2929,48 +1373,16 @@ input[type='submit'] {
   }
 }
 
-.favorite-property-holder .property-filter .by-user-sorting ul li, .favorite-property-holder .property-filter .by-id-sorting ul li,
-.property-listing-holder .property-filter .by-user-sorting ul li,
-.property-listing-holder .property-filter .by-id-sorting ul li {
+.pendingForAdmin-property-holder .property-filter .by-user-sorting ul li, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul li {
   padding: 5px 7px 10px;
   float: left;
 }
 
-@media (max-width: 1199px) {
-  .favorite-property-holder .property-filter .by-user-sorting ul li, .favorite-property-holder .property-filter .by-id-sorting ul li,
-  .property-listing-holder .property-filter .by-user-sorting ul li,
-  .property-listing-holder .property-filter .by-id-sorting ul li {
-    padding: 5px 4px 10px;
-  }
-}
-
-@media (max-width: 767px) {
-  .favorite-property-holder .property-filter .by-user-sorting ul li, .favorite-property-holder .property-filter .by-id-sorting ul li,
-  .property-listing-holder .property-filter .by-user-sorting ul li,
-  .property-listing-holder .property-filter .by-id-sorting ul li {
-    width: 50%;
-    padding: 0 5px;
-  }
-}
-
-.favorite-property-holder .property-filter .by-user-sorting ul li label, .favorite-property-holder .property-filter .by-id-sorting ul li label,
-.property-listing-holder .property-filter .by-user-sorting ul li label,
-.property-listing-holder .property-filter .by-id-sorting ul li label {
+.pendingForAdmin-property-holder .property-filter .by-user-sorting ul li label, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul li label {
   margin: 0 10px 0 0;
 }
 
-@media (max-width: 767px) {
-  .favorite-property-holder .property-filter .by-user-sorting ul li label, .favorite-property-holder .property-filter .by-id-sorting ul li label,
-  .property-listing-holder .property-filter .by-user-sorting ul li label,
-  .property-listing-holder .property-filter .by-id-sorting ul li label {
-    display: block;
-    margin: 0 0 5px;
-  }
-}
-
-.favorite-property-holder .property-filter .by-user-sorting ul li select, .favorite-property-holder .property-filter .by-id-sorting ul li select,
-.property-listing-holder .property-filter .by-user-sorting ul li select,
-.property-listing-holder .property-filter .by-id-sorting ul li select {
+.pendingForAdmin-property-holder .property-filter .by-user-sorting ul li select, .pendingForAdmin-property-holder .property-filter .by-id-sorting ul li select {
   min-width: 50px;
   border: 1px solid #2e2e2e;
   height: 29px;
@@ -2979,18 +1391,7 @@ input[type='submit'] {
   outline: none;
 }
 
-@media (max-width: 767px) {
-  .favorite-property-holder .property-filter .by-user-sorting ul li select, .favorite-property-holder .property-filter .by-id-sorting ul li select,
-  .property-listing-holder .property-filter .by-user-sorting ul li select,
-  .property-listing-holder .property-filter .by-id-sorting ul li select {
-    min-width: 100%;
-    width: 100%;
-  }
-}
-
-.favorite-property-holder .property-filter .by-user-sorting input[type="submit"], .favorite-property-holder .property-filter .by-id-sorting input[type="submit"],
-.property-listing-holder .property-filter .by-user-sorting input[type="submit"],
-.property-listing-holder .property-filter .by-id-sorting input[type="submit"] {
+.pendingForAdmin-property-holder .property-filter .by-user-sorting input[type="submit"], .pendingForAdmin-property-holder .property-filter .by-id-sorting input[type="submit"] {
   border: 0;
   height: 30px;
   padding: 4px 10px;
@@ -3004,9 +1405,7 @@ input[type='submit'] {
 }
 
 @media (max-width: 1199px) {
-  .favorite-property-holder .property-filter .by-user-sorting input[type="submit"], .favorite-property-holder .property-filter .by-id-sorting input[type="submit"],
-  .property-listing-holder .property-filter .by-user-sorting input[type="submit"],
-  .property-listing-holder .property-filter .by-id-sorting input[type="submit"] {
+  .pendingForAdmin-property-holder .property-filter .by-user-sorting input[type="submit"], .pendingForAdmin-property-holder .property-filter .by-id-sorting input[type="submit"] {
     padding: 5px;
     font-size: 12px;
     line-height: 15px;
@@ -3014,75 +1413,62 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .favorite-property-holder .property-filter .by-user-sorting input[type="submit"], .favorite-property-holder .property-filter .by-id-sorting input[type="submit"],
-  .property-listing-holder .property-filter .by-user-sorting input[type="submit"],
-  .property-listing-holder .property-filter .by-id-sorting input[type="submit"] {
+  .pendingForAdmin-property-holder .property-filter .by-user-sorting input[type="submit"], .pendingForAdmin-property-holder .property-filter .by-id-sorting input[type="submit"] {
     float: none;
     width: 100%;
     display: block;
   }
 }
 
-.favorite-property-holder .property-filter .by-user-sorting input[type="submit"]:hover, .favorite-property-holder .property-filter .by-id-sorting input[type="submit"]:hover,
-.property-listing-holder .property-filter .by-user-sorting input[type="submit"]:hover,
-.property-listing-holder .property-filter .by-id-sorting input[type="submit"]:hover {
+.pendingForAdmin-property-holder .property-filter .by-user-sorting input[type="submit"]:hover, .pendingForAdmin-property-holder .property-filter .by-id-sorting input[type="submit"]:hover {
   background: #1ab394;
 }
 
-.favorite-property-holder .property-filter .by-id-sorting,
-.property-listing-holder .property-filter .by-id-sorting {
+.pendingForAdmin-property-holder .property-filter .by-id-sorting {
   float: right;
 }
 
 @media (max-width: 1199px) {
-  .favorite-property-holder .property-filter .by-id-sorting,
-  .property-listing-holder .property-filter .by-id-sorting {
+  .pendingForAdmin-property-holder .property-filter .by-id-sorting {
     padding: 0;
     width: 46%;
   }
 }
 
-.favorite-property-holder .table-responsive,
-.property-listing-holder .table-responsive {
+.pendingForAdmin-property-holder .table-responsive {
   overflow-x: auto;
 }
 
-.favorite-property-holder .properties-table,
-.property-listing-holder .properties-table {
+.pendingForAdmin-property-holder .properties-table {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.sideBar-active .favorite-property-holder .properties-table, .sideBar-active
-.property-listing-holder .properties-table {
+.sideBar-active .pendingForAdmin-property-holder .properties-table {
   margin: 0;
 }
 
 @media (max-width: 1199px) {
-  .favorite-property-holder .properties-table,
-  .property-listing-holder .properties-table {
+  .pendingForAdmin-property-holder .properties-table {
     width: 1200px;
   }
 }
 
 @media (max-width: 1023px) {
-  .favorite-property-holder .properties-table,
-  .property-listing-holder .properties-table {
+  .pendingForAdmin-property-holder .properties-table {
     font-size: 14px;
     line-height: 18px;
   }
 }
 
 @media (max-width: 1023px) {
-  .favorite-property-holder .properties-table,
-  .property-listing-holder .properties-table {
+  .pendingForAdmin-property-holder .properties-table {
     width: 894px;
   }
 }
 
-.favorite-property-holder .properties-table li,
-.property-listing-holder .properties-table li {
+.pendingForAdmin-property-holder .properties-table li {
   width: 100%;
   font-size: 0;
   line-height: 0;
@@ -3091,8 +1477,7 @@ input[type='submit'] {
   position: relative;
 }
 
-.favorite-property-holder .properties-table li > *,
-.property-listing-holder .properties-table li > * {
+.pendingForAdmin-property-holder .properties-table li > * {
   display: inline-block;
   vertical-align: top;
   font-size: 15px;
@@ -3101,14 +1486,12 @@ input[type='submit'] {
 }
 
 @media (max-width: 1554px) {
-  .favorite-property-holder .properties-table li,
-  .property-listing-holder .properties-table li {
+  .pendingForAdmin-property-holder .properties-table li {
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
   }
-  .favorite-property-holder .properties-table li > *,
-  .property-listing-holder .properties-table li > * {
+  .pendingForAdmin-property-holder .properties-table li > * {
     display: inline-block;
     vertical-align: top;
     font-size: 13px;
@@ -3117,23 +1500,19 @@ input[type='submit'] {
   }
 }
 
-.favorite-property-holder .properties-table li.active,
-.property-listing-holder .properties-table li.active {
+.pendingForAdmin-property-holder .properties-table li.active {
   border-left: 1px solid rgba(96, 96, 96, 0.4);
   border-right: 1px solid rgba(96, 96, 96, 0.4);
   background: rgba(0, 0, 0, 0.03);
 }
 
-.favorite-property-holder .properties-table li:first-child,
-.property-listing-holder .properties-table li:first-child {
+.pendingForAdmin-property-holder .properties-table li:first-child {
   border: 0;
   background: rgba(19, 55, 131, 0.5);
   border-radius: 4px;
 }
 
-.favorite-property-holder .properties-table li.restoring:after, .favorite-property-holder .properties-table li.deleting:after,
-.property-listing-holder .properties-table li.restoring:after,
-.property-listing-holder .properties-table li.deleting:after {
+.pendingForAdmin-property-holder .properties-table li.restoring:after, .pendingForAdmin-property-holder .properties-table li.deleting:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -3150,14 +1529,12 @@ input[type='submit'] {
   display: block;
 }
 
-.favorite-property-holder .properties-table li.restoring:after,
-.property-listing-holder .properties-table li.restoring:after {
+.pendingForAdmin-property-holder .properties-table li.restoring:after {
   content: 'Restoring...';
   color: #489ddd;
 }
 
-.favorite-property-holder .properties-table li .t-head,
-.property-listing-holder .properties-table li .t-head {
+.pendingForAdmin-property-holder .properties-table li .t-head {
   text-align: left;
   padding: 8px;
   color: #fff;
@@ -3165,51 +1542,42 @@ input[type='submit'] {
   font-weight: 600;
 }
 
-.favorite-property-holder .properties-table li .t-head.by-location, .favorite-property-holder .properties-table li .t-head.by-type,
-.property-listing-holder .properties-table li .t-head.by-location,
-.property-listing-holder .properties-table li .t-head.by-type {
+.pendingForAdmin-property-holder .properties-table li .t-head.by-location, .pendingForAdmin-property-holder .properties-table li .t-head.by-type {
   width: 23.72%;
 }
 
-.favorite-property-holder .properties-table li .t-head.by-id,
-.property-listing-holder .properties-table li .t-head.by-id {
+.pendingForAdmin-property-holder .properties-table li .t-head.by-id {
   width: 8%;
 }
 
-.favorite-property-holder .properties-table li .t-head.by-price,
-.property-listing-holder .properties-table li .t-head.by-price {
+.pendingForAdmin-property-holder .properties-table li .t-head.by-price {
   width: 8%;
 }
 
-.favorite-property-holder .properties-table li .t-head.by-view,
-.property-listing-holder .properties-table li .t-head.by-view {
+.pendingForAdmin-property-holder .properties-table li .t-head.by-view {
   width: 8%;
 }
 
 @media (max-width: 1554px) {
-  .favorite-property-holder .properties-table li .t-head,
-  .property-listing-holder .properties-table li .t-head {
+  .pendingForAdmin-property-holder .properties-table li .t-head {
     width: 14.28% !important;
   }
 }
 
 @media (max-width: 1023px) {
-  .favorite-property-holder .properties-table li .t-head,
-  .property-listing-holder .properties-table li .t-head {
+  .pendingForAdmin-property-holder .properties-table li .t-head {
     padding: 5px;
   }
 }
 
-.favorite-property-holder .properties-table li .t-head span,
-.property-listing-holder .properties-table li .t-head span {
+.pendingForAdmin-property-holder .properties-table li .t-head span {
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
   position: relative;
 }
 
-.favorite-property-holder .properties-table li .t-head span:after,
-.property-listing-holder .properties-table li .t-head span:after {
+.pendingForAdmin-property-holder .properties-table li .t-head span:after {
   position: absolute;
   top: 8px;
   right: -15px;
@@ -3217,71 +1585,58 @@ input[type='submit'] {
   content: '';
 }
 
-.favorite-property-holder .properties-table li .t-head span.descending:after,
-.property-listing-holder .properties-table li .t-head span.descending:after {
+.pendingForAdmin-property-holder .properties-table li .t-head span.descending:after {
   border-top: 5px solid #fff;
 }
 
-.favorite-property-holder .properties-table li .t-head span:hover,
-.property-listing-holder .properties-table li .t-head span:hover {
+.pendingForAdmin-property-holder .properties-table li .t-head span:hover {
   color: #edf1f4;
 }
 
-.favorite-property-holder .properties-table li .t-head span:hover:after,
-.property-listing-holder .properties-table li .t-head span:hover:after {
+.pendingForAdmin-property-holder .properties-table li .t-head span:hover:after {
   opacity: 0.8;
 }
 
-.favorite-property-holder .properties-table li .t-data,
-.property-listing-holder .properties-table li .t-data {
+.pendingForAdmin-property-holder .properties-table li .t-data {
   text-align: left;
   padding: 10px 8px;
   overflow: hidden;
   width: 14.28%;
 }
 
-.favorite-property-holder .properties-table li .t-data.by-location, .favorite-property-holder .properties-table li .t-data.by-type,
-.property-listing-holder .properties-table li .t-data.by-location,
-.property-listing-holder .properties-table li .t-data.by-type {
+.pendingForAdmin-property-holder .properties-table li .t-data.by-location, .pendingForAdmin-property-holder .properties-table li .t-data.by-type {
   width: 23.72%;
 }
 
-.favorite-property-holder .properties-table li .t-data.by-id,
-.property-listing-holder .properties-table li .t-data.by-id {
+.pendingForAdmin-property-holder .properties-table li .t-data.by-id {
   width: 8%;
 }
 
-.favorite-property-holder .properties-table li .t-data.by-price,
-.property-listing-holder .properties-table li .t-data.by-price {
+.pendingForAdmin-property-holder .properties-table li .t-data.by-price {
   width: 8%;
 }
 
-.favorite-property-holder .properties-table li .t-data.by-view,
-.property-listing-holder .properties-table li .t-data.by-view {
+.pendingForAdmin-property-holder .properties-table li .t-data.by-view {
   width: 8%;
 }
 
 @media (max-width: 1023px) {
-  .favorite-property-holder .properties-table li .t-data,
-  .property-listing-holder .properties-table li .t-data {
+  .pendingForAdmin-property-holder .properties-table li .t-data {
     padding: 5px;
   }
 }
 
 @media (max-width: 1554px) {
-  .favorite-property-holder .properties-table li .t-data,
-  .property-listing-holder .properties-table li .t-data {
+  .pendingForAdmin-property-holder .properties-table li .t-data {
     width: 14.28% !important;
   }
 }
 
-.favorite-property-holder .properties-table li p,
-.property-listing-holder .properties-table li p {
+.pendingForAdmin-property-holder .properties-table li p {
   margin: 0;
 }
 
-.favorite-property-holder .properties-table li a,
-.property-listing-holder .properties-table li a {
+.pendingForAdmin-property-holder .properties-table li a {
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
@@ -3295,58 +1650,48 @@ input[type='submit'] {
   max-width: inherit;
 }
 
-.favorite-property-holder .properties-table li a.details,
-.property-listing-holder .properties-table li a.details {
+.pendingForAdmin-property-holder .properties-table li a.details {
   color: #489ddd;
   font-size: 20px;
   line-height: 1;
   font-weight: bold;
 }
 
-.favorite-property-holder .properties-table li a.details:hover,
-.property-listing-holder .properties-table li a.details:hover {
+.pendingForAdmin-property-holder .properties-table li a.details:hover {
   color: #2277b7;
 }
 
-.favorite-property-holder .properties-table li a.edit,
-.property-listing-holder .properties-table li a.edit {
+.pendingForAdmin-property-holder .properties-table li a.edit {
   color: #ef9521;
 }
 
-.favorite-property-holder .properties-table li a.edit:hover,
-.property-listing-holder .properties-table li a.edit:hover {
+.pendingForAdmin-property-holder .properties-table li a.edit:hover {
   color: #b66c0d;
 }
 
-.favorite-property-holder .properties-table li a.delete,
-.property-listing-holder .properties-table li a.delete {
+.pendingForAdmin-property-holder .properties-table li a.delete {
   color: #e14646;
 }
 
-.favorite-property-holder .properties-table li a.delete:hover,
-.property-listing-holder .properties-table li a.delete:hover {
+.pendingForAdmin-property-holder .properties-table li a.delete:hover {
   color: #bc1e1e;
 }
 
-.favorite-property-holder .properties-table li a.undo,
-.property-listing-holder .properties-table li a.undo {
-  color: #39f;
+.pendingForAdmin-property-holder .properties-table li a.accept {
+  color: #58a36f;
 }
 
-.favorite-property-holder .properties-table li a.undo:hover,
-.property-listing-holder .properties-table li a.undo:hover {
-  color: #0073e6;
+.pendingForAdmin-property-holder .properties-table li a.accept:hover {
+  color: #3d714d;
 }
 
-.favorite-property-holder .properties-table li .slide,
-.property-listing-holder .properties-table li .slide {
+.pendingForAdmin-property-holder .properties-table li .slide {
   display: block;
   overflow: hidden;
   padding: 0 0 10px;
 }
 
-.favorite-property-holder .properties-table li .slide .two-cols,
-.property-listing-holder .properties-table li .slide .two-cols {
+.pendingForAdmin-property-holder .properties-table li .slide .two-cols {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
@@ -3354,8 +1699,7 @@ input[type='submit'] {
   color: #606060;
 }
 
-.favorite-property-holder .properties-table li .slide .two-cols > *,
-.property-listing-holder .properties-table li .slide .two-cols > * {
+.pendingForAdmin-property-holder .properties-table li .slide .two-cols > * {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
@@ -3363,13 +1707,11 @@ input[type='submit'] {
   letter-spacing: 0;
 }
 
-.favorite-property-holder .properties-table li .slide .two-cols .col,
-.property-listing-holder .properties-table li .slide .two-cols .col {
+.pendingForAdmin-property-holder .properties-table li .slide .two-cols .col {
   width: 50%;
 }
 
-.favorite-property-holder .properties-table li .slide .two-cols h1,
-.property-listing-holder .properties-table li .slide .two-cols h1 {
+.pendingForAdmin-property-holder .properties-table li .slide .two-cols h1 {
   font-size: 22px;
   line-height: 25px;
   font-style: italic;
@@ -3378,13 +1720,11 @@ input[type='submit'] {
   font-weight: 600;
 }
 
-.favorite-property-holder .properties-table li .slide .two-cols p,
-.property-listing-holder .properties-table li .slide .two-cols p {
+.pendingForAdmin-property-holder .properties-table li .slide .two-cols p {
   margin: 0 0 10px;
 }
 
-.favorite-property-holder .properties-table li .slide .btn-more,
-.property-listing-holder .properties-table li .slide .btn-more {
+.pendingForAdmin-property-holder .properties-table li .slide .btn-more {
   color: #fff;
   font-weight: 600;
   font-size: 16px;
@@ -3403,82 +1743,76 @@ input[type='submit'] {
   -ms-transition: border 0.4s ease, background 0.4s ease;
 }
 
-.favorite-property-holder .properties-table li .slide .btn-more:hover,
-.property-listing-holder .properties-table li .slide .btn-more:hover {
+.pendingForAdmin-property-holder .properties-table li .slide .btn-more:hover {
   background: #ef9521;
   border-bottom: 4px solid #b66c0d;
 }
 
-.favorite-property-holder {
+.pendingForAdmin-property-holder {
   padding: 15px 10px 0;
 }
 
-.sideBar-active .favorite-property-holder {
+.sideBar-active .pendingForAdmin-property-holder {
   padding: 15px 10px 0 320px;
 }
 
 @media (max-width: 1199px) {
-  .sideBar-active .favorite-property-holder {
+  .sideBar-active .pendingForAdmin-property-holder {
     padding: 15px 10px 0 310px;
   }
 }
 
 @media (max-width: 1023px) {
-  .sideBar-active .favorite-property-holder {
+  .sideBar-active .pendingForAdmin-property-holder {
     padding: 15px 10px 0 260px;
   }
 }
 
 @media (max-width: 767px) {
-  .sideBar-active .favorite-property-holder {
+  .sideBar-active .pendingForAdmin-property-holder {
     padding: 15px 10px 0;
   }
 }
 
-.sideBar-active .favorite-property-holder .listing-cetegories-links ul {
+.sideBar-active .pendingForAdmin-property-holder .listing-cetegories-links ul {
   padding: 0 10px 0 300px;
 }
 
 @media (max-width: 1023px) {
-  .sideBar-active .favorite-property-holder .listing-cetegories-links ul {
+  .sideBar-active .pendingForAdmin-property-holder .listing-cetegories-links ul {
     padding: 0 10px 0 250px;
   }
 }
 
 @media (max-width: 767px) {
-  .sideBar-active .favorite-property-holder .listing-cetegories-links ul {
+  .sideBar-active .pendingForAdmin-property-holder .listing-cetegories-links ul {
     padding: 0;
   }
 }
 
-.changePassword,
-.registrationFormHolder {
+.login-Admin {
   overflow: hidden;
   padding: 20px;
   transition: padding 0.4s ease;
 }
 
-.sideBar-active .changePassword, .sideBar-active
-.registrationFormHolder {
+.sideBar-active .login-Admin {
   padding: 20px 20px 20px 320px;
 }
 
 @media (max-width: 1023px) {
-  .sideBar-active .changePassword, .sideBar-active
-  .registrationFormHolder {
+  .sideBar-active .login-Admin {
     padding: 20px 20px 20px 260px;
   }
 }
 
 @media (max-width: 767px) {
-  .sideBar-active .changePassword, .sideBar-active
-  .registrationFormHolder {
+  .sideBar-active .login-Admin {
     padding: 20px;
   }
 }
 
-.changePassword-form,
-.registration-form {
+.login-Admin-Form {
   background: rgba(237, 241, 244, 0.2);
   border-radius: 5px;
   padding: 25px;
@@ -3490,8 +1824,7 @@ input[type='submit'] {
   letter-spacing: -4px;
 }
 
-.changePassword-form > *,
-.registration-form > * {
+.login-Admin-Form > * {
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
@@ -3500,14 +1833,12 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
-  .changePassword-form,
-  .registration-form {
+  .login-Admin-Form {
     padding: 5px;
   }
 }
 
-.changePassword-form .heading-profile,
-.registration-form .heading-profile {
+.login-Admin-Form .heading-profile {
   display: block;
   width: 100%;
   text-transform: capitalize;
@@ -3519,236 +1850,26 @@ input[type='submit'] {
   font-style: italic;
 }
 
-.changePassword-form.agent-info .agent-information,
-.registration-form.agent-info .agent-information {
-  min-height: 545px;
-  opacity: 1;
-  height: auto;
-}
-
-@media (max-width: 767px) {
-  .changePassword-form.agent-info .agent-information,
-  .registration-form.agent-info .agent-information {
-    padding: 185px 0 0;
-  }
-}
-
-.changePassword-form .input-holder,
-.registration-form .input-holder {
+.login-Admin-Form .input-holder {
   width: 50%;
 }
 
 @media (max-width: 767px) {
-  .changePassword-form .input-holder,
-  .registration-form .input-holder {
+  .login-Admin-Form .input-holder {
     width: 100%;
     float: none;
     overflow: hidden;
   }
 }
 
-.changePassword-form .roles,
-.registration-form .roles {
-  overflow: hidden;
-}
-
-.changePassword-form .roles .role-opener,
-.registration-form .roles .role-opener {
-  display: block;
-  text-transform: capitalize;
-  cursor: pointer;
-  color: #606060;
-  position: relative;
-  padding: 0 0 10px 50px;
-  border-bottom: 1px solid rgba(96, 96, 96, 0.5);
-}
-
-@media (max-width: 1023px) {
-  .changePassword-form .roles .role-opener,
-  .registration-form .roles .role-opener {
-    font-size: 13px;
-    line-height: 15px;
-    padding: 0 0 10px 35px;
-  }
-}
-
-.changePassword-form .roles .role-opener:before,
-.registration-form .roles .role-opener:before {
-  font-family: 'icomoon';
-  content: "\e973";
-  position: absolute;
-  top: 0;
-  left: 10px;
-  font-size: 20px;
-  line-height: 1;
-}
-
-@media (max-width: 1023px) {
-  .changePassword-form .roles .role-opener:before,
-  .registration-form .roles .role-opener:before {
-    font-size: 13px;
-  }
-}
-
-.changePassword-form .roles .role-opener:after,
-.registration-form .roles .role-opener:after {
-  position: absolute;
-  left: 0;
-  right: 100%;
-  bottom: 0;
-  content: '';
-  height: 2px;
-  background: #606060;
-  margin: -1px 0 0;
-  transition: right 0.2s ease;
-}
-
-.changePassword-form .roles .role-opener.active:after,
-.registration-form .roles .role-opener.active:after {
-  right: 0;
-}
-
-.changePassword-form .societiesBlock-listing,
-.changePassword-form .role-listing,
-.registration-form .societiesBlock-listing,
-.registration-form .role-listing {
-  padding: 10px 0 0;
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-}
-
-.changePassword-form .societiesBlock-listing > *,
-.changePassword-form .role-listing > *,
-.registration-form .societiesBlock-listing > *,
-.registration-form .role-listing > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0;
-}
-
-@media (max-width: 1023px) {
-  .changePassword-form .societiesBlock-listing,
-  .changePassword-form .role-listing,
-  .registration-form .societiesBlock-listing,
-  .registration-form .role-listing {
-    font-size: 0;
-    line-height: 0;
-    letter-spacing: -4px;
-  }
-  .changePassword-form .societiesBlock-listing > *,
-  .changePassword-form .role-listing > *,
-  .registration-form .societiesBlock-listing > *,
-  .registration-form .role-listing > * {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 13px;
-    line-height: 15px;
-    letter-spacing: 0;
-  }
-}
-
-.changePassword-form .societiesBlock-listing li,
-.changePassword-form .role-listing li,
-.registration-form .societiesBlock-listing li,
-.registration-form .role-listing li {
-  width: 33.33%;
-  overflow: hidden;
-  padding: 5px;
-}
-
-@media (max-width: 767px) {
-  .changePassword-form .societiesBlock-listing li,
-  .changePassword-form .role-listing li,
-  .registration-form .societiesBlock-listing li,
-  .registration-form .role-listing li {
-    width: 100%;
-  }
-}
-
-.changePassword-form .societiesBlock-listing li label,
-.changePassword-form .societiesBlock-listing li input[type="checkbox"],
-.changePassword-form .role-listing li label,
-.changePassword-form .role-listing li input[type="checkbox"],
-.registration-form .societiesBlock-listing li label,
-.registration-form .societiesBlock-listing li input[type="checkbox"],
-.registration-form .role-listing li label,
-.registration-form .role-listing li input[type="checkbox"] {
-  display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-.changePassword-form .societiesBlock-listing,
-.registration-form .societiesBlock-listing {
-  padding: 0;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-style: solid;
-  border-width: 0 1px 1px;
-  margin: -5px 0 0;
-  max-height: 200px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.changePassword-form .societiesBlock-listing li,
-.registration-form .societiesBlock-listing li {
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.changePassword-form .societiesBlock-listing li:hover,
-.registration-form .societiesBlock-listing li:hover {
-  background: #edf1f4;
-}
-
-.changePassword-form .societiesBlock-listing li input[type="checkbox"],
-.registration-form .societiesBlock-listing li input[type="checkbox"] {
-  float: left;
-  width: 10%;
-  margin: 4px 0 0;
-}
-
-.changePassword-form .societiesBlock-listing li label,
-.registration-form .societiesBlock-listing li label {
-  float: left;
-  width: 90%;
-}
-
-.changePassword-form .calculatedSocieties,
-.registration-form .calculatedSocieties {
-  position: absolute;
-  top: 50%;
-  margin: -7px 0 0;
-  color: #133783;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  right: 10px;
-  display: block;
-  max-width: 165px;
-}
-
-@media (max-width: 767px) {
-  .changePassword-form .calculatedSocieties,
-  .registration-form .calculatedSocieties {
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
-
-.changePassword-form .input-holder,
-.registration-form .input-holder {
+.login-Admin-Form .input-holder {
   overflow: hidden;
   padding: 5px;
   position: relative;
   margin: 0 0 20px;
 }
 
-.changePassword-form .input-holder.full-width,
-.registration-form .input-holder.full-width {
+.login-Admin-Form .input-holder.full-width {
   float: none;
   display: block;
   width: 100%;
@@ -3756,38 +1877,15 @@ input[type='submit'] {
   overflow: hidden;
 }
 
-.changePassword-form .input-holder.no-indent,
-.registration-form .input-holder.no-indent {
-  margin: 0;
-}
-
-@media (max-width: 767px) {
-  .changePassword-form .input-holder.onTop-mobile,
-  .registration-form .input-holder.onTop-mobile {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-  }
-}
-
-.changePassword-form .input-holder.onTop-mobile .error-text,
-.registration-form .input-holder.onTop-mobile .error-text {
-  text-align: center;
-}
-
-.changePassword-form .input-holder .error-text,
-.registration-form .input-holder .error-text {
+.login-Admin-Form .input-holder .error-text {
   display: none;
 }
 
-.changePassword-form .input-holder.error,
-.registration-form .input-holder.error {
+.login-Admin-Form .input-holder.error {
   color: #e14646 !important;
 }
 
-.changePassword-form .input-holder.error .error-text,
-.registration-form .input-holder.error .error-text {
+.login-Admin-Form .input-holder.error .error-text {
   display: block;
   font-size: 13px;
   line-height: 16px;
@@ -3797,49 +1895,33 @@ input[type='submit'] {
   color: #e14646 !important;
 }
 
-.changePassword-form .input-holder.error textarea,
-.changePassword-form .input-holder.error input[type="text"], .changePassword-form .input-holder.error input[type="tel"], .changePassword-form .input-holder.error input[type="email"], .changePassword-form .input-holder.error input[type="password"],
-.registration-form .input-holder.error textarea,
-.registration-form .input-holder.error input[type="text"],
-.registration-form .input-holder.error input[type="tel"],
-.registration-form .input-holder.error input[type="email"],
-.registration-form .input-holder.error input[type="password"] {
+.login-Admin-Form .input-holder.error textarea,
+.login-Admin-Form .input-holder.error input[type="text"], .login-Admin-Form .input-holder.error input[type="tel"], .login-Admin-Form .input-holder.error input[type="email"], .login-Admin-Form .input-holder.error input[type="password"] {
   color: #e14646;
 }
 
-.changePassword-form .input-holder.error > label[class^="icon-"], .changePassword-form .input-holder.error > label[class*="icon-"],
-.registration-form .input-holder.error > label[class^="icon-"],
-.registration-form .input-holder.error > label[class*="icon-"] {
+.login-Admin-Form .input-holder.error > label[class^="icon-"], .login-Admin-Form .input-holder.error > label[class*="icon-"] {
   color: #e14646;
 }
 
-.changePassword-form .input-holder.error .border:before,
-.registration-form .input-holder.error .border:before {
+.login-Admin-Form .input-holder.error .border:before {
   background: #e14646;
 }
 
-.changePassword-form .input-holder.error .role-opener,
-.registration-form .input-holder.error .role-opener {
+.login-Admin-Form .input-holder.error .role-opener {
   border-bottom: 1px solid #e14646;
 }
 
-.changePassword-form .input-holder.error .role-opener:before,
-.registration-form .input-holder.error .role-opener:before {
+.login-Admin-Form .input-holder.error .role-opener:before {
   color: #e14646;
 }
 
-.changePassword-form .input-holder.error .role-listing,
-.registration-form .input-holder.error .role-listing {
+.login-Admin-Form .input-holder.error .role-listing {
   color: #606060 !important;
 }
 
-.changePassword-form .input-holder textarea,
-.changePassword-form .input-holder input[type="text"], .changePassword-form .input-holder input[type="tel"], .changePassword-form .input-holder input[type="email"], .changePassword-form .input-holder input[type="password"],
-.registration-form .input-holder textarea,
-.registration-form .input-holder input[type="text"],
-.registration-form .input-holder input[type="tel"],
-.registration-form .input-holder input[type="email"],
-.registration-form .input-holder input[type="password"] {
+.login-Admin-Form .input-holder textarea,
+.login-Admin-Form .input-holder input[type="text"], .login-Admin-Form .input-holder input[type="tel"], .login-Admin-Form .input-holder input[type="email"], .login-Admin-Form .input-holder input[type="password"] {
   border: 0;
   display: block;
   color: #2e2e2e;
@@ -3853,184 +1935,103 @@ input[type='submit'] {
   padding: 6px 10px 6px 50px;
 }
 
-.changePassword-form .input-holder textarea#search-society,
-.changePassword-form .input-holder input[type="text"]#search-society, .changePassword-form .input-holder input[type="tel"]#search-society, .changePassword-form .input-holder input[type="email"]#search-society, .changePassword-form .input-holder input[type="password"]#search-society,
-.registration-form .input-holder textarea#search-society,
-.registration-form .input-holder input[type="text"]#search-society,
-.registration-form .input-holder input[type="tel"]#search-society,
-.registration-form .input-holder input[type="email"]#search-society,
-.registration-form .input-holder input[type="password"]#search-society {
+.login-Admin-Form .input-holder textarea#search-society,
+.login-Admin-Form .input-holder input[type="text"]#search-society, .login-Admin-Form .input-holder input[type="tel"]#search-society, .login-Admin-Form .input-holder input[type="email"]#search-society, .login-Admin-Form .input-holder input[type="password"]#search-society {
   padding: 6px 170px 6px 50px;
 }
 
 @media (max-width: 767px) {
-  .changePassword-form .input-holder textarea#search-society,
-  .changePassword-form .input-holder input[type="text"]#search-society, .changePassword-form .input-holder input[type="tel"]#search-society, .changePassword-form .input-holder input[type="email"]#search-society, .changePassword-form .input-holder input[type="password"]#search-society,
-  .registration-form .input-holder textarea#search-society,
-  .registration-form .input-holder input[type="text"]#search-society,
-  .registration-form .input-holder input[type="tel"]#search-society,
-  .registration-form .input-holder input[type="email"]#search-society,
-  .registration-form .input-holder input[type="password"]#search-society {
+  .login-Admin-Form .input-holder textarea#search-society,
+  .login-Admin-Form .input-holder input[type="text"]#search-society, .login-Admin-Form .input-holder input[type="tel"]#search-society, .login-Admin-Form .input-holder input[type="email"]#search-society, .login-Admin-Form .input-holder input[type="password"]#search-society {
     padding: 6px 125px 6px 30px;
   }
 }
 
 @media (max-width: 1199px) {
-  .changePassword-form .input-holder textarea,
-  .changePassword-form .input-holder input[type="text"], .changePassword-form .input-holder input[type="tel"], .changePassword-form .input-holder input[type="email"], .changePassword-form .input-holder input[type="password"],
-  .registration-form .input-holder textarea,
-  .registration-form .input-holder input[type="text"],
-  .registration-form .input-holder input[type="tel"],
-  .registration-form .input-holder input[type="email"],
-  .registration-form .input-holder input[type="password"] {
+  .login-Admin-Form .input-holder textarea,
+  .login-Admin-Form .input-holder input[type="text"], .login-Admin-Form .input-holder input[type="tel"], .login-Admin-Form .input-holder input[type="email"], .login-Admin-Form .input-holder input[type="password"] {
     font-size: 15px;
     line-height: 23px;
   }
 }
 
 @media (max-width: 1023px) {
-  .changePassword-form .input-holder textarea,
-  .changePassword-form .input-holder input[type="text"], .changePassword-form .input-holder input[type="tel"], .changePassword-form .input-holder input[type="email"], .changePassword-form .input-holder input[type="password"],
-  .registration-form .input-holder textarea,
-  .registration-form .input-holder input[type="text"],
-  .registration-form .input-holder input[type="tel"],
-  .registration-form .input-holder input[type="email"],
-  .registration-form .input-holder input[type="password"] {
+  .login-Admin-Form .input-holder textarea,
+  .login-Admin-Form .input-holder input[type="text"], .login-Admin-Form .input-holder input[type="tel"], .login-Admin-Form .input-holder input[type="email"], .login-Admin-Form .input-holder input[type="password"] {
     padding: 6px 10px 6px 25px;
     font-size: 13px;
     line-height: 23px;
   }
 }
 
-.changePassword-form .input-holder textarea::-webkit-input-placeholder,
-.changePassword-form .input-holder input[type="text"]::-webkit-input-placeholder, .changePassword-form .input-holder input[type="tel"]::-webkit-input-placeholder, .changePassword-form .input-holder input[type="email"]::-webkit-input-placeholder, .changePassword-form .input-holder input[type="password"]::-webkit-input-placeholder,
-.registration-form .input-holder textarea::-webkit-input-placeholder,
-.registration-form .input-holder input[type="text"]::-webkit-input-placeholder,
-.registration-form .input-holder input[type="tel"]::-webkit-input-placeholder,
-.registration-form .input-holder input[type="email"]::-webkit-input-placeholder,
-.registration-form .input-holder input[type="password"]::-webkit-input-placeholder {
+.login-Admin-Form .input-holder textarea::-webkit-input-placeholder,
+.login-Admin-Form .input-holder input[type="text"]::-webkit-input-placeholder, .login-Admin-Form .input-holder input[type="tel"]::-webkit-input-placeholder, .login-Admin-Form .input-holder input[type="email"]::-webkit-input-placeholder, .login-Admin-Form .input-holder input[type="password"]::-webkit-input-placeholder {
   color: #616161;
   transition: color 0.5s ease;
 }
 
-.changePassword-form .input-holder textarea::-moz-placeholder,
-.changePassword-form .input-holder input[type="text"]::-moz-placeholder, .changePassword-form .input-holder input[type="tel"]::-moz-placeholder, .changePassword-form .input-holder input[type="email"]::-moz-placeholder, .changePassword-form .input-holder input[type="password"]::-moz-placeholder,
-.registration-form .input-holder textarea::-moz-placeholder,
-.registration-form .input-holder input[type="text"]::-moz-placeholder,
-.registration-form .input-holder input[type="tel"]::-moz-placeholder,
-.registration-form .input-holder input[type="email"]::-moz-placeholder,
-.registration-form .input-holder input[type="password"]::-moz-placeholder {
+.login-Admin-Form .input-holder textarea::-moz-placeholder,
+.login-Admin-Form .input-holder input[type="text"]::-moz-placeholder, .login-Admin-Form .input-holder input[type="tel"]::-moz-placeholder, .login-Admin-Form .input-holder input[type="email"]::-moz-placeholder, .login-Admin-Form .input-holder input[type="password"]::-moz-placeholder {
   opacity: 1;
   color: #616161;
   transition: color 0.5s ease;
 }
 
-.changePassword-form .input-holder textarea:-moz-placeholder,
-.changePassword-form .input-holder input[type="text"]:-moz-placeholder, .changePassword-form .input-holder input[type="tel"]:-moz-placeholder, .changePassword-form .input-holder input[type="email"]:-moz-placeholder, .changePassword-form .input-holder input[type="password"]:-moz-placeholder,
-.registration-form .input-holder textarea:-moz-placeholder,
-.registration-form .input-holder input[type="text"]:-moz-placeholder,
-.registration-form .input-holder input[type="tel"]:-moz-placeholder,
-.registration-form .input-holder input[type="email"]:-moz-placeholder,
-.registration-form .input-holder input[type="password"]:-moz-placeholder {
+.login-Admin-Form .input-holder textarea:-moz-placeholder,
+.login-Admin-Form .input-holder input[type="text"]:-moz-placeholder, .login-Admin-Form .input-holder input[type="tel"]:-moz-placeholder, .login-Admin-Form .input-holder input[type="email"]:-moz-placeholder, .login-Admin-Form .input-holder input[type="password"]:-moz-placeholder {
   color: #616161;
   transition: color 0.5s ease;
 }
 
-.changePassword-form .input-holder textarea:-ms-input-placeholder,
-.changePassword-form .input-holder input[type="text"]:-ms-input-placeholder, .changePassword-form .input-holder input[type="tel"]:-ms-input-placeholder, .changePassword-form .input-holder input[type="email"]:-ms-input-placeholder, .changePassword-form .input-holder input[type="password"]:-ms-input-placeholder,
-.registration-form .input-holder textarea:-ms-input-placeholder,
-.registration-form .input-holder input[type="text"]:-ms-input-placeholder,
-.registration-form .input-holder input[type="tel"]:-ms-input-placeholder,
-.registration-form .input-holder input[type="email"]:-ms-input-placeholder,
-.registration-form .input-holder input[type="password"]:-ms-input-placeholder {
+.login-Admin-Form .input-holder textarea:-ms-input-placeholder,
+.login-Admin-Form .input-holder input[type="text"]:-ms-input-placeholder, .login-Admin-Form .input-holder input[type="tel"]:-ms-input-placeholder, .login-Admin-Form .input-holder input[type="email"]:-ms-input-placeholder, .login-Admin-Form .input-holder input[type="password"]:-ms-input-placeholder {
   color: #616161;
   transition: color 0.5s ease;
 }
 
-.changePassword-form .input-holder textarea.placeholder,
-.changePassword-form .input-holder input[type="text"].placeholder, .changePassword-form .input-holder input[type="tel"].placeholder, .changePassword-form .input-holder input[type="email"].placeholder, .changePassword-form .input-holder input[type="password"].placeholder,
-.registration-form .input-holder textarea.placeholder,
-.registration-form .input-holder input[type="text"].placeholder,
-.registration-form .input-holder input[type="tel"].placeholder,
-.registration-form .input-holder input[type="email"].placeholder,
-.registration-form .input-holder input[type="password"].placeholder {
+.login-Admin-Form .input-holder textarea.placeholder,
+.login-Admin-Form .input-holder input[type="text"].placeholder, .login-Admin-Form .input-holder input[type="tel"].placeholder, .login-Admin-Form .input-holder input[type="email"].placeholder, .login-Admin-Form .input-holder input[type="password"].placeholder {
   color: #616161;
   transition: color 0.5s ease;
 }
 
-.changePassword-form .input-holder textarea:focus,
-.changePassword-form .input-holder input[type="text"]:focus, .changePassword-form .input-holder input[type="tel"]:focus, .changePassword-form .input-holder input[type="email"]:focus, .changePassword-form .input-holder input[type="password"]:focus,
-.registration-form .input-holder textarea:focus,
-.registration-form .input-holder input[type="text"]:focus,
-.registration-form .input-holder input[type="tel"]:focus,
-.registration-form .input-holder input[type="email"]:focus,
-.registration-form .input-holder input[type="password"]:focus {
+.login-Admin-Form .input-holder textarea:focus,
+.login-Admin-Form .input-holder input[type="text"]:focus, .login-Admin-Form .input-holder input[type="tel"]:focus, .login-Admin-Form .input-holder input[type="email"]:focus, .login-Admin-Form .input-holder input[type="password"]:focus {
   color: black;
 }
 
-.changePassword-form .input-holder textarea:focus::-webkit-input-placeholder,
-.changePassword-form .input-holder input[type="text"]:focus::-webkit-input-placeholder, .changePassword-form .input-holder input[type="tel"]:focus::-webkit-input-placeholder, .changePassword-form .input-holder input[type="email"]:focus::-webkit-input-placeholder, .changePassword-form .input-holder input[type="password"]:focus::-webkit-input-placeholder,
-.registration-form .input-holder textarea:focus::-webkit-input-placeholder,
-.registration-form .input-holder input[type="text"]:focus::-webkit-input-placeholder,
-.registration-form .input-holder input[type="tel"]:focus::-webkit-input-placeholder,
-.registration-form .input-holder input[type="email"]:focus::-webkit-input-placeholder,
-.registration-form .input-holder input[type="password"]:focus::-webkit-input-placeholder {
+.login-Admin-Form .input-holder textarea:focus::-webkit-input-placeholder,
+.login-Admin-Form .input-holder input[type="text"]:focus::-webkit-input-placeholder, .login-Admin-Form .input-holder input[type="tel"]:focus::-webkit-input-placeholder, .login-Admin-Form .input-holder input[type="email"]:focus::-webkit-input-placeholder, .login-Admin-Form .input-holder input[type="password"]:focus::-webkit-input-placeholder {
   color: black;
 }
 
-.changePassword-form .input-holder textarea:focus::-moz-placeholder,
-.changePassword-form .input-holder input[type="text"]:focus::-moz-placeholder, .changePassword-form .input-holder input[type="tel"]:focus::-moz-placeholder, .changePassword-form .input-holder input[type="email"]:focus::-moz-placeholder, .changePassword-form .input-holder input[type="password"]:focus::-moz-placeholder,
-.registration-form .input-holder textarea:focus::-moz-placeholder,
-.registration-form .input-holder input[type="text"]:focus::-moz-placeholder,
-.registration-form .input-holder input[type="tel"]:focus::-moz-placeholder,
-.registration-form .input-holder input[type="email"]:focus::-moz-placeholder,
-.registration-form .input-holder input[type="password"]:focus::-moz-placeholder {
+.login-Admin-Form .input-holder textarea:focus::-moz-placeholder,
+.login-Admin-Form .input-holder input[type="text"]:focus::-moz-placeholder, .login-Admin-Form .input-holder input[type="tel"]:focus::-moz-placeholder, .login-Admin-Form .input-holder input[type="email"]:focus::-moz-placeholder, .login-Admin-Form .input-holder input[type="password"]:focus::-moz-placeholder {
   opacity: 1;
   color: black;
 }
 
-.changePassword-form .input-holder textarea:focus:-moz-placeholder,
-.changePassword-form .input-holder input[type="text"]:focus:-moz-placeholder, .changePassword-form .input-holder input[type="tel"]:focus:-moz-placeholder, .changePassword-form .input-holder input[type="email"]:focus:-moz-placeholder, .changePassword-form .input-holder input[type="password"]:focus:-moz-placeholder,
-.registration-form .input-holder textarea:focus:-moz-placeholder,
-.registration-form .input-holder input[type="text"]:focus:-moz-placeholder,
-.registration-form .input-holder input[type="tel"]:focus:-moz-placeholder,
-.registration-form .input-holder input[type="email"]:focus:-moz-placeholder,
-.registration-form .input-holder input[type="password"]:focus:-moz-placeholder {
+.login-Admin-Form .input-holder textarea:focus:-moz-placeholder,
+.login-Admin-Form .input-holder input[type="text"]:focus:-moz-placeholder, .login-Admin-Form .input-holder input[type="tel"]:focus:-moz-placeholder, .login-Admin-Form .input-holder input[type="email"]:focus:-moz-placeholder, .login-Admin-Form .input-holder input[type="password"]:focus:-moz-placeholder {
   color: black;
 }
 
-.changePassword-form .input-holder textarea:focus:-ms-input-placeholder,
-.changePassword-form .input-holder input[type="text"]:focus:-ms-input-placeholder, .changePassword-form .input-holder input[type="tel"]:focus:-ms-input-placeholder, .changePassword-form .input-holder input[type="email"]:focus:-ms-input-placeholder, .changePassword-form .input-holder input[type="password"]:focus:-ms-input-placeholder,
-.registration-form .input-holder textarea:focus:-ms-input-placeholder,
-.registration-form .input-holder input[type="text"]:focus:-ms-input-placeholder,
-.registration-form .input-holder input[type="tel"]:focus:-ms-input-placeholder,
-.registration-form .input-holder input[type="email"]:focus:-ms-input-placeholder,
-.registration-form .input-holder input[type="password"]:focus:-ms-input-placeholder {
+.login-Admin-Form .input-holder textarea:focus:-ms-input-placeholder,
+.login-Admin-Form .input-holder input[type="text"]:focus:-ms-input-placeholder, .login-Admin-Form .input-holder input[type="tel"]:focus:-ms-input-placeholder, .login-Admin-Form .input-holder input[type="email"]:focus:-ms-input-placeholder, .login-Admin-Form .input-holder input[type="password"]:focus:-ms-input-placeholder {
   color: black;
 }
 
-.changePassword-form .input-holder textarea:focus.placeholder,
-.changePassword-form .input-holder input[type="text"]:focus.placeholder, .changePassword-form .input-holder input[type="tel"]:focus.placeholder, .changePassword-form .input-holder input[type="email"]:focus.placeholder, .changePassword-form .input-holder input[type="password"]:focus.placeholder,
-.registration-form .input-holder textarea:focus.placeholder,
-.registration-form .input-holder input[type="text"]:focus.placeholder,
-.registration-form .input-holder input[type="tel"]:focus.placeholder,
-.registration-form .input-holder input[type="email"]:focus.placeholder,
-.registration-form .input-holder input[type="password"]:focus.placeholder {
+.login-Admin-Form .input-holder textarea:focus.placeholder,
+.login-Admin-Form .input-holder input[type="text"]:focus.placeholder, .login-Admin-Form .input-holder input[type="tel"]:focus.placeholder, .login-Admin-Form .input-holder input[type="email"]:focus.placeholder, .login-Admin-Form .input-holder input[type="password"]:focus.placeholder {
   color: black;
 }
 
-.changePassword-form .input-holder textarea:focus ~ .border:after,
-.changePassword-form .input-holder input[type="text"]:focus ~ .border:after, .changePassword-form .input-holder input[type="tel"]:focus ~ .border:after, .changePassword-form .input-holder input[type="email"]:focus ~ .border:after, .changePassword-form .input-holder input[type="password"]:focus ~ .border:after,
-.registration-form .input-holder textarea:focus ~ .border:after,
-.registration-form .input-holder input[type="text"]:focus ~ .border:after,
-.registration-form .input-holder input[type="tel"]:focus ~ .border:after,
-.registration-form .input-holder input[type="email"]:focus ~ .border:after,
-.registration-form .input-holder input[type="password"]:focus ~ .border:after {
+.login-Admin-Form .input-holder textarea:focus ~ .border:after,
+.login-Admin-Form .input-holder input[type="text"]:focus ~ .border:after, .login-Admin-Form .input-holder input[type="tel"]:focus ~ .border:after, .login-Admin-Form .input-holder input[type="email"]:focus ~ .border:after, .login-Admin-Form .input-holder input[type="password"]:focus ~ .border:after {
   right: 0;
 }
 
-.changePassword-form .input-holder textarea,
-.registration-form .input-holder textarea {
+.login-Admin-Form .input-holder textarea {
   resize: none;
   padding: 9px 5px 6px 50px;
   overflow: auto;
@@ -4040,16 +2041,13 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .changePassword-form .input-holder textarea,
-  .registration-form .input-holder textarea {
+  .login-Admin-Form .input-holder textarea {
     height: 80px;
     padding: 9px 5px 6px 25px;
   }
 }
 
-.changePassword-form .input-holder > label[class^="icon-"], .changePassword-form .input-holder > label[class*="icon-"],
-.registration-form .input-holder > label[class^="icon-"],
-.registration-form .input-holder > label[class*="icon-"] {
+.login-Admin-Form .input-holder > label[class^="icon-"], .login-Admin-Form .input-holder > label[class*="icon-"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -4065,23 +2063,19 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
-  .changePassword-form .input-holder > label[class^="icon-"], .changePassword-form .input-holder > label[class*="icon-"],
-  .registration-form .input-holder > label[class^="icon-"],
-  .registration-form .input-holder > label[class*="icon-"] {
+  .login-Admin-Form .input-holder > label[class^="icon-"], .login-Admin-Form .input-holder > label[class*="icon-"] {
     font-size: 14px;
     line-height: 50px;
     width: 30px;
   }
 }
 
-.changePassword-form .input-holder .border,
-.registration-form .input-holder .border {
+.login-Admin-Form .input-holder .border {
   display: block;
   position: relative;
 }
 
-.changePassword-form .input-holder .border:before,
-.registration-form .input-holder .border:before {
+.login-Admin-Form .input-holder .border:before {
   position: absolute;
   left: 0;
   right: 0;
@@ -4091,8 +2085,7 @@ input[type='submit'] {
   background: rgba(46, 46, 46, 0.4);
 }
 
-.changePassword-form .input-holder .border:after,
-.registration-form .input-holder .border:after {
+.login-Admin-Form .input-holder .border:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -4105,8 +2098,7 @@ input[type='submit'] {
   transition: right 0.2s ease;
 }
 
-.changePassword-form .input-holder .forgot-pass,
-.registration-form .input-holder .forgot-pass {
+.login-Admin-Form .input-holder .forgot-pass {
   position: absolute;
   top: 50%;
   right: 0;
@@ -4118,29 +2110,24 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .changePassword-form .input-holder .forgot-pass,
-  .registration-form .input-holder .forgot-pass {
+  .login-Admin-Form .input-holder .forgot-pass {
     font-size: 11px;
     line-height: 15px;
     margin: -8px 5px 0 0;
   }
 }
 
-.changePassword-form .input-holder .forgot-pass:hover,
-.registration-form .input-holder .forgot-pass:hover {
+.login-Admin-Form .input-holder .forgot-pass:hover {
   color: #e14646;
 }
 
-.changePassword-form .input-holder .forgot-pass [class^="icon-"], .changePassword-form .input-holder .forgot-pass [class*="icon-"],
-.registration-form .input-holder .forgot-pass [class^="icon-"],
-.registration-form .input-holder .forgot-pass [class*="icon-"] {
+.login-Admin-Form .input-holder .forgot-pass [class^="icon-"], .login-Admin-Form .input-holder .forgot-pass [class*="icon-"] {
   display: inline-block;
   vertical-align: middle;
   margin: -2px 0 0;
 }
 
-.changePassword-form button[type="submit"],
-.registration-form button[type="submit"] {
+.login-Admin-Form button[type="submit"] {
   border: 0;
   background: #489ddd;
   text-align: center;
@@ -4157,17 +2144,14 @@ input[type='submit'] {
 }
 
 @media (max-width: 767px) {
-  .changePassword-form button[type="submit"],
-  .registration-form button[type="submit"] {
+  .login-Admin-Form button[type="submit"] {
     font-size: 16px;
     line-height: 19px;
     padding: 8px;
   }
 }
 
-.changePassword-form button[type="submit"] [class^="icon-"], .changePassword-form button[type="submit"] [class*="icon-"],
-.registration-form button[type="submit"] [class^="icon-"],
-.registration-form button[type="submit"] [class*="icon-"] {
+.login-Admin-Form button[type="submit"] [class^="icon-"], .login-Admin-Form button[type="submit"] [class*="icon-"] {
   display: inline-block;
   vertical-align: middle;
   margin: -2px 0 0;
@@ -4176,113 +2160,15 @@ input[type='submit'] {
   transition: right 0.4s ease;
 }
 
-.changePassword-form button[type="submit"]:hover,
-.registration-form button[type="submit"]:hover {
+.login-Admin-Form button[type="submit"]:hover {
   background: #3291d9;
 }
 
-.changePassword-form button[type="submit"]:hover [class^="icon-"], .changePassword-form button[type="submit"]:hover [class*="icon-"],
-.registration-form button[type="submit"]:hover [class^="icon-"],
-.registration-form button[type="submit"]:hover [class*="icon-"] {
+.login-Admin-Form button[type="submit"]:hover [class^="icon-"], .login-Admin-Form button[type="submit"]:hover [class*="icon-"] {
   right: -10px;
 }
 
-.changePassword-form .agent-check,
-.registration-form .agent-check {
-  float: left;
-  margin: 25px 50px 0;
-  position: relative;
-  z-index: 60;
-}
-
-@media (max-width: 1023px) {
-  .changePassword-form .agent-check,
-  .registration-form .agent-check {
-    margin: 25px 20px 0;
-    font-size: 13px;
-    line-height: 15px;
-  }
-}
-
-.changePassword-form .agent-check:after,
-.registration-form .agent-check:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 55;
-  content: '';
-}
-
-.changePassword-form .agent-check .hidden-checkfield,
-.registration-form .agent-check .hidden-checkfield {
-  visibility: visible;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-}
-
-.changePassword-form .agent-check .hidden-checkfield:checked ~ .fake-checkbox,
-.registration-form .agent-check .hidden-checkfield:checked ~ .fake-checkbox {
-  background: #00e359;
-  box-shadow: none;
-}
-
-.changePassword-form .agent-check .hidden-checkfield:checked ~ .fake-checkbox .fake-button,
-.registration-form .agent-check .hidden-checkfield:checked ~ .fake-checkbox .fake-button {
-  left: 48%;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px #00a23f;
-}
-
-.changePassword-form .agent-check .hidden-checkfield:checked ~ .fake-label,
-.registration-form .agent-check .hidden-checkfield:checked ~ .fake-label {
-  color: #000;
-}
-
-.changePassword-form .agent-check .fake-checkbox,
-.registration-form .agent-check .fake-checkbox {
-  width: 40px;
-  height: 20px;
-  border-radius: 20px;
-  float: left;
-  background: #dde2e8;
-  box-shadow: inset 0 0 5px -2px rgba(0, 0, 0, 0.5);
-  position: relative;
-  transition: background 0.4s ease;
-  z-index: -1;
-}
-
-.changePassword-form .agent-check .fake-checkbox .fake-button,
-.registration-form .agent-check .fake-checkbox .fake-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 21px;
-  border-radius: 100%;
-  background: #dde2e8;
-  border: 1px solid rgba(46, 46, 46, 0.2);
-  content: '';
-  transition: left 0.4s cubic-bezier(0.54, 1.85, 0.5, 1);
-  cursor: pointer;
-}
-
-.changePassword-form .agent-check .fake-label,
-.registration-form .agent-check .fake-label {
-  float: left;
-  cursor: pointer;
-  max-width: 200px;
-  padding: 0 0 0 10px;
-  position: relative;
-  z-index: -1;
-  color: #363636;
-}
-
-.changePassword-form h1,
-.registration-form h1 {
+.login-Admin-Form h1 {
   display: block;
   margin: 10px 0;
   clear: both;
@@ -4293,395 +2179,6 @@ input[type='submit'] {
   color: #000;
   background: #eceff2;
   font-weight: 600;
-}
-
-.changePassword-form .company-logo,
-.registration-form .company-logo {
-  width: 70px;
-  height: 70px;
-  overflow: hidden;
-  border-radius: 100%;
-  margin: 0  auto;
-  position: relative;
-  background: #dde2e8;
-  z-index: 6;
-}
-
-.changePassword-form .company-logo.image-loaded:hover .delete,
-.registration-form .company-logo.image-loaded:hover .delete {
-  display: block;
-}
-
-.changePassword-form .company-logo.image-loaded .name-tag,
-.registration-form .company-logo.image-loaded .name-tag {
-  display: none;
-}
-
-.changePassword-form .company-logo.image-loaded .picture-holder,
-.registration-form .company-logo.image-loaded .picture-holder {
-  display: block;
-}
-
-.changePassword-form .company-logo .picture-holder,
-.registration-form .company-logo .picture-holder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  border-radius: 100%;
-}
-
-.changePassword-form .company-logo .picture-holder img,
-.registration-form .company-logo .picture-holder img {
-  width: 100%;
-  height: auto;
-  display: block;
-  height: 100%;
-}
-
-.changePassword-form .company-logo .delete,
-.registration-form .company-logo .delete {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
-  font-size: 40px;
-  line-height: 40px;
-  padding: 14px 16px;
-  color: #e14646;
-  cursor: pointer;
-  display: none;
-}
-
-.changePassword-form .company-logo .delete span,
-.registration-form .company-logo .delete span {
-  display: block;
-}
-
-.changePassword-form .company-logo .name-tag,
-.registration-form .company-logo .name-tag {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: -1;
-  font-size: 12px;
-  line-height: 15px;
-  color: #2e2e2e;
-}
-
-.changePassword-form .company-logo input[type="file"],
-.registration-form .company-logo input[type="file"] {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.agent-information {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  clear: left;
-  min-height: 0;
-  opacity: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  transition: min-height 0.5s cubic-bezier(0.05, 1.6, 0.1, 1), opacity 0.5s ease;
-}
-
-.agent-information > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0;
-}
-
-@media (max-width: 767px) {
-  .agent-information h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-}
-
-/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
-.fancybox-wrap,
-.fancybox-skin,
-.fancybox-outer,
-.fancybox-inner,
-.fancybox-image,
-.fancybox-wrap iframe,
-.fancybox-wrap object,
-.fancybox-nav,
-.fancybox-nav span,
-.fancybox-tmp {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  outline: none;
-  vertical-align: top;
-}
-
-.fancybox-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 8020;
-}
-
-.fancybox-skin {
-  position: relative;
-  color: #444;
-  text-shadow: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.fancybox-opened {
-  z-index: 8030;
-}
-
-.fancybox-outer, .fancybox-inner {
-  position: relative;
-  background: #fff;
-}
-
-.fancybox-inner {
-  overflow: hidden;
-}
-
-.fancybox-type-iframe .fancybox-inner {
-  -webkit-overflow-scrolling: touch;
-}
-
-.fancybox-error {
-  color: #444;
-  font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
-  margin: 0;
-  padding: 15px;
-  white-space: nowrap;
-}
-
-.fancybox-image, .fancybox-iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.fancybox-image {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-  background-image: url("../images/fancybox/fancybox_sprite.png");
-}
-
-#fancybox-loading {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -22px;
-  margin-left: -22px;
-  background-position: 0 -108px;
-  opacity: 0.8;
-  cursor: pointer;
-  z-index: 8060;
-}
-
-#fancybox-loading div {
-  width: 44px;
-  height: 44px;
-  background: url("../images/fancybox/fancybox_loading.gif") center center no-repeat;
-}
-
-.fancybox-close {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  z-index: 8040;
-  display: none;
-}
-
-.fancybox-nav {
-  position: absolute;
-  top: 0;
-  width: 40%;
-  height: 100%;
-  cursor: pointer;
-  text-decoration: none;
-  background: transparent url("../images/fancybox/blank.gif");
-  /* helps IE */
-  -webkit-tap-highlight-color: transparent;
-  z-index: 8040;
-}
-
-.fancybox-prev {
-  left: 0;
-}
-
-.fancybox-next {
-  right: 0;
-}
-
-.fancybox-nav span {
-  position: absolute;
-  top: 50%;
-  width: 36px;
-  height: 34px;
-  margin-top: -18px;
-  cursor: pointer;
-  z-index: 8040;
-  visibility: hidden;
-}
-
-.fancybox-prev span {
-  left: 10px;
-  background-position: 0 -36px;
-}
-
-.fancybox-next span {
-  right: 10px;
-  background-position: 0 -72px;
-}
-
-.fancybox-nav:hover span {
-  visibility: visible;
-}
-
-.fancybox-tmp {
-  position: absolute;
-  top: -99999px;
-  left: -99999px;
-  visibility: hidden;
-  max-width: 99999px;
-  max-height: 99999px;
-  overflow: visible !important;
-}
-
-/* Overlay helper */
-.fancybox-lock {
-  overflow: hidden !important;
-  width: auto;
-  height: auto;
-}
-
-.fancybox-lock body {
-  overflow: hidden !important;
-}
-
-.fancybox-lock-test {
-  overflow-y: hidden !important;
-}
-
-.fancybox-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  display: none;
-  z-index: 9999;
-  background: url("../images/fancybox/fancybox_overlay.png");
-}
-
-.fancybox-overlay-fixed {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-
-.fancybox-lock .fancybox-overlay {
-  overflow: auto;
-  overflow-y: scroll;
-}
-
-/* Title helper */
-.fancybox-title {
-  visibility: hidden;
-  font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
-  position: relative;
-  text-shadow: none;
-  z-index: 8050;
-}
-
-.fancybox-opened .fancybox-title {
-  visibility: visible;
-}
-
-.fancybox-title-float-wrap {
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  margin-bottom: -35px;
-  z-index: 8050;
-  text-align: center;
-}
-
-.fancybox-title-float-wrap .child {
-  display: inline-block;
-  margin-right: -100%;
-  padding: 2px 20px;
-  background: transparent;
-  /* Fallback for web browsers that doesn't support RGBa */
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  text-shadow: 0 1px 2px #222;
-  color: #FFF;
-  font-weight: bold;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.fancybox-title-outside-wrap {
-  position: relative;
-  margin-top: 10px;
-  color: #fff;
-}
-
-.fancybox-title-inside-wrap {
-  padding-top: 10px;
-}
-
-.fancybox-title-over-wrap {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: #fff;
-  padding: 10px;
-  background: #000;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-/*Retina graphics!*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-    background-image: url("../images/fancybox/fancybox_sprite@2x.png");
-    background-size: 44px 152px;
-    /*The size of the normal image, half the size of the hi-res image*/
-  }
-  #fancybox-loading div {
-    background-image: url("../images/fancybox/fancybox_loading@2x.gif");
-    background-size: 24px 24px;
-    /*The size of the normal image, half the size of the hi-res image*/
-  }
 }
 
 .lightbox {
@@ -4767,7 +2264,7 @@ body.loading-resources:after {
   margin: 0 auto;
 }
 
-.text-left, .sideBar-active .addPropertyFormContainer .listing-holder, #sidebar-dashboard .layout {
+.text-left, #sidebar-dashboard .layout {
   text-align: left !important;
 }
 
@@ -4779,9 +2276,7 @@ body.loading-resources:after {
   text-transform: uppercase !important;
 }
 
-.text-center, .addPropertyFormContainer .listing-holder, .favorite-property-holder .property-filter .by-user-sorting ul li label, .favorite-property-holder .property-filter .by-id-sorting ul li label,
-.property-listing-holder .property-filter .by-user-sorting ul li label,
-.property-listing-holder .property-filter .by-id-sorting ul li label, #header .searhForm-holder, #sidebar-dashboard .user-picture, .pager, .success-message {
+.text-center, #header .searhForm-holder, #sidebar-dashboard .user-picture, .pager, .success-message {
   text-align: center !important;
 }
 
@@ -4836,7 +2331,8 @@ a {
   z-index: 9999;
   left: 0;
   right: 0;
-  background: #133783;
+  background: #bfc8d3;
+  border-bottom: 1px solid #000;
 }
 
 .page-loader-underProgress #header:before {
@@ -4930,7 +2426,7 @@ a {
   right: 0;
   height: 2px;
   content: '';
-  background: #edf2f8;
+  background: #2e2e2e;
 }
 
 #header .sideBar-opener:after {
@@ -4949,7 +2445,7 @@ a {
   left: -13px;
   content: '';
   border: 5px solid transparent;
-  border-right: 5px solid #edf2f8;
+  border-right: 5px solid #2e2e2e;
   margin: -5px 0 0;
   transition: left 0.4s ease, right 0.4s ease;
   -webkit-transition: left 0.4s ease, right 0.4s ease;
@@ -4961,7 +2457,7 @@ a {
   left: auto;
   right: -8px;
   border-right: 0;
-  border-left: 5px solid #edf2f8;
+  border-left: 5px solid #2e2e2e;
 }
 
 #header .sideBar-opener:focus span:before, #header .sideBar-opener:active span:before {
@@ -5163,7 +2659,7 @@ a {
   font-size: 20px;
   line-height: 22px;
   float: left;
-  background: #1ab394;
+  background: #58a36f;
   padding: 15px 30px;
   position: relative;
   overflow: hidden;
@@ -5254,7 +2750,7 @@ a {
 
 .logout {
   float: right;
-  color: #fff;
+  color: #2e2e2e;
   text-decoration: none;
   margin: 15px 10px 0 20px;
 }
@@ -5402,7 +2898,8 @@ a {
   overflow: auto;
   width: 300px;
   height: 100vh;
-  background: #000 linear-gradient(to right, #3a3633 93%, #2a2725 100%);
+  background: #bfc8d3;
+  border-right: 1px solid #000;
   position: fixed;
   top: 0;
   left: 0;
@@ -5453,7 +2950,6 @@ a {
 #sidebar-dashboard .user-picture {
   padding: 10px 5px 0;
   overflow: hidden;
-  border-bottom: 1px solid #000;
 }
 
 #sidebar-dashboard .user-picture .image-thumb {
@@ -5707,7 +3203,7 @@ a {
   display: block;
   color: #fff;
   font-style: italic;
-  color: #fff581;
+  color: #ef9521;
   font-size: 12px;
   line-height: 15px;
 }
@@ -5716,7 +3212,7 @@ a {
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
-  color: #dde2e8;
+  color: #2e2e2e;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 1px;
@@ -5752,9 +3248,8 @@ a {
 }
 
 #sidebar-dashboard .sideBar-links li.active > a {
-  background: rgba(0, 0, 0, 0.3);
-  border-color: #000;
-  color: #fff;
+  border-color: #133783;
+  background: #133783;
 }
 
 #sidebar-dashboard .sideBar-links li .badge {
@@ -5793,11 +3288,11 @@ a {
 
 #sidebar-dashboard .sideBar-links li a {
   display: block;
-  color: #fff;
   text-decoration: none;
   padding: 10px 20px;
-  color: #dde2e8;
-  border: 1px solid transparent;
+  background: rgba(0, 0, 0, 0.7);
+  border-color: #000;
+  color: #fff;
   margin: 0 0 5px;
   transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
   -webkit-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
@@ -5806,9 +3301,8 @@ a {
 }
 
 #sidebar-dashboard .sideBar-links li a:hover {
-  background: rgba(0, 0, 0, 0.3);
-  border-color: #000;
-  color: #fff;
+  border-color: #133783;
+  background: #133783;
 }
 
 #sidebar-dashboard .sideBar-links li a [class^="icon-"], #sidebar-dashboard .sideBar-links li a [class*="icon-"] {
@@ -5898,7 +3392,7 @@ a {
 }
 
 .social-networks li a {
-  border: 2px solid #fff;
+  border: 2px solid #2e2e2e;
   padding: 10px;
   border-radius: 100%;
   display: inline-block;
@@ -5912,11 +3406,13 @@ a {
 .social-networks li a:hover.facebook {
   background: #3B5998;
   border-color: #3B5998;
+  color: #fff !important;
 }
 
 .social-networks li a:hover.twitter {
   background: #55acee;
   border-color: #55acee;
+  color: #fff !important;
 }
 
 .pager {
@@ -6018,7 +3514,8 @@ a {
 }
 
 #footer {
-  background: #363636;
+  border-top: 1px solid #000;
+  background: #bfc8d3;
   position: relative;
   display: table-footer-group;
   height: 1%;
@@ -6094,7 +3591,7 @@ a {
 
 #footer .cols-holder .col {
   width: 25%;
-  color: #dde2e8;
+  color: #2e2e2e;
   padding: 30px 10px;
 }
 
@@ -6134,11 +3631,11 @@ a {
 
 #footer .cols-holder ul li a {
   text-decoration: none;
-  color: #dde2e8;
+  color: #2e2e2e;
 }
 
 #footer .cols-holder ul li a:hover {
-  color: #fff;
+  color: #000;
 }
 
 #footer .cols-holder h2 {
@@ -6176,7 +3673,7 @@ a {
   width: 100%;
   display: block;
   height: 30px;
-  border: 2px solid #999;
+  border: 2px solid #2e2e2e;
   padding: 5px;
   font-size: 14px;
   line-height: 18px;

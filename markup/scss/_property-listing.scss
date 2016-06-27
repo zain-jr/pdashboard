@@ -1,6 +1,5 @@
 /*Listing page with table */
-.favorite-property-holder,
-.property-listing-holder{
+.pendingForAdmin-property-holder{
 	overflow: hidden;
 	padding: 60px 10px 0;
 	transition: padding 0.4s ease;
@@ -40,6 +39,7 @@
 	
 	.quick-links {
 		@extend %listreset;
+		float: right;
 		padding: 5px 0 0;
 		@include align-reset(top, 14, 20);
 
@@ -231,35 +231,9 @@
 		overflow: hidden;
 		
 		.by-user-sorting, .by-id-sorting {
-			display: block;
-			width: 40%;
 			overflow: hidden;
 			margin: 0 0 10px;
 			float: left;
-			
-			@include media('<1426px'){
-				width: 50%;
-			}
-			
-			@include media('<widescreen'){
-				width: 54%;
-			}
-			
-			@include media('<tablet'){
-				width: 100% !important;
-				float: none !important;
-				overflow: hidden;
-				margin: 0 0 10px !important;
-			}
-			
-			.sideBar-active & {
-				@include media('<desktop'){
-					width: 100% !important;
-					float: none !important;
-					overflow: hidden;
-					margin: 0 0 10px !important;
-				}
-			}
 			
 			ul{
 				float: left;
@@ -282,23 +256,9 @@
 					padding: 5px 7px 10px;
 					float: left;
 					
-					@include media('<widescreen'){
-						padding: 5px 4px 10px;
-					}
-					
-					@include media('<tablet'){
-						width: 50%;
-						padding: 0 5px;
-					}
-					
 					label{
 						margin: 0 10px 0 0;
 						
-						@include media('<tablet'){
-							display: block;
-							@extend .text-center;
-							margin: 0 0 5px;
-						}
 					}
 					
 					select{
@@ -307,11 +267,6 @@
 						height: 29px;
 						@include font(12,15);
 						outline: none;
-						
-						@include media('<tablet'){
-							min-width: 100%;
-							width: 100%;
-						}
 					}
 				}
 			}
@@ -539,9 +494,9 @@
 					color: $red;
 					&:hover{ color: darken($red, 15%);}
 				}
-				&.undo {
-					color: $light-blue;
-					&:hover { color: darken($light-blue, 15%);}
+				&.accept {
+					color: $green;
+					&:hover { color: darken($green, 15%);}
 				}
 			}
 			.slide{
@@ -592,7 +547,7 @@
 		}
 	}
 }
-.favorite-property-holder {
+.pendingForAdmin-property-holder {
 	padding: 15px 10px 0;
 	
 	.sideBar-active &{

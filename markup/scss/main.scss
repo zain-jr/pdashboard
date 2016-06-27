@@ -42,12 +42,9 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
-@import 'add-agency-user';
-@import 'add-property-form';
 @import 'list-agency-user';
 @import 'property-listing';
-@import 'user-registeration';
-@import 'fancybox';
+@import 'admin-login';
 .lightbox {
 	width: 100%;
 	max-width: 500px;
@@ -159,7 +156,8 @@ a{ outline: none;}
 	z-index: 9999;
 	left: 0;
 	right: 0;
-	background: $defualt-blue;
+	background:darken($light-gray, 10%);
+	border-bottom: 1px solid $black;
 	@extend %clearfix;
 	
 	.page-loader-underProgress &{
@@ -256,7 +254,7 @@ a{ outline: none;}
 			right: 0;
 			height: 2px;
 			content: '';
-			background: $dove-gray;
+			background: $mix-black;
 		}
 		&:after{
 			top: auto;
@@ -273,7 +271,7 @@ a{ outline: none;}
 				left: -13px;
 				content: '';
 				border: 5px solid transparent;
-				border-right: 5px solid $dove-gray;
+				border-right: 5px solid $mix-black;
 				margin: -5px 0 0;
 				transition: left 0.4s ease, right 0.4s ease;
 				-webkit-transition: left 0.4s ease, right 0.4s ease;
@@ -285,7 +283,7 @@ a{ outline: none;}
 				left: auto;
 				right: -8px;
 				border-right: 0;
-				border-left: 5px solid $dove-gray;
+				border-left: 5px solid $mix-black;
 			}
 		}
 		&:focus, &:active {
@@ -427,7 +425,7 @@ a{ outline: none;}
 	color: $white;
 	@include font(20,22);
 	float: left;
-	background: $sharp-musterd;
+	background: $green;
 	padding: 15px 30px;
 	position: relative;
 	overflow: hidden;
@@ -500,7 +498,7 @@ a{ outline: none;}
 }
 .logout {
 	float: right;
-	color: $white;
+	color: $mix-black;
 	text-decoration: none;
 	margin: 15px 10px 0 20px;
 	
@@ -627,7 +625,8 @@ a{ outline: none;}
 #sidebar-dashboard{
 	overflow: auto;
 	@include squar(300px, 100vh);
-	background: $black linear-gradient(to right, #3a3633 93%, #2a2725 100%);
+	background:darken($light-gray, 10%);
+	border-right: 1px solid $black;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -674,7 +673,6 @@ a{ outline: none;}
 		padding: 10px 5px 0;
 		@extend .text-center;
 		overflow: hidden;
-		border-bottom: 1px solid $black;
 		
 		.image-thumb{
 			@include squar(70px,70px);
@@ -834,13 +832,13 @@ a{ outline: none;}
 		display: block;
 		color: $white;
 		font-style: italic;
-		color: #fff581;
+		color: $orange;
 		@include font(12,15);
 	}
 	.user-name {
 		@include align(top);
 		text-decoration: none;
-		color: $light-gray;
+		color: $mix-black;
 		@include font(16,19);
 		letter-spacing: 1px;
 		transition: color 0.4s ease;
@@ -868,9 +866,8 @@ a{ outline: none;}
 			
 			&.active{
 				> a{
-					background: rgba(0, 0, 0, 0.3);
-					border-color: $black;
-					color: $white;
+					border-color: $defualt-blue;
+					background: $defualt-blue;
 				}
 			}
 			
@@ -902,23 +899,22 @@ a{ outline: none;}
 			
 			a {
 				display: block;
-				color: $white;
 				text-decoration: none;
 				padding: 10px 20px;
-				color: $light-gray;
-				border: 1px solid transparent;
+				background: rgba($black, 0.7);
+				border-color: $black;
+				color: $white;
 				margin: 0 0 5px;
 				transition:color 0.4s ease, background 0.4s ease, border 0.4s ease;
 				-webkit-transition:color 0.4s ease, background 0.4s ease, border 0.4s ease;
 				-moz-transition:color 0.4s ease, background 0.4s ease, border 0.4s ease;
 				-ms-transition:color 0.4s ease, background 0.4s ease, border 0.4s ease;
 				
-				&:hover{
-					background: rgba(0, 0, 0, 0.3);
-					border-color: #000;
-					color: $white;
+				&:hover {
+					border-color: $defualt-blue;
+					background: $defualt-blue;
 				}
-				
+
 				[class^="icon-"],[class*="icon-"]{
 					@include align(middle);
 					margin: -2px 10px 0 0;
@@ -979,7 +975,7 @@ a{ outline: none;}
 		}
 		
 		a {
-			border: 2px solid $white;
+			border: 2px solid $mix-black;
 			padding: 10px;
 			border-radius: 100%;
 			@include align(top);
@@ -993,11 +989,13 @@ a{ outline: none;}
 				&.facebook{
 					background: #3B5998;
 					border-color: #3B5998;
+					color: $white !important;
 				}
 				
 				&.twitter {
 					background: #55acee;
 					border-color: #55acee;
+					color: $white !important;
 				}
 			}
 		}
@@ -1076,7 +1074,8 @@ a{ outline: none;}
 	}
 }
 #footer{
-	background: $dove-black;
+	border-top: 1px solid $black;
+	background:darken($light-gray, 10%);
 	position: relative;
 	display: table-footer-group;
 	height: 1%;
@@ -1124,7 +1123,7 @@ a{ outline: none;}
 		
 		.col {
 			width: 25%;
-			color: $light-gray;
+			color: $mix-black;
 			padding: 30px 10px;
 			
 			@include media('<widescreen'){
@@ -1156,9 +1155,9 @@ a{ outline: none;}
 				
 				a{
 					text-decoration: none;
-					color: $light-gray;
+					color: $mix-black;
 					
-					&:hover{ color: $white;}
+					&:hover{ color: $black;}
 				}
 			}
 		}
@@ -1193,7 +1192,7 @@ a{ outline: none;}
 				width: 100%;
 				display: block;
 				height: 30px;
-				border: 2px solid $gray;
+				border: 2px solid $mix-black;
 				padding: 5px;
 				@include font(14,18);
 				background: transparent;

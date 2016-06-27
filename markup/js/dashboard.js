@@ -2,6 +2,12 @@ $(document).ready(function() {
     checkWidth();
 });
 
+$(document).ready(function(){
+    if($('body').hasClass('admin-login') == true){
+        $('body').removeClass('sideBar-active');
+    }
+});
+
 $(document).on('click', '.sideBar-opener', function(){
    $('body').toggleClass('sideBar-active'); 
 });
@@ -37,3 +43,7 @@ $(document).on('click', '.sideBar-links li a', function(){
             $('body').removeClass('sideBar-active');
         }
  });
+
+$(document).on('click','.accordion-row .delete', function(){
+    window.confirm("Are you sure?");
+});

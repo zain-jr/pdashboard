@@ -42,6 +42,13 @@
 		@extend %listreset;
 		padding: 5px 0 0;
 		@include align-reset(top, 14, 20);
+		float: left;
+
+		@include media('<widescreen'){
+			float: none;
+			width: 100%;
+			display: block;
+		}
 
 		li{
 			padding: 0 5px;
@@ -197,7 +204,7 @@
 					color: $dove-black;
 					text-decoration: none;
 					
-					@include media('<1426px'){
+					@include media('<tvscreen'){
 						padding: 15px 18px;
 					}
 					
@@ -344,9 +351,13 @@
 		.by-id-sorting{
 			float: right;
 			
+			@include media('<tvscreen'){
+				width: 35%;
+			}
+
 			@include media('<widescreen'){
 				padding: 0;
-				width: 46%;
+				width: 45%;
 			}
 		}
 	}
@@ -609,6 +620,11 @@
 			padding: 15px 10px 0;
 		}
 		
+		.by-user-sorting {
+			width: auto;
+			float: right;
+		}
+
 		.listing-cetegories-links {
 			ul{
 				padding: 0 10px 0 300px;

@@ -554,6 +554,8 @@
 			&.add{
 				max-width: 885px;
 				margin: 0 auto;
+				@extend %clearfix;
+				overflow: visible;
 				
 				@include media('<desktop'){
 					max-width: 469px;

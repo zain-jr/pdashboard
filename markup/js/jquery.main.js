@@ -4,10 +4,6 @@ $(document).on('change keyup', 'input, textarea, select', function(){
 
  $(function() {
 	 initLightbox();
-	 if ($(".addPropertyFormContainer")[0]){
-		handleAddPropertyFormScrolling();
-		$(document).on("scroll", onScroll);
-	 }
 });
 
 $(document).on('click', '.accordion .opener', function(){

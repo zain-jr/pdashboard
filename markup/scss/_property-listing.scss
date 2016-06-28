@@ -242,7 +242,7 @@
 			width: 40%;
 			overflow: hidden;
 			margin: 0 0 10px;
-			float: left;
+			float: right;
 			
 			@include media('<1426px'){
 				width: 50%;
@@ -269,7 +269,7 @@
 			}
 			
 			ul{
-				float: left;
+				float: right;
 				@extend %listreset;
 				@include align-reset(middle,14,17);
 				text-transform: capitalize;
@@ -385,7 +385,7 @@
 			width: 894px;
 		}
 		
-		li{
+		> li{
 			width: 100%;
 			@include align-reset(top,15,18);
 			border-bottom: 1px solid rgba($mix-grays, 0.4);

@@ -285,6 +285,11 @@
                 }
             }
         }
+        input[type="password"] {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        }
         textarea {
             resize: none;
             padding: 9px 5px 6px 50px;

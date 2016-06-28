@@ -2,10 +2,6 @@ $(document).on('change keyup', 'input, textarea, select', function(){
 	$(this).closest('.error').removeClass('error');
 });
 
- $(function() {
-	 initLightbox();
-});
-
 $(document).on('click', '.accordion .opener', function(){
 	$(this).closest('.accordion-row').siblings().removeClass('active');
 	$(this).closest('.accordion-row').toggleClass('active');
@@ -91,3 +87,4 @@ function companyLogoUploader(file, target)
 	 $(this).closest('.company-logo').find('.company-profileP').attr('alt', '');
 	 $(this).closest('.company-logo').removeClass('image-loaded');
  });
+ 

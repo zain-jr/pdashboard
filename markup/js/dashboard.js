@@ -19,6 +19,10 @@ $(document).on('click', '.form-openerMobile', function(){
    $('.searhForm-holder').toggleClass('searh-dashboard-active'); 
 });
 
+$(document).on('click', '.advancedSearchOpener', function(){
+    $('.advancedSearch-holder').toggleClass('active');
+})
+
 function checkWidth() {
     var $window = $(window);
     var windowsize = $window.width();

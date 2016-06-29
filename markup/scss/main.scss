@@ -499,6 +499,7 @@ a{ outline: none;}
 	float: right;
 	color: $white;
 	text-decoration: none;
+	cursor: pointer;
 	margin: 15px 10px 0 20px;
 	
 	@include media('<desktop'){
@@ -777,7 +778,6 @@ a{ outline: none;}
 				text-decoration: none;
 				color: $light-gray;
 				@include align-reset(middle,24,27);
-				cursor: pointer;
 				position: relative;
 				opacity: 0.4;
 				
@@ -1203,7 +1203,7 @@ a{ outline: none;}
 					color: $gray;
 				}
 				&:focus {
-					background: $gray;
+					border-color: $white;
 					color: $white;
 					
 					@include placeholder {

@@ -1,4 +1,5 @@
 /*Listing page with table */
+.advancedSearch-holder,
 .favorite-property-holder,
 .property-listing-holder{
 	overflow: hidden;
@@ -535,6 +536,10 @@
 				width: auto;
 				max-width: inherit;
 				
+				@include media('<desktop'){
+					margin: 0 3px;
+				}
+
 				&.details{
 					color: $mix-blue;
 					font-size: 20px;
@@ -603,6 +608,7 @@
 		}
 	}
 }
+.advancedSearch-holder,
 .favorite-property-holder {
 	padding: 15px 10px 0;
 	
@@ -626,6 +632,7 @@
 		}
 
 		.listing-cetegories-links {
+
 			ul{
 				padding: 0 10px 0 300px;
 				
@@ -634,6 +641,270 @@
 				}
 				@include media('<tablet'){
 					padding: 0;
+				}
+			}
+		}
+	}
+}
+.advancedSearch-holder {
+	
+	.properties-table{
+		
+		> li {
+			
+			.t-head, .t-data{
+				width: 11.11% !important;
+			}
+			strong{
+				@include align(top);
+				font-weight: 600;
+				position: relative;
+				
+				&:before{
+					font-family: 'icomoon';
+					@include align(top);
+					padding: 0 4px;
+					font-weight: 400;
+				}
+				
+				&.active{
+					color: $green;
+					
+					&:before{
+						content: "\e91d";
+					}
+				}
+				&.pending{
+						color: $mix-blue;
+						
+						&:before{
+							content: "\e90d";
+						}
+				}
+				&.rejected{
+						color:#bc5858;
+						
+						&:before{
+							content: "\e920";
+						}
+				}
+				&.expired{
+						color: #cf8511;
+						
+						&:before{
+							content: "\e912";
+						}
+				}
+				&.deleted{
+						color: $red;
+						
+						&:before{
+						content: "\e910";
+					}
+				}
+			}
+		}
+	}
+
+	&.active {
+		.advancedSearh-form {
+			opacity: 1;
+			visibility: visible;
+			height: 370px;
+		}
+	}
+
+	.advancedSearchOpener {
+		cursor: pointer;
+		width: 200px;
+		display: block;
+		color: $white;
+		background: $green;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 4px;
+		padding: 5px 25px;
+		margin: 0 auto;
+		position: relative;
+
+		@include media('>desktop'){
+			display: none;
+		}
+
+		span[class^="icon-"], span[class*="icon-"]{
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			@include font(14,14);
+			content: '';
+			margin: -6px 0 0;
+		}
+
+		&:hover {
+			background: darken($green, 10%);
+		}
+	}
+}
+.advancedSearh-form {
+	overflow: hidden;
+	@include align-reset(top, 14, 19);
+	
+	@include media('<desktop'){
+		padding: 10px 0 0;
+		max-width: 500px;
+		margin: 0 auto;
+		opacity: 0;
+		visibility: hidden;
+		height: 0;
+		overflow: auto;
+		transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+		-webkit-transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+		-ms-transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+	}
+
+	.type {
+		@extend %listreset;
+		width: 10%;
+		@include font(16,20);
+
+		@include media('<desktop'){
+			width: 100%;
+			display: block;
+			overflow: hidden;
+		}
+
+		li {
+			display: block;
+			padding: 6px 0 10px;
+
+			@include media('<desktop'){
+				padding: 0 0 5px;
+				float: left;
+				width: 50%;
+				padding: 0 10px 5px;
+			}
+
+			input[type="checkbox"]{
+				position: fixed;
+				top: -9999px;
+				left: -9999px;
+				opacity: 0;
+				visibility: hidden;
+
+				&:checked ~ {
+					.fake-label {
+						border-color: $mix-blue;
+						color: $white;
+						background: $mix-blue;
+
+						&:after {
+							display: block;
+						}
+					}
+				}
+			}
+			.fake-label,
+			label {
+				display: block;
+				cursor: pointer;
+			}
+			.fake-label {
+				color:$mix-grays;
+				border:1px solid $mix-grays;
+				text-align: center;
+				font-weight: 600;
+				padding: 13px 5px;
+				position: relative;
+
+				&:after {
+					position: absolute;
+					top: 50%;
+					margin: -10px 0 0;
+					left: 5px;
+					color: $white;
+					content: "\e903";
+					font-family: 'icomoon';
+					display: none;
+					border: 2px solid $white;
+					padding: 3px;
+					@include font(10,10);
+				}
+
+				&:hover{
+					background: rgba($mix-blue, 0.2);
+				}
+
+				@include media('<desktop'){
+					padding: 5px;
+				}
+			}
+		}
+	}
+	.cols-holder {
+		width: 90%;
+		@include align-reset(top, 14, 19);
+		padding: 0 5px;
+
+		@include media('<tvscreen'){
+			@include align-reset(top, 13, 19);
+		}
+
+		@include media('<widescreen'){
+			@include align-reset(top, 11, 19);
+		}
+
+		@include media('<desktop'){
+			@include align-reset(top, 12, 15);
+			width: 100%;
+			display: block;
+		}
+
+		.cols {
+			width: 16.66%;
+			padding: 0 5px;
+
+			@include media('<desktop'){
+				width: 50%;
+			}
+
+			.input-holder {
+				margin: 2px 0 12px;
+				
+				@include media('<desktop'){
+					margin: 0 0 5px;
+				}
+			}
+
+			label {
+				display: block;
+				padding: 0 5px 3px;
+
+				@include media('<tvscreen'){
+					padding: 0 0 3px;
+				}
+			}
+			select, input[type="text"], input[type="number"]{
+				@include squar(100%, 30px);
+				display: block;
+				padding: 5px 10px;
+				@include font(12,16);
+			}
+			input[type="submit"]{
+				display: block;
+				width: 100%;
+				padding: 4px 5px;
+				border: 0;
+				color: $white;
+				@include font(18,22);
+				background: $mix-blue;
+				margin: 33px 0 0;
+				
+				@include media('<desktop'){
+					margin: 23px 0 0;
+				}
+
+				&:hover {
+					background: darken($mix-blue, 10%);
 				}
 			}
 		}

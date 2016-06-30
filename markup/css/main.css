@@ -2030,8 +2030,10 @@ input[type='submit'] {
 
 .addPropertyFormContainer .feature-block .holder .tag {
   display: block;
-  padding: 10px;
+  padding: 5px 10px;
   text-align: center;
+  background: #edf1f4;
+  margin: 0 10px 10px;
 }
 
 .addPropertyFormContainer .tag {
@@ -2056,16 +2058,6 @@ input[type='submit'] {
   font-size: 13px;
   line-height: 16px;
   letter-spacing: 0;
-}
-
-.addPropertyFormContainer .feature-list:after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  content: '';
-  background: #e7e7e7;
 }
 
 .addPropertyFormContainer .feature-list li {
@@ -3082,6 +3074,10 @@ input[type='submit'] {
   font-size: 12px;
   line-height: 15px;
   outline: none;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -3450,7 +3446,7 @@ input[type='submit'] {
   text-decoration: none;
   font-size: 18px;
   line-height: 21px;
-  margin: 0 5px;
+  margin: 0 2px;
   color: #000;
   cursor: pointer;
   padding: 0;
@@ -6810,7 +6806,6 @@ a {
 }
 
 #footer .cols-holder .contact {
-  overflow: hidden;
   padding: 0 3px;
   text-align: left;
 }

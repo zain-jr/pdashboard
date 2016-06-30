@@ -315,6 +315,10 @@
 						height: 29px;
 						@include font(12,15);
 						outline: none;
+						max-width: 200px;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
 						
 						@include media('<tablet'){
 							min-width: 100%;
@@ -529,7 +533,7 @@
 				@include align(top);
 				text-decoration:none;
 				@include font(18,21);
-				margin: 0 5px;
+				margin: 0 2px;
 				color: $black;
 				cursor: pointer;
 				padding: 0;

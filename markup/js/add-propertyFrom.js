@@ -20,3 +20,11 @@ function previewAddPropertyImg(file, target)
 	 $(this).closest('li').find('img').attr('src', '#');
 	 $(this).closest('li').removeClass('image-loaded');
  });
+
+$(document).on('focusin', '.PriceField', function(){
+	$('.calculatedPrice').removeClass('priceShow');
+	$('.calculatedPrice').addClass('priceShow');
+});
+$(document).on('focusout', '.PriceField', function(){
+	$('.calculatedPrice').removeClass('priceShow');
+});

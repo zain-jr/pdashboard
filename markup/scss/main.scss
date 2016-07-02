@@ -1202,6 +1202,7 @@ a{ outline: none;}
 		width: 100%;
 		display: block;
 		height: 30px;
+		color: $gray;
 		border: 2px solid $gray;
 		padding: 5px;
 		@include font(14,18);
@@ -1211,9 +1212,6 @@ a{ outline: none;}
 		-moz-transition: all 0.4s ease;
 		-ms-transition: all 0.4s ease;
 		
-		@include placeholder {
-			color: $gray;
-		}
 		&:focus {
 			border-color: $white;
 			color: $white;

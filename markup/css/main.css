@@ -1394,11 +1394,29 @@ input[type='submit'] {
 }
 
 .addPropertyFormContainer .calculatedPrice {
-  display: block;
-  padding: 0 0 0 110px;
-  color: #363636;
+  display: none;
+  color: #fff;
+  padding: 3px;
   font-style: italic;
   position: relative;
+  border-radius: 4px;
+  background: rgba(19, 55, 131, 0.6);
+  font-size: 14px;
+  line-height: 17px;
+  margin: 10px 0 0;
+}
+
+.addPropertyFormContainer .calculatedPrice.priceShow {
+  display: block;
+}
+
+.addPropertyFormContainer .calculatedPrice:after {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid rgba(19, 55, 131, 0.6);
+  content: '';
 }
 
 .addPropertyFormContainer .tab-content {
@@ -6844,6 +6862,7 @@ a {
   width: 100%;
   display: block;
   height: 30px;
+  color: #999;
   border: 2px solid #999;
   padding: 5px;
   font-size: 14px;
@@ -6853,32 +6872,6 @@ a {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
-}
-
-.contact textarea::-webkit-input-placeholder,
-.contact input[type="text"]::-webkit-input-placeholder, .contact input[type="email"]::-webkit-input-placeholder {
-  color: #999;
-}
-
-.contact textarea::-moz-placeholder,
-.contact input[type="text"]::-moz-placeholder, .contact input[type="email"]::-moz-placeholder {
-  opacity: 1;
-  color: #999;
-}
-
-.contact textarea:-moz-placeholder,
-.contact input[type="text"]:-moz-placeholder, .contact input[type="email"]:-moz-placeholder {
-  color: #999;
-}
-
-.contact textarea:-ms-input-placeholder,
-.contact input[type="text"]:-ms-input-placeholder, .contact input[type="email"]:-ms-input-placeholder {
-  color: #999;
-}
-
-.contact textarea.placeholder,
-.contact input[type="text"].placeholder, .contact input[type="email"].placeholder {
-  color: #999;
 }
 
 .contact textarea:focus,

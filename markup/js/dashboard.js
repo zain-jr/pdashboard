@@ -15,6 +15,10 @@ $(document).on('click', '.slide-onMobile > li > a', function(){
    $('.slide-onMobile-opener').html($(this).html());
 });
 
+$(document).on('click', '.sub-links>li>a', function(){
+   $('.navFor-mobile').find('span.tag').html($(this).find('.onlyText').html());
+});
+
 $(document).on('click', '.form-openerMobile', function(){
    $('.searhForm-holder').toggleClass('searh-dashboard-active'); 
 });

@@ -208,11 +208,26 @@
 		}
 	}
 	.calculatedPrice{
-		display: block;
-		padding: 0 0 0 110px;
-		color: $dove-black;
+		display: none;
+		color: $white;
+		padding: 3px;
 		font-style: italic;
 		position: relative;
+		border-radius: 4px;
+		background: rgba($defualt-blue, 0.6);
+		@include font(14,17);
+		margin: 10px 0 0;
+
+		&.priceShow { display: block;}
+
+		&:after {
+			position: absolute;
+			top: -10px;
+			left: 10px;
+			border: 5px solid transparent;
+			border-bottom: 5px solid rgba($defualt-blue, 0.6);
+			content: '';
+		}
 	}
 	.tab-content{
 		overflow: hidden;

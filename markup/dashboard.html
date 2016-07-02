@@ -76,6 +76,25 @@
                     <li><a href="#"><span class="icon-key"></span>Change Password</a></li>
                     <li><a href="#"><span class="icon-search"></span>Advanced Search</a></li>
 				</ul>
+                <form class="contact popup-holder">
+                    <h2>Feedback</h2>
+                    <div class="popup success-modal">
+                        <span class="caution-heading"><span class="icon-checkmark"></span>Success !</span>
+                        <p>Thanks for your feedback, your thoughts are very valuable for us.</p>
+                        <ul class="links">
+                            <li><a href="#" class="close">Ok</a></li>
+                        </ul>
+                    </div>
+                    <div class="input-holder error">
+                        <input type="email" placeholder="Enter you email address">
+                        <span class="error-text">Please enter a valid email.</span>
+                        </div>
+                    <div class="input-holder error">
+                        <textarea placeholder="Enter you message"></textarea>
+                        <span class="error-text">Please enter a message.</span>
+                    </div>
+                    <input type="submit"  value="Send">
+                </form>
 			</aside>
 			<div class="pages-holder">
 				<div class="addAgency-user">
@@ -665,14 +684,14 @@
                         <form class="advancedSearh-form">
                             <ul class="type">
                                 <li>
-                                    <label for="buy">
-                                        <input type="checkbox" id="buy">
+                                    <label for="Buy">
+                                        <input type="checkbox" id="Buy">
                                         <span class="fake-label">Buy</span>
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="rent">
-                                        <input type="checkbox" id="rent">
+                                    <label for="Rent">
+                                        <input type="checkbox" id="Rent">
                                         <span class="fake-label">Rent</span>
                                     </label>
                                 </li>
@@ -1484,32 +1503,12 @@
 							<li><a href="#" class="twitter"><span class="icon-twitter"></span></a></li>
 						</ul>
 					</div>
-                    <div class="col">
-                        <h2>Feedback</h2>
-                        <form class="contact popup-holder">
-							<div class="popup success-modal">
-								<span class="caution-heading"><span class="icon-checkmark"></span>Success !</span>
-								<p>Thanks for your feedback, your thoughts are very valuable for us.</p>
-								<ul class="links">
-									<li><a href="#" class="close">Ok</a></li>
-								</ul>
-							</div>
-                            <div class="input-holder error">
-                                <input type="email" placeholder="Enter you email address">
-                                <span class="error-text">Please enter a valid email.</span>
-                             </div>
-                            <div class="input-holder error">
-                                <textarea placeholder="Enter you message"></textarea>
-                                <span class="error-text">Please enter a message.</span>
-                            </div>
-                            <input type="submit"  value="Send">
-                        </form>
-                    </div>
 				</div>
 			</div>
 		</footer>
 	</div>
 	<!-- include jQuery library -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js" defer><\/script>')</script>
 	<script type="text/javascript" src="js/select2.full.js" defer></script>
 	<!-- include custom JavaScript -->

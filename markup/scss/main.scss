@@ -854,6 +854,7 @@ a{ outline: none;}
 		@include font(16,19);
 		text-transform: capitalize;
 		padding: 10px 0 0;
+		border-bottom: 1px solid $black;
 		
 		@include media('<desktop'){
 			@include font(14,18);
@@ -1164,73 +1165,84 @@ a{ outline: none;}
 			font-weight: 600;
 			margin: 0 0 10px;
 		}
-		.contact {
-			padding: 0 3px;
-			text-align: left;
-			
-			.input-holder {
-				width: 100%;
-				margin: 0 0 10px;
-				
-				&.error {
-					.error-text {
-						display: block;
-					}
-				}
-			}
+	}
+}
+.contact {
+	padding: 30px 10px;
+	text-align: left;
+	overflow: hidden;
+	border-top: 1px solid $mix-grays;
+	
+	h2 {
+		@include font(18,21);
+		display: block;
+		text-align: center;
+		color: $index-white;
+		font-weight: 600;
+	}
+
+	.input-holder {
+		width: 100%;
+		margin: 0 0 10px;
+		
+		&.error {
 			.error-text {
-				color: $red;
-				@include font(13,16);
-				display: none;
-				padding: 5px 0 0;
-			}
-			textarea,
-			input[type="text"],input[type="email"]{
-				width: 100%;
 				display: block;
-				height: 30px;
-				border: 2px solid $gray;
-				padding: 5px;
-				@include font(14,18);
-				background: transparent;
-				transition: all 0.4s ease;
-				-webkit-transition: all 0.4s ease;
-				-moz-transition: all 0.4s ease;
-				-ms-transition: all 0.4s ease;
-				
-				@include placeholder {
-					color: $gray;
-				}
-				&:focus {
-					border-color: $white;
-					color: $white;
-					
-					@include placeholder {
-						color: $white;
-					}
-				}
 			}
-			textarea {
-				resize: none;
-				height: 100px;
-				overflow: auto;
+		}
+	}
+	.error-text {
+		color: $red;
+		@include font(13,16);
+		display: none;
+		padding: 5px 0 0;
+	}
+	textarea,
+	input[type="text"],input[type="email"]{
+		width: 100%;
+		display: block;
+		height: 30px;
+		border: 2px solid $gray;
+		padding: 5px;
+		@include font(14,18);
+		background: transparent;
+		transition: all 0.4s ease;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		
+		@include placeholder {
+			color: $gray;
+		}
+		&:focus {
+			border-color: $white;
+			color: $white;
+			
+			@include placeholder {
+				color: $white;
 			}
-			input[type="submit"] {
-				display: block;
-				border: 0;
-				width: 100%;
-				padding: 5px;
-				background: $mix-blue;
-				border-radius: 2px;
-				transition: background 0.4s ease;
-				-webkit-transition: background 0.4s ease;
-				-moz-transition: background 0.4s ease;
-				-ms-transition: background 0.4s ease;
-				
-				&:hover {
-					background: darken($mix-blue, 10%);
-				}
-			}
+		}
+	}
+	textarea {
+		resize: none;
+		height: 100px;
+		overflow: auto;
+	}
+	input[type="submit"] {
+		display: block;
+		color: $white;
+		border: 0;
+		width: 100%;
+		padding: 5px;
+		background: $mix-blue;
+		border-radius: 2px;
+		transition: background 0.4s ease;
+		-webkit-transition: background 0.4s ease;
+		-moz-transition: background 0.4s ease;
+		-ms-transition: background 0.4s ease;
+		
+		&:hover {
+			background: darken($mix-blue, 10%);
 		}
 	}
 }

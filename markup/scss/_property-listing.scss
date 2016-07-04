@@ -650,6 +650,33 @@
 		}
 	}
 }
+.favorite-property-holder {
+	.by-user-sorting {
+		@include media('<tablet'){
+			max-width: 200px;
+			margin: 0 auto !important;
+		}
+		li {
+			@include media('<tablet'){
+				width: 100% !important;
+			}
+
+			label{
+				@include media('<tablet'){
+					float: left !important;
+					width: 20% !important;
+				}
+			}
+			select{
+				@include media('<tablet'){
+					width: 80% !important;
+					float: right !important;
+					min-width: inherit !important;
+				}
+			}
+		}
+	}
+}
 .advancedSearch-holder {
 	
 	.properties-table{

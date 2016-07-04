@@ -907,7 +907,7 @@
 					overflow: hidden;
 					
 					@include media('<tablet'){
-						@include squar(100%, 150px);
+						@include squar(100%, 100px);
 					}
 
 					&:hover{

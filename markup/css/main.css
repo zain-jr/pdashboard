@@ -2239,7 +2239,7 @@ input[type='submit'] {
 @media (max-width: 767px) {
   .addPropertyFormContainer .image-uploading-area li .file-uploader {
     width: 100%;
-    height: 150px;
+    height: 100px;
   }
 }
 
@@ -3663,6 +3663,34 @@ input[type='submit'] {
   .sideBar-active .advancedSearch-holder .listing-cetegories-links ul, .sideBar-active
   .favorite-property-holder .listing-cetegories-links ul {
     padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .favorite-property-holder .by-user-sorting {
+    max-width: 200px;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .favorite-property-holder .by-user-sorting li {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .favorite-property-holder .by-user-sorting li label {
+    float: left !important;
+    width: 20% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .favorite-property-holder .by-user-sorting li select {
+    width: 80% !important;
+    float: right !important;
+    min-width: inherit !important;
   }
 }
 
@@ -6809,7 +6837,7 @@ a {
   #footer .cols-holder .col {
     width: 100%;
     display: block;
-    padding: 30px 5px;
+    padding: 10px 5px;
   }
 }
 

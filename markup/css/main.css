@@ -5663,7 +5663,7 @@ a {
 
 @media (max-width: 1023px) {
   #header .searhForm-holder {
-    margin: 0 20px 0 0;
+    margin: 0 15px 0 0;
     width: 200px;
   }
 }
@@ -5943,7 +5943,7 @@ a {
 
 @media (max-width: 767px) {
   .logout {
-    margin: 15px 25px 0 10px;
+    display: none;
   }
 }
 
@@ -5966,9 +5966,27 @@ a {
   border-left: 1px solid #2277b7;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .our-contactNum {
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .our-contactNum .hidden-xs {
     display: none;
+  }
+}
+
+.our-contactNum span[class*="icon-"], .our-contactNum span[class*="icon-"] {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1px 4px;
+}
+
+@media (max-width: 1024px) {
+  .our-contactNum span[class*="icon-"], .our-contactNum span[class*="icon-"] {
+    padding: 1px 0;
   }
 }
 
